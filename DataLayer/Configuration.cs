@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObjects;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
@@ -18,8 +19,13 @@ namespace DataLayer
 
         protected override void Seed(ApplicationDbContext context)
         {
+           /* context.Shirts.AddOrUpdate(
+                s => s.Id,
+                new Shirt() { Id = 1, Name = "" },
+                new Shirt() { Id = 2, Name = "" });*/
             context.SaveChanges();
             base.Seed(context);
+
         }
     }
 }
