@@ -18,6 +18,10 @@ namespace ForFashion.Controllers
             _shirtManager = new ShirtManager();
         }
         // GET api/shirts
+        /// <summary>
+        /// Returns the list of shirts
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<ShirtDto> Get()
         {
             var result = _shirtManager.GetAll();
