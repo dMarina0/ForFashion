@@ -19,11 +19,11 @@ namespace DataLayer
 
         protected override void Seed(ApplicationDbContext context)
         {
-           /* context.Shirts.AddOrUpdate(
-                s => s.Id,
-                new Shirt() { Id = 1, Name = "" },
-                new Shirt() { Id = 2, Name = "" });*/
-            context.SaveChanges();
+
+            context.Shirts.AddOrUpdate(
+               s => s.Id,
+               new Shirt() { Id = 4, Name = "ff" });
+            context.SaveChanges();  
             base.Seed(context);
 
         }
