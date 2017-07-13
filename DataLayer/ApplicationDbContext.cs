@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,8 @@ namespace DataLayer
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity <Shirt> ().Property(s=> s.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            //modelBuilder.Entity<Shirt>().HasKey(s => s.Id);
             base.OnModelCreating(modelBuilder);
         }
 
