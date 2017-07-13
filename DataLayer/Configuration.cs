@@ -1,4 +1,6 @@
 ﻿using BusinessObjects;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
@@ -25,7 +27,7 @@ namespace DataLayer
                 new Shirt() { Id = 2, Name = "" });*/
             context.SaveChanges();
             base.Seed(context);
+        }
 
         }
-    }
 }
