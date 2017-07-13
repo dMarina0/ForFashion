@@ -5,8 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using Microsoft.Practices.Unity;
 
 namespace ForFashion.Controllers
 {
@@ -15,7 +15,9 @@ namespace ForFashion.Controllers
         private IShirtManager _shirtManager;
         public ShirtController()
         {
-            _shirtManager = new ShirtManager();
+             DIContainer cont = new DIContainer();
+            _shirtManager = cont.Container.Resolve<IShirtManager>();
+            
         }
         // GET api/shirts
         /// <summary>
