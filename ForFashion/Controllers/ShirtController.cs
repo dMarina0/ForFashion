@@ -7,15 +7,17 @@ using System.Linq;
 using System.Net;
 using System.Web.Http;
 using Microsoft.Practices.Unity;
+using ForFashion.Controllers;
 
 namespace ForFashion.Controllers
 {
-    public class ShirtController : ApiController
+    public class ShirtController : ApiController 
     {
         private IShirtManager _shirtManager;
         public ShirtController()
         {
-             DIContainer cont = new DIContainer();
+            // DIContainer cont = new DIContainer();
+            var cont = DIContainer.Instance;
             _shirtManager = cont.Container.Resolve<IShirtManager>();
             
         }
