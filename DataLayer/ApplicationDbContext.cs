@@ -44,6 +44,6 @@ namespace DataLayer
 
         public DbSet<Shirt> Shirts { get; set; }
         //public DbSet<User> Users { get; set; }
-        public DbSet<UserDetails> UserDetails { get; set; }        
+        //public DbSet<UserDetails> UserDetails { get; set; }        
     }
 }

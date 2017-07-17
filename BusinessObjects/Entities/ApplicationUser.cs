@@ -28,7 +28,7 @@ namespace BusinessObjects
         public bool Active { get; set; }
         //public int DetailsID { get; set; }
         //[ForeignKey("DetailsID")]
-        public virtual UserDetails UserDetails { get; set; }
+        //public virtual UserDetails UserDetails { get; set; }
     }
     //public class User
     //{
@@ -39,16 +39,16 @@ namespace BusinessObjects
        
     //    public virtual UserDetails Details { get; set; }
     //}
-    public class UserDetails
-    {
-        //[Key,ForeignKey("User")]
+    //public class UserDetails
+    //{
+    //    //[Key,ForeignKey("User")]
 
-        public string UserID{ get; set; }
-        public string Address { get; set; }
-        public double PhoneNumber { get; set; }
-        public virtual ApplicationUser ApplicationUser { get; set; }
+    //    public string UserID{ get; set; }
+    //    public string Address { get; set; }
+    //    public double PhoneNumber { get; set; }
+    //    public virtual ApplicationUser ApplicationUser { get; set; }
 
-    }
+    //}
    
 
 }
