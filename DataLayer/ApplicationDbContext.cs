@@ -1,4 +1,5 @@
 ﻿using BusinessObjects;
+
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -28,9 +29,21 @@ namespace DataLayer
         {
             modelBuilder.Entity <Shirt> ().Property(s=> s.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             //modelBuilder.Entity<Shirt>().HasKey(s => s.Id);
-            base.OnModelCreating(modelBuilder);
+           /* modelBuilder.Entity<UserDetails>() .HasKey(e => e.UserID);
+
+            // Configure StudentId as FK for StudentAddress
+            modelBuilder.Entity<User>()
+                        .HasOptional(s => s.Details)
+                        .WithRequired(a => a.Id);
+
+
+
+    */
+
         }
 
         public DbSet<Shirt> Shirts { get; set; }
+        //public DbSet<User> Users { get; set; }
+        public DbSet<UserDetails> UserDetails { get; set; }        
     }
 }
