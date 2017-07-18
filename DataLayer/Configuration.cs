@@ -55,34 +55,32 @@ namespace DataLayer
                new Shirt() { Id = 30, Name = "High-neck blouse"}
                );
             context.Dresses.AddOrUpdate(
-                d => d.Id,
-                new Dress() { Id = 1, Name = "Floral dress" },
-                new Dress() { Id = 2, Name = "Combined asymetric dress" },
-                new Dress() { Id = 3, Name = "Midi dress" },
-                new Dress() { Id = 4, Name = "Stripped dress" },
-                 new Dress() { Id = 5, Name = "Long ribbed dress" },
-                new Dress() { Id = 6, Name = "Polka dot dress" },
-                new Dress() { Id = 7, Name = "Long stripped dress" },
-                new Dress() { Id = 8, Name = "Sleeveless oversized dress" },
-                 new Dress() { Id = 9, Name = "Flowing dress with ruffled sleeves" },
-                new Dress() { Id = 10, Name = "Off-the-shoulder dress" },
-                new Dress() { Id = 11, Name = "Oversized dress with fringe" },
-                new Dress() { Id = 12, Name = "Combined midi dress" },
-                 new Dress() { Id = 13, Name = "Constrasting Jacquard Dress" },
-                new Dress() { Id = 14, Name = "Shinny ribbed dress" },
-                new Dress() { Id = 15, Name = "Checked shirt tunic" },
-                new Dress() { Id = 16, Name = "Tulle dress" },
-                 new Dress() { Id = 17, Name = "Frilled-sleeve dress" },
-                new Dress() { Id = 18, Name = "Printed satin dress" },
-                new Dress() { Id = 19, Name = "Multicoloured stripped dress" },
-                new Dress() { Id = 20, Name = "Denim mini dress" }
-                );
+               d => d.Id,
+               new Dress() { Id = 1, Name = "Floral dress" },
+               new Dress() { Id = 2, Name = "Combined asymetric dress" },
+               new Dress() { Id = 3, Name = "Midi dress" },
+               new Dress() { Id = 4, Name = "Stripped dress" },
+                new Dress() { Id = 5, Name = "Long ribbed dress" },
+               new Dress() { Id = 6, Name = "Polka dot dress" },
+               new Dress() { Id = 7, Name = "Long stripped dress" },
+               new Dress() { Id = 8, Name = "Sleeveless oversized dress" },
+                new Dress() { Id = 9, Name = "Flowing dress with ruffled sleeves" },
+               new Dress() { Id = 10, Name = "Off-the-shoulder dress" },
+               new Dress() { Id = 11, Name = "Oversized dress with fringe" },
+               new Dress() { Id = 12, Name = "Combined midi dress" },
+                new Dress() { Id = 13, Name = "Constrasting Jacquard Dress" },
+               new Dress() { Id = 14, Name = "Shinny ribbed dress" },
+               new Dress() { Id = 15, Name = "Checked shirt tunic" },
+               new Dress() { Id = 16, Name = "Tulle dress" },
+                new Dress() { Id = 17, Name = "Frilled-sleeve dress" },
+               new Dress() { Id = 18, Name = "Printed satin dress" },
+               new Dress() { Id = 19, Name = "Multicoloured stripped dress" },
+               new Dress() { Id = 20, Name = "Denim mini dress" }
+               );
             context.SaveChanges();  
             base.Seed(context);
-            
-            
+
         }
     }
-    
 }
  

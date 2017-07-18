@@ -35,14 +35,13 @@ namespace BusinessObjects
             result.Name = dress.Name;
             return result;
         }
-        public static IEnumerable<DressDto> ToDressDtos(this IEnumerable<Dress> dresses)
+        public static IEnumerable<DressDto> ToDressDtos(this IEnumerable<Dress> dress)
         {
-            var result = dresses.Select(it => new DressDto()
+            var result = dress.Select(it => new DressDto()
             {
                 Id = it.Id,
                 Name = it.Name
             });
-
             return result;
         }
     }
