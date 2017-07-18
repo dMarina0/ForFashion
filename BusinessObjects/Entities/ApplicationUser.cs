@@ -26,14 +26,28 @@ namespace BusinessObjects
         }
 
         public bool Active { get; set; }
+
+        public virtual UserDetails UserDetails { get; set; }
+
         //public int DetailsID { get; set; }
         //[ForeignKey("DetailsID")]
         //public virtual UserDetails UserDetails { get; set; }
+
     }
-    //public class User
-    //{
-    //    public User() { }
-    //    public int Id { get; set; }
+
+
+    public class UserDetails
+    {
+        [Key]
+        public int Id { get; set; }
+        public string Address { get; set; }
+        public string PhoneNumber { get; set; }
+        //[ForeignKey("ApplicationUser")]
+        //public string IdUser { get; set; }
+        [Required]
+        public virtual ApplicationUser ApplicationUser { get; set; }
+
+    }
 
     //    public string userName { get; set; }
        
