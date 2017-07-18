@@ -17,6 +17,8 @@ namespace ForFashion
             Container = new UnityContainer();
             Container.RegisterType<IShirtManager, ShirtManager>(new ContainerControlledLifetimeManager());
         }
+
+        
         //Singleton
         public static DIContainer Instance
         {
