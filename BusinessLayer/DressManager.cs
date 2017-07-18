@@ -22,7 +22,7 @@ namespace BusinessLayer
 
         public IEnumerable<DressDto> GetAll()
         {
-            var result = _repository.GetAll().ToDressDto();
+            var result = _repository.GetAll().ToDressDtos();
             return result;
         }
     }
