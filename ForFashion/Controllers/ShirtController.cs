@@ -17,8 +17,8 @@ namespace ForFashion.Controllers
         public ShirtController()
         {
             // DIContainer cont = new DIContainer();
-            var cont = DIContainer.Instance;
-            _shirtManager = cont.Resolve<IShirtManager>();
+            //var cont = DIContainer.Instance;
+            _shirtManager = DIContainer.Instance.Resolve < IShirtManager>();
             
         }
         // GET api/shirts

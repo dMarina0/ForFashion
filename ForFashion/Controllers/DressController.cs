@@ -2,6 +2,7 @@
 using BusinessObjects.Dtos;
 using System;
 using System.Collections.Generic;
+using Microsoft.Practices.Unity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -15,18 +16,13 @@ namespace ForFashion.Controllers
 
         public DressController()
         {
-            var cont = DIContainer.Instance;
-            _dressManager = cont.Resolve<IDressManager>();
+            _dressManager = DIContainer.Instance.Resolve<IDressManager>();
         }
-
-        /// <summary>
-        /// Returns a list of dresses
-        /// </summary>
-        /// <returns></returns>
         public IEnumerable<DressDto> Get()
         {
-            var result = _dressManager.GetAll();
-            return result;
+            var res = _dressManager.GetAll();
+            return res;
         }
+
     }
 }
