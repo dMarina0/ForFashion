@@ -17,6 +17,7 @@ using ForFashion.Models;
 using ForFashion.Providers;
 using ForFashion.Results;
 using BusinessObjects;
+using Abstracts;
 
 namespace ForFashion.Controllers
 {
@@ -26,9 +27,11 @@ namespace ForFashion.Controllers
     {
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
+        private IUserDetailsManager _iuserDetailsManager;
 
         public AccountController()
         {
+            _iuserDetailsManager = DIContainer.Instance.Resolve<IUserDetailsManager>();
         }
 
         public AccountController(ApplicationUserManager userManager,
@@ -337,6 +340,8 @@ namespace ForFashion.Controllers
             {
                 return GetErrorResult(result);
             }
+
+            _iuserDetailsManager.AddUserDetails(user.Id);
 
             return Ok();
         }
