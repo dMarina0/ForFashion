@@ -1,4 +1,5 @@
 ﻿using Abstracts;
+using Abstracts.IManagers;
 using BusinessLayer;
 using BusinessObjects;
 using DataLayer;
@@ -23,6 +24,7 @@ namespace ForFashion
             _container.RegisterType<IRepository<Shirt>, Repository<Shirt>>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IRepository<ApplicationUser>, Repository<ApplicationUser>>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IRepository<UserDetails>, Repository<UserDetails>>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<IDressManager, DressManager>(new ContainerControlledLifetimeManager());
 
         }
         //Singleton
