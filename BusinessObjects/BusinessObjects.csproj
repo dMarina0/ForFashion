@@ -90,6 +90,7 @@
     <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Entities\Collection.cs" />
     <Compile Include="Entities\Dress.cs" />
+    <Compile Include="Entities\FashionHouse.cs" />
     <Compile Include="Entities\Shirt.cs" />
     <Compile Include="Mappers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
