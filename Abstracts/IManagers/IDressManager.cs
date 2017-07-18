@@ -1,4 +1,5 @@
 ﻿using BusinessObjects.Dtos;
+using BusinessObjects.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Abstracts.IManagers
     public interface IDressManager
     {
         IEnumerable<DressDto> GetAll();
-        void Add(DressDto obj);
+        void Insert(Dress obj);
+        Dress ByName(long Name);
     }
 }

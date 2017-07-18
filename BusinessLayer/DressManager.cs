@@ -25,5 +25,17 @@ namespace BusinessLayer
             var result = _repository.GetAll().ToDressDtos();
             return result;
         }
+        public void Insert(Dress obj)
+        {
+            _repository.Insert(obj);
+
+        }
+        public Dress ByName(long Name)
+        {
+           
+            var result = _repository.GetByName(Name);
+            return result;
+        }
+        
     }
 }

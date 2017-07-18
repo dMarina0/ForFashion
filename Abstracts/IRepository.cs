@@ -10,6 +10,7 @@ namespace Abstracts
     {
         IEnumerable<T> GetAll();
         T GetById(object Id);
+        T GetByName(object Name);
         void Insert(T obj);
         void Update(T obj);
         void Delete(object Id);

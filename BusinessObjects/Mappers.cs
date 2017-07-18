@@ -44,5 +44,12 @@ namespace BusinessObjects
             });
             return result;
         }
+        /*public static void ToNewObj(Dress dress)
+        {
+            var result = new DressDto();
+            result.Id = dress.Id;
+            result.Name = dress.Name;
+
+        }*/
     }
 }

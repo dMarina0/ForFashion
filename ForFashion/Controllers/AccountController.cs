@@ -18,6 +18,7 @@ using ForFashion.Providers;
 using ForFashion.Results;
 using BusinessObjects;
 using Abstracts;
+using BusinessObjects.Entities;
 
 namespace ForFashion.Controllers
 {
@@ -380,6 +381,7 @@ namespace ForFashion.Controllers
             return Ok();
         }
 
+       
         protected override void Dispose(bool disposing)
         {
             if (disposing && _userManager != null)

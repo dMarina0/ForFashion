@@ -28,6 +28,10 @@ namespace DataLayer
         {
             return dbSet.Find(Id);
         }
+        public T GetByName(object Name)
+        {
+            return dbSet.Find(Name);
+        }
 
         public void Insert(T obj)
         {
