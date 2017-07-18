@@ -342,6 +342,8 @@ namespace ForFashion.Controllers
             }
             _iuserDetailsManager.AddUserDetails(user.Id);
 
+            _iuserDetailsManager.AddUserDetails(user.Id);
+
             return Ok();
         }
 

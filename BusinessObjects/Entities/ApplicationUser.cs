@@ -1,7 +1,15 @@
-﻿using Microsoft.AspNet.Identity;
+﻿
+
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
+using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace BusinessObjects
@@ -42,7 +50,7 @@ namespace BusinessObjects
     }
 
     //    public string userName { get; set; }
-
+       
     //    public virtual UserDetails Details { get; set; }
     //}
     //public class UserDetails
@@ -55,6 +63,7 @@ namespace BusinessObjects
     //    public virtual ApplicationUser ApplicationUser { get; set; }
 
     //}
+   
 
 
 }
