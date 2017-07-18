@@ -40,6 +40,6 @@ namespace DataLayer
 
         //public DbSet<User> Users { get; set; }
         //public DbSet<UserDetails> UserDetails { get; set; }        
-
+        public DbSet<FashionHouse> FashionHouse { get; set; }
     }
 }
