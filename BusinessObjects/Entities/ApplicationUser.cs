@@ -26,16 +26,16 @@ namespace BusinessObjects
         }
 
         public bool Active { get; set; }
-<<<<<<< HEAD
+
         public virtual UserDetails UserDetails { get; set; }
-=======
+
         //public int DetailsID { get; set; }
         //[ForeignKey("DetailsID")]
         //public virtual UserDetails UserDetails { get; set; }
->>>>>>> abeb72909ed3f2d926f86cf2b262dec4947da42c
+
     }
 
-<<<<<<< HEAD
+
     public class UserDetails
     {
         [Key]
@@ -48,7 +48,7 @@ namespace BusinessObjects
         public virtual ApplicationUser ApplicationUser { get; set; }
 
     }
-=======
+
     //    public string userName { get; set; }
        
     //    public virtual UserDetails Details { get; set; }
@@ -65,5 +65,5 @@ namespace BusinessObjects
     //}
    
 
->>>>>>> abeb72909ed3f2d926f86cf2b262dec4947da42c
+
 }
