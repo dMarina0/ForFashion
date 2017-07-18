@@ -10,12 +10,18 @@ namespace ForFashion
 {
     public class DIContainer
     {
-        public IUnityContainer Container;
+     private IUnityContainer _container;
         private static DIContainer instance;
         private DIContainer()
         {
-            Container = new UnityContainer();
-            Container.RegisterType<IShirtManager, ShirtManager>(new ContainerControlledLifetimeManager());
+
+            _container = new UnityContainer();
+            _container.RegisterType<IShirtManager, ShirtManager>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<IUserDetailsManager, UserDetailsManager>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<IRepository<Shirt>, Repository<Shirt>>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<IRepository<ApplicationUser>, Repository<ApplicationUser>>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<IRepository<UserDetails>, Repository<UserDetails>>(new ContainerControlledLifetimeManager());
+
         }
 
         
@@ -32,6 +38,9 @@ namespace ForFashion
                 return instance;
             }
         }
-        
+        public T Resolve<T>() where T : class
+        {
+            return _container.Resolve<T>();
+        }
     }
 }
