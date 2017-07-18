@@ -10,5 +10,6 @@ namespace Abstracts.IManagers
     public interface  IDressManager
     {
         IEnumerable<DressDto> GetAll();
+        void Add(DressDto obj);
     }
 }

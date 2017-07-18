@@ -23,6 +23,15 @@ namespace ForFashion.Controllers
             var res = _dressManager.GetAll();
             return res;
         }
+        /* public void Insert(DressDto obj)
+         {
+             _dressManager.Add(obj);
+         }
+         */
+        void add()
+        { 
 
+        _dressManager.Insert(DressDto obj);
+        }
     }
 }
