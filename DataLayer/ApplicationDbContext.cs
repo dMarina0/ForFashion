@@ -37,9 +37,10 @@ namespace DataLayer
         public DbSet<UserDetails> UserDetails { get; set; }
 
         public DbSet<Dress> Dresses { get; set; }
+        public DbSet<Collection> Collections { get; set; }
 
         //public DbSet<User> Users { get; set; }
         //public DbSet<UserDetails> UserDetails { get; set; }        
-
+        public DbSet<FashionHouse> FashionHouse { get; set; }
     }
 }

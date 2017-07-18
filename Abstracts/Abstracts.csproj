@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IManagers\ICollectionManager.cs" />
     <Compile Include="IManagers\IDressManager.cs" />
+    <Compile Include="IManagers\IFashionHouseManager.cs" />
     <Compile Include="IManagers\IShirtManager.cs" />
     <Compile Include="IManagers\IUserDetailsManager.cs" />
     <Compile Include="IRepository.cs" />

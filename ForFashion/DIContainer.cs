@@ -26,6 +26,7 @@ namespace ForFashion
             _container.RegisterType<IRepository<ApplicationUser>, Repository<ApplicationUser>>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IRepository<UserDetails>, Repository<UserDetails>>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IRepository<DressManager>, Repository<DressManager>>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<ICollectionManager, CollectionManager>(new ContainerControlledLifetimeManager());
         }
 
 
