@@ -31,6 +31,11 @@ namespace DataLayer
         }
 
         public DbSet<Shirt> Shirts { get; set; }
+<<<<<<< HEAD
         public DbSet<UserDetails> UserDetails { get; set; }
+=======
+        //public DbSet<User> Users { get; set; }
+        //public DbSet<UserDetails> UserDetails { get; set; }        
+>>>>>>> abeb72909ed3f2d926f86cf2b262dec4947da42c
     }
 }
