@@ -55,7 +55,7 @@ namespace DataLayer
                );
             context.SaveChanges();  
             base.Seed(context);
-            context.Database.ExecuteSqlCommand("ALTER TABLE Users ADD CONSTRAINT Details UNIQUE(DetailsID)");
+            
             
         }
     }

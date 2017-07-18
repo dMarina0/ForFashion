@@ -1,14 +1,15 @@
 ﻿using Abstracts;
+
+using BusinessObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessObjects;
 
 namespace BusinessLayer
 {
-    public class UserDetailsManager : IUserDetailsManager
+    public class UserDetailsManager: IUserDetailsManager
     {
         private IRepository<ApplicationUser> _repository;
         public UserDetailsManager(IRepository<ApplicationUser> repository)
@@ -28,7 +29,5 @@ namespace BusinessLayer
             var applicationUser = _repository.GetById(id);
             return applicationUser;
         }
-
-
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessObjects.Dtos;
+using BusinessObjects.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +21,23 @@ namespace BusinessObjects
         public static IEnumerable<ShirtDto> ToShirtDtos(this IEnumerable<Shirt> shirts)
         {
             var result = shirts.Select(it => new ShirtDto()
+            {
+                Id = it.Id,
+                Name = it.Name
+            });
+
+            return result;
+        }
+        public static DressDto ToDressDto(Dress dress)
+        {
+            var result = new DressDto();
+            result.Id = dress.Id;
+            result.Name = dress.Name;
+            return result;
+        }
+        public static IEnumerable<DressDto> ToDressDtos(this IEnumerable<Dress> dresses)
+        {
+            var result = dresses.Select(it => new DressDto()
             {
                 Id = it.Id,
                 Name = it.Name

@@ -18,6 +18,8 @@ using ForFashion.Providers;
 using ForFashion.Results;
 using BusinessObjects;
 
+using Abstracts;
+
 namespace ForFashion.Controllers
 {
     [Authorize]
