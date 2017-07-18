@@ -17,6 +17,7 @@ using ForFashion.Models;
 using ForFashion.Providers;
 using ForFashion.Results;
 using BusinessObjects;
+using Abstracts;
 
 namespace ForFashion.Controllers
 {
@@ -26,9 +27,11 @@ namespace ForFashion.Controllers
     {
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
+        private IUserDetailsManager _iuserDetailsManager;
 
         public AccountController()
         {
+            _iuserDetailsManager = DIContainer.Instance.Resolve<IUserDetailsManager>();
         }
 
         public AccountController(ApplicationUserManager userManager,
@@ -126,7 +129,7 @@ namespace ForFashion.Controllers
 
             IdentityResult result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword,
                 model.NewPassword);
-            
+
             if (!result.Succeeded)
             {
                 return GetErrorResult(result);
@@ -259,9 +262,9 @@ namespace ForFashion.Controllers
             if (hasRegistered)
             {
                 Authentication.SignOut(DefaultAuthenticationTypes.ExternalCookie);
-                
-                 ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
-                    OAuthDefaults.AuthenticationType);
+
+                ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
+                   OAuthDefaults.AuthenticationType);
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
 
@@ -337,10 +340,10 @@ namespace ForFashion.Controllers
             {
                 return GetErrorResult(result);
             }
+            _iuserDetailsManager.AddUserDetails(user.Id);
 
             return Ok();
         }
-
 
         // POST api/Account/RegisterExternal
         [OverrideAuthentication]
@@ -370,7 +373,7 @@ namespace ForFashion.Controllers
             result = await UserManager.AddLoginAsync(user.Id, info.Login);
             if (!result.Succeeded)
             {
-                return GetErrorResult(result); 
+                return GetErrorResult(result);
             }
             return Ok();
         }
