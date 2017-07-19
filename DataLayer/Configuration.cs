@@ -56,7 +56,7 @@ namespace DataLayer
                );
             context.Dresses.AddOrUpdate(
                d => d.Id,
-               new Dress() { Id = 1, Name = "Floral dress" },
+               new Dress() { Id = 1, Name = "Floral" },
                new Dress() { Id = 2, Name = "Combined asymetric dress" },
                new Dress() { Id = 3, Name = "Midi dress" },
                new Dress() { Id = 4, Name = "Stripped dress" },

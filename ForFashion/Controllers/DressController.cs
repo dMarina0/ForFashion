@@ -14,34 +14,44 @@ namespace ForFashion.Controllers
 {
     public class DressController : ApiController
     {
-       // [RoutePrefix("api/Dress")]
         private IDressManager _dressManager;
 
         public DressController()
         {
             _dressManager = DIContainer.Instance.Resolve<IDressManager>();
         }
+
         public IEnumerable<DressDto> Get()
         {
             var res = _dressManager.GetAll();
             return res;
         }
-        /* public void Insert(DressDto obj)
-         {
-             _dressManager.Add(obj);
-         }
-         */
-        void AddObj(Dress obj)
+
+        //[HttpPost]
+        //[Route("api/Dress/post")]
+        [System.Web.Http.HttpPost]
+        public IHttpActionResult AddObj(DressDto obj)
         {
             _dressManager.Insert(obj);
+            return Ok();
         }
-       
-        public Dress GetObjByName(long Name)
+
+        //[HttpGet]
+        //[Route("api/Dress/{"name=string")]
+        [System.Web.Http.HttpGet]
+        public IEnumerable<Dress> GetObjByName(string name)
         {
-           var result= _dressManager.ByName(Name);
+            var result = _dressManager.ByName(name);
             return result;
         }
-    }
- }
-    
 
+        //[HttpDelete]
+        //[Route("api/Dress/{id}")]
+        [System.Web.Http.HttpDelete]
+        public IHttpActionResult DeleteObjById(int id)
+        {
+            _dressManager.DeleteById(id);
+            return Ok();
+        }
+    }
+}

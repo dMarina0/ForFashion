@@ -16,7 +16,8 @@ namespace BusinessLayer
     {
         IRepository<Dress> _repository;
 
-        public DressManager() {
+        public DressManager()
+        {
             _repository = new Repository<Dress>();
         }
 
@@ -25,17 +26,24 @@ namespace BusinessLayer
             var result = _repository.GetAll().ToDressDtos();
             return result;
         }
-        public void Insert(Dress obj)
-        {
-            _repository.Insert(obj);
 
-        }
-        public Dress ByName(long Name)
+        public void Insert(DressDto dressDto)
         {
-           
-            var result = _repository.GetByName(Name);
+            var dressEntity = Mappers.ToDressEntity(dressDto);
+            _repository.Insert(dressEntity);
+            _repository.Save();
+        }
+
+        public IEnumerable<Dress> ByName(string name)
+        {
+            var result = _repository.GetAll().Where(it => it.Name.Contains(name));
             return result;
         }
-        
+
+        public void DeleteById(int id)
+        {
+            _repository.Delete(id);
+        }
+
     }
 }
