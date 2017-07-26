@@ -20,7 +20,7 @@ var myApp = angular.module('myApp', []);
             $scope.isProcessing = true;
             signupService.SaveRegistration($scope.registration).then(function (response) {
                 alert("Registered");
-                //$window.location.href = 'Login.html';
+                $window.location.href = 'Login.html';
             }, function (something) {
                 var a = "";
                 for (var key in something.data.ModelState) {
