@@ -301,9 +301,34 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Theme\404.html" />
+    <Content Include="Content\Theme\basket.html" />
+    <Content Include="Content\Theme\blog.html" />
+    <Content Include="Content\Theme\category-full.html" />
+    <Content Include="Content\Theme\category-right.html" />
+    <Content Include="Content\Theme\category.html" />
+    <Content Include="Content\Theme\checkout1.html" />
+    <Content Include="Content\Theme\checkout2.html" />
+    <Content Include="Content\Theme\checkout3.html" />
+    <Content Include="Content\Theme\checkout4.html" />
+    <Content Include="Content\Theme\contact.html" />
+    <Content Include="Content\Theme\customer-account.html" />
+    <Content Include="Content\Theme\customer-order.html" />
+    <Content Include="Content\Theme\customer-orders.html" />
+    <Content Include="Content\Theme\customer-wishlist.html" />
+    <Content Include="Content\Theme\detail.html" />
+    <Content Include="Content\Theme\faq.html" />
+    <Content Include="Content\Theme\favicon.png" />
+    <Content Include="Content\Theme\index.html" />
+    <Content Include="Content\Theme\post.html" />
+    <Content Include="Content\Theme\readme.txt" />
+    <Content Include="Content\Theme\register.html" />
+    <Content Include="Content\Theme\text-right.html" />
+    <Content Include="Content\Theme\text.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -1142,6 +1167,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Theme\css\" />
+    <Folder Include="Content\Theme\img\" />
+    <Folder Include="Content\Theme\js\" />
+    <Folder Include="Scripts\app\" />
     <Folder Include="Scripts\register\" />
   </ItemGroup>
   <ItemGroup>
@@ -1171,9 +1200,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\app\app.config.ts" />
-    <TypeScriptCompile Include="Scripts\app\app.modules.ts" />
-    <TypeScriptCompile Include="Scripts\app\app.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
