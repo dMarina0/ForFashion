@@ -1,14 +1,14 @@
 'use strict';
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-    'ngRoute',
-]).
-    config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+angular.
+    module('ForFashionApp').
+    config(['$locationProvider', '$routeProvider',
+    function config($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
         $routeProvider.
-            when('/register', {
-            template: '<register></register>'
+            when('/home', {
+            template: '<home></home>'
         }).
-            otherwise('/phones');
-    }]);
+            otherwise('/home');
+    }
+]);
 //# sourceMappingURL=app.config.js.map

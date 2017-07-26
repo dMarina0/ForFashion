@@ -1,2 +1,3 @@
-angular.module('myApp');
+'use strict';
+angular.module('ForFashionApp', []);
 //# sourceMappingURL=app.js.map
