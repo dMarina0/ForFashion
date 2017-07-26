@@ -293,7 +293,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AngularJS\JS\angular.js" />
-    <Content Include="AngularJS\JS\authInterceptorService.js" />
+    <Content Include="AngularJS\JS\AuthService.js" />
     <Content Include="AngularJS\JS\LoginPage.js" />
     <Content Include="AngularJS\JS\signup.js" />
     <Content Include="AngularJS\Login.html" />
