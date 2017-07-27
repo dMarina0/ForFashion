@@ -1270,9 +1270,11 @@
     <TypeScriptCompile Include="Scripts\app\app.config.ts" />
     <TypeScriptCompile Include="Scripts\app\app.modules.ts" />
     <TypeScriptCompile Include="Scripts\app\app.ts" />
+    <TypeScriptCompile Include="Scripts\app\core\base.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\home\home.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\home\home.coponent.ts" />
     <TypeScriptCompile Include="Scripts\app\home\home.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\register\register.controller.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />

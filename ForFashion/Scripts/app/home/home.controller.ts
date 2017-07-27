@@ -2,11 +2,17 @@
     public TestText
 }
 
-class HomeController {
+class HomeController extends BaseController {
     public Model: HomeModel;
     constructor() {
-        debugger;
+        super();
         this.Model = new HomeModel();
         this.Model.TestText = "test";
+
+        this.onLoad();
+    }
+
+    protected onLoad(): void {
+        this.loadScript("Content/Theme/js/front.js");
     }
 }
