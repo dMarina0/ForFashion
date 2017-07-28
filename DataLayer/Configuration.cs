@@ -77,7 +77,12 @@ namespace DataLayer
                new Dress() { Id = 19, Name = "Multicoloured stripped dress" },
                new Dress() { Id = 20, Name = "Denim mini dress" }
                );
-            context.SaveChanges();  
+            context.FashionHouse.AddOrUpdate(
+                f => f.Id,
+                new FashionHouse() { Id = 1, Name = "Versace", PhoneNumber = "+40(0)31 6300031" },
+                new FashionHouse() { Id = 2, Name = "Chanel", PhoneNumber = "+40(0)31 6355531" });
+           
+            context.SaveChanges(); 
             base.Seed(context);
 
         }
