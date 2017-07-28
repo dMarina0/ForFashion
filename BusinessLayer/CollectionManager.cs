@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using BusinessObjects.Entities;
 using Abstracts;
 using DataLayer;
+using BusinessObjects.Dtos;
+using BusinessObjects;
 
 namespace BusinessLayer
 {
@@ -14,20 +16,20 @@ namespace BusinessLayer
     {
         private IRepository<Collection> _repository;
 
-        public CollectionManager (Repository<Collection> repository)
+        public CollectionManager ()
         {
-            _repository = repository;
+            _repository = new Repository<Collection>();
         }
 
-        public void AddCollection(int id)
+        /*public void AddCollection(int id)
         {
             throw new NotImplementedException();
-        }
+        }*/
 
-        public Collection GetCollection(int id)
+        public IEnumerable<CollectionDto> GetAll()
         {
-            var collection = _repository.GetById(id);
-                return collection;
+            var result = _repository.GetAll().ToCollectionDtos();
+            return result;
         }
     }
 }

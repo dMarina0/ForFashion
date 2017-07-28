@@ -1,4 +1,5 @@
-﻿using BusinessObjects.Entities;
+﻿using BusinessObjects.Dtos;
+using BusinessObjects.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,9 @@ namespace Abstracts.IManagers
 {
     public interface ICollectionManager
     {
-        Collection GetCollection(int id);
-        void AddCollection(int id);
+
+        IEnumerable<CollectionDto> GetAll();
+       // void AddCollection(int id);
        
     }
 }

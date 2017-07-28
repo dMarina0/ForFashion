@@ -64,5 +64,17 @@ namespace BusinessObjects
             FashionHouse.Take(3);
             return result;
         }
+        public static IEnumerable<CollectionDto> ToCollectionDtos(this IEnumerable<Collection> collection)
+        {
+            var result = collection.Select(it => new CollectionDto()
+            {
+                Id = it.Id,
+                Name = it.Name,
+                year = it.year,
+               //FashionHouse = it.FashionHouse
+            });
+            //collection.Take(3);
+            return result;
+        }
     }
 }

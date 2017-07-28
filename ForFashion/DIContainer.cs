@@ -23,7 +23,9 @@ namespace ForFashion
             _container.RegisterType<IUserDetailsManager, UserDetailsManager>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IDressManager, DressManager>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IFashionHouseManager, FashionHouseManager>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<ICollectionManager, CollectionManager>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IRepository<FashionHouseManager>, Repository<FashionHouseManager>>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<IRepository<CollectionManager>, Repository<CollectionManager>>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IRepository<Shirt>, Repository<Shirt>>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IRepository<ApplicationUser>, Repository<ApplicationUser>>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IRepository<UserDetails>, Repository<UserDetails>>(new ContainerControlledLifetimeManager());

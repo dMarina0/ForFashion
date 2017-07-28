@@ -481,6 +481,18 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:ForFashion.Controllers.CollectionController.Get">
+            <summary>
+            Returns the list of collections
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ForFashion.Controllers.FashionHouseController.Get">
+            <summary>
+            Returns the list of fashion houses
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:ForFashion.Controllers.ShirtController.Get">
             <summary>
             Returns the list of shirts

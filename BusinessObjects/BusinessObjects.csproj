@@ -85,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\CollectionDto.cs" />
     <Compile Include="Dtos\DressDto.cs" />
     <Compile Include="Dtos\FashionHouseDto.cs" />
     <Compile Include="Dtos\ShirtDto.cs" />

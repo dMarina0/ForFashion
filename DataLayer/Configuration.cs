@@ -77,7 +77,8 @@ namespace DataLayer
                new Dress() { Id = 19, Name = "Multicoloured stripped dress" },
                new Dress() { Id = 20, Name = "Denim mini dress" }
                );
-            var fh1 = new FashionHouse() { Id = 1, Name = "Versace", PhoneNumber = "+40(0)31 6300031" };
+            
+            var fh1 = new FashionHouse() { Id = 1, Name = "Versace", PhoneNumber = "+40(0)31 6300031"};
             var fh2 = new FashionHouse() { Id = 2, Name = "Chanel", PhoneNumber = "+40(0)31 6355531" };
             var fh3 = new FashionHouse() { Id = 3, Name = "Gucci", PhoneNumber = "+40(0)31 8975531" };
             context.FashionHouse.AddOrUpdate(
