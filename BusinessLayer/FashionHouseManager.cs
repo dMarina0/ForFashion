@@ -6,27 +6,26 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessObjects.Entities;
 using Abstracts;
+using BusinessObjects.Dtos;
+using BusinessObjects;
+using DataLayer;
 
 namespace BusinessLayer
 {
-    class FashionHouseManager : IFashionHouseManager
+    public class FashionHouseManager : IFashionHouseManager
     {
         private IRepository<FashionHouse> _repository;
-        public FashionHouseManager(IRepository<FashionHouse> repository)
+        public FashionHouseManager()
         {
-            _repository = repository;
-        }
-        public void AddFashionHouse(string id)
-        {
-            var fashionHouse = _repository.GetById(id);
-            fashionHouse = new FashionHouse();
-            _repository.Save();
+            _repository = new Repository<FashionHouse>();
         }
 
-        public FashionHouse GetFashionHouse(string id)
+
+        public IEnumerable<FashionHouseDto> GetAll()
         {
-            var fashionHouse = _repository.GetById(id);
-            return fashionHouse;
+            var result = _repository.GetAll().ToFashionHouseDtos();
+            return result;
         }
+
     }
 }

@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dtos\DressDto.cs" />
+    <Compile Include="Dtos\FashionHouseDto.cs" />
     <Compile Include="Dtos\ShirtDto.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Entities\Collection.cs" />

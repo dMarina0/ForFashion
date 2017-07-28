@@ -25,7 +25,7 @@ namespace BusinessObjects
                 Id = it.Id,
                 Name = it.Name
             });
-
+            shirts.Take(3);
             return result;
         }
         public static DressDto ToDressDto(Dress dress)
@@ -48,15 +48,21 @@ namespace BusinessObjects
             {
                 Id = it.Id,
                 Name = it.Name
+                
             });
             return result;
         }
-        /*public static void ToNewObj(Dress dress)
+        public static IEnumerable<FashionHouseDto> ToFashionHouseDtos(this IEnumerable<FashionHouse> FashionHouse)
         {
-            var result = new DressDto();
-            result.Id = dress.Id;
-            result.Name = dress.Name;
+            var result = FashionHouse.Select(it => new FashionHouseDto()
+            {
+                Id = it.Id,
+                Name = it.Name,
+                PhoneNumber = it.PhoneNumber
 
-        }*/
+            });
+            FashionHouse.Take(3);
+            return result;
+        }
     }
 }

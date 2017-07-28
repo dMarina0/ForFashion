@@ -1,4 +1,5 @@
-﻿using BusinessObjects.Entities;
+﻿using BusinessObjects.Dtos;
+using BusinessObjects.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,6 @@ namespace Abstracts.IManagers
 {
     public interface IFashionHouseManager
     {
-        FashionHouse GetFashionHouse(string id);
-        void AddFashionHouse(string id);
+        IEnumerable<FashionHouseDto> GetAll();
     }
 }

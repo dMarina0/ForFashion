@@ -29,6 +29,7 @@ namespace DataLayer
         {
             modelBuilder.Entity <Shirt> ().Property(s=> s.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<Dress>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            modelBuilder.Entity<FashionHouse>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             base.OnModelCreating(modelBuilder);
         }
 
