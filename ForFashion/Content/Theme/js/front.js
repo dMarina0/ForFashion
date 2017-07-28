@@ -13,11 +13,12 @@ $(function() {
 
 
 $(window).load(function() {
-    $(this).alignElementsSameHeight();
+    $(this).alignElementsSameHeight();    
 });
 
 $(window).resize(function() {
-    setTimeout(function() {
+    setTimeout(function () {
+       
 	$(this).alignElementsSameHeight();
     }, 150);
 });
@@ -167,12 +168,15 @@ function carousels() {
 
 /* animations */
 
-function animations() {
+function animations() { 
+    
     delayTime = 0;
     $('[data-animate]').css({opacity: '0'});
-    $('[data-animate]').waypoint(function(direction) {
+    $('[data-animate]').waypoint(function (direction) {
+        
 	delayTime += 150;
-	$(this).delay(delayTime).queue(function(next) {
+	$(this).delay(delayTime).queue(function (next) {
+	    $(window).trigger('resize');
 	    $(this).toggleClass('animated');
 	    $(this).toggleClass($(this).data('animate'));
 	    delayTime = 0;
@@ -199,7 +203,8 @@ function animations() {
 }
 
 $.fn.alignElementsSameHeight = function() {
-    $('.same-height-row').each(function() {
+    $('.same-height-row').each(function () {
+       
 
 	var maxHeight = 0;
 
