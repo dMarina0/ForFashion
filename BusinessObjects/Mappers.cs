@@ -35,6 +35,13 @@ namespace BusinessObjects
             result.Name = dress.Name;
             return result;
         }
+        public static Dress ToDressEntity(DressDto dressDto)
+        {
+            var result = new Dress();
+            result.Id = dressDto.Id;
+            result.Name = dressDto.Name;
+            return result;
+        }
         public static IEnumerable<DressDto> ToDressDtos(this IEnumerable<Dress> dress)
         {
             var result = dress.Select(it => new DressDto()
@@ -44,5 +51,12 @@ namespace BusinessObjects
             });
             return result;
         }
+        /*public static void ToNewObj(Dress dress)
+        {
+            var result = new DressDto();
+            result.Id = dress.Id;
+            result.Name = dress.Name;
+
+        }*/
     }
 }
