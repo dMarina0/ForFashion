@@ -2,6 +2,6 @@
 angular.module('home')
     .component('home', {
     templateUrl: '/Scripts/app/home/home.template.html',
-    controller: [HomeController]
+    controller: ['$http', HomeController]
 });
 //# sourceMappingURL=home.coponent.js.map
