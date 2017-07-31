@@ -13,6 +13,6 @@ namespace BusinessObjects.Dtos
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
 
-        public virtual ICollection<Collection> Collections { get; set; }
+        public IEnumerable<Collection> Collections { get; set; }
     }
 }
