@@ -33,11 +33,9 @@ namespace ForFashion
             _container.RegisterType<ICollectionManager, CollectionManager>(new ContainerControlledLifetimeManager());
         }
 
-
         //Singleton
         public static DIContainer Instance
         {
-
             get
             {
                 if(instance == null)
@@ -47,6 +45,7 @@ namespace ForFashion
                 return instance;
             }
         }
+
         public T Resolve<T>() where T : class
         {
             return _container.Resolve<T>();
