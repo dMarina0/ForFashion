@@ -61,7 +61,7 @@ namespace BusinessObjects
                 PhoneNumber = it.PhoneNumber
 
             });
-            FashionHouse.Take(3);
+            
             return result;
         }
         public static IEnumerable<CollectionDto> ToCollectionDtos(this IEnumerable<Collection> collection)
@@ -73,7 +73,7 @@ namespace BusinessObjects
                 year = it.year,
                //FashionHouse = it.FashionHouse
             });
-            //collection.Take(3);
+            collection.Take(3);
             return result;
         }
     }

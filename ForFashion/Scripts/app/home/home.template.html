@@ -1,4 +1,4 @@
-﻿<!--<input type="text" ng-model="$ctrl.Model.TestText" />
+﻿<!--<!--<input type="text" ng-model="$ctrl.Model.TestText" />-->
 <h1>{{$ctrl.Model.TestText}}</h1>-->
 
 <!-- *** TOPBAR ***
@@ -67,7 +67,7 @@ _________________________________________________________ -->
         <div class="navbar-header">
 
             <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                <img src="Content/Theme/img/logo.png" alt="Obaju logo" class="hidden-xs">
+                <img src="Content/Theme/img/ForFashionLogo.png" alt="Obaju logo" class="hidden-xs">
                 <img src="Content/Theme/img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
             </a>
             <div class="navbar-buttons">
@@ -93,7 +93,7 @@ _________________________________________________________ -->
                     <a href="index.html">Home</a>
                 </li>
                 <li class="dropdown yamm-fw">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Fashion House <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <div class="yamm-content">
@@ -189,7 +189,7 @@ _________________________________________________________ -->
                 </li>
 
                 <li class="dropdown yamm-fw">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Ladies <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Live <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <div class="yamm-content">
@@ -281,9 +281,103 @@ _________________________________________________________ -->
                         </li>
                     </ul>
                 </li>
+                </li>
+                <li class="dropdown yamm-fw">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">News<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h5>Clothing</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="category.html">T-shirts</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Shirts</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Pants</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Accessories</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Shoes</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="category.html">Trainers</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Sandals</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Hiking shoes</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Casual</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Accessories</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="category.html">Trainers</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Sandals</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Hiking shoes</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Casual</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Hiking shoes</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Casual</a>
+                                            </li>
+                                        </ul>
+                                        <h5>Looks and trends</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="category.html">Trainers</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Sandals</a>
+                                            </li>
+                                            <li>
+                                                <a href="category.html">Hiking shoes</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="banner">
+                                            <a href="#">
+                                                <img src="img/banner.jpg" class="img img-responsive" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="banner">
+                                            <a href="#">
+                                                <img src="img/banner2.jpg" class="img img-responsive" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.yamm-content -->
+                        </li>
+                    </ul>
+                </li>
 
                 <li class="dropdown yamm-fw">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Vlog <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <div class="yamm-content">
@@ -506,42 +600,79 @@ _________________________________________________________ -->
             <div class="box">
                 <div class="container">
                     <div class="col-md-12">
-                        <h2>Hot this week</h2>
+                        <h2>Hot Collection</h2>
                     </div>
                 </div>
             </div>
 
             <div class="container">
                 <div class="product-slider">
-                    <div class="item">
+                    <div ng-repeat="collection in $ctrl.Model.CollectionDtos" class="item">
                         <div class="product">
                             <div class="flip-container">
                                 <div class="flipper">
                                     <div class="front">
-                                        <a href="detail.html">
-                                            <img src="/Content/Theme/img/product1.jpg" alt="" class="img-responsive">
+                                        <a ng-if="$index == 0" href="detail.html">
+                                            <img src="/Content/Theme/img/prood1.jpg" alt="" class="img-responsive">
+                                        </a>
+                                        <a ng-if="$index == 1" href="detail.html">
+                                            <img src="/Content/Theme/img/prood2.jpg" alt="" class="img-responsive">
+                                        </a>
+                                        <a ng-if="$index == 2" href="detail.html">
+                                            <img src="/Content/Theme/img/prood3.jpg" alt="" class="img-responsive">
+                                        </a>
+                                        <a ng-if="$index == 3" href="detail.html">
+                                            <img src="/Content/Theme/img/prood4.jpg" alt="" class="img-responsive">
+                                            <a ng-if="$index == 4" href="detail.html">
+                                                <img src="/Content/Theme/img/prood5.jpg" alt="" class="img-responsive">
+                                            </a>
                                         </a>
                                     </div>
                                     <div class="back">
-                                        <a href="detail.html">
-                                            <img src="/Content/Theme/img/product1_2.jpg" alt="" class="img-responsive">
+                                        <a ng-if="$index == 0" href="detail.html">
+                                            <img src="/Content/Theme/img/prood1.jpg" alt="" class="img-responsive">
+                                        </a>
+                                        <a ng-if="$index == 1" href="detail.html">
+                                            <img src="/Content/Theme/img/prood2.jpg" alt="" class="img-responsive">
+                                        </a>
+                                        <a ng-if="$index == 2" href="detail.html">
+                                            <img src="/Content/Theme/img/prood3.jpg" alt="" class="img-responsive">
+                                        </a>
+                                        <a ng-if="$index == 3" href="detail.html">
+                                            <img src="/Content/Theme/img/prood4.jpg" alt="" class="img-responsive">
+                                        </a>
+                                        <a ng-if="$index == 4" href="detail.html">
+                                            <img src="/Content/Theme/img/prood5.jpg" alt="" class="img-responsive">
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <a href="detail.html" class="invisible">
-                                <img src="/Content/Theme/img/product1.jpg" alt="" class="img-responsive">
+                            <a ng-if="$index == 0" href="detail.html" class="invisible">
+                                <img src="/Content/Theme/img/prood1.jpg" alt="" class="img-responsive">
+                            </a>
+                            <a ng-if="$index == 1" href="detail.html" class="invisible">
+                                <img src="/Content/Theme/img/prood2.jpg" alt="" class="img-responsive">
+                            </a>
+                            <a ng-if="$index == 2" href="detail.html" class="invisible">
+                                <img src="/Content/Theme/img/prood3.jpg" alt="" class="img-responsive">
+                            </a>
+                            <a ng-if="$index == 3" href="detail.html" class="invisible">
+                                <img src="/Content/Theme/img/prood4.jpg" alt="" class="img-responsive">
+                            </a>
+                            <a ng-if="$index == 4" href="detail.html" class="invisible">
+                                <img src="/Content/Theme/img/prood5.jpg" alt="" class="img-responsive">
                             </a>
                             <div class="text">
-                                <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
-                                <p class="price">$143.00</p>
+                                <h3><a href="detail.html">{{collection.Name}}</a></h3>
+
+                              <!--<p class="price">$143.00</p>-->
                             </div>
                             <!-- /.text -->
                         </div>
                         <!-- /.product -->
                     </div>
 
-                    <div class="item">
+                 <!--<div class="item">
                         <div class="product">
                             <div class="flip-container">
                                 <div class="flipper">
@@ -563,22 +694,22 @@ _________________________________________________________ -->
                             <div class="text">
                                 <h3><a href="detail.html">White Blouse Armani</a></h3>
                                 <p class="price"><del>$280</del> $143.00</p>
-                            </div>
+                            </div> 
                             <!-- /.text -->
-
-                            <div class="ribbon sale">
+                   
+                            <!--<div class="ribbon sale">
                                 <div class="theribbon">SALE</div>
                                 <div class="ribbon-background"></div>
-                            </div>
+                            </div>-->
                             <!-- /.ribbon -->
 
-                            <div class="ribbon new">
+                            <!--<div class="ribbon new">
                                 <div class="theribbon">NEW</div>
                                 <div class="ribbon-background"></div>
-                            </div>
+                            </div>-->
                             <!-- /.ribbon -->
 
-                            <div class="ribbon gift">
+                            <!--<div class="ribbon gift">
                                 <div class="theribbon">GIFT</div>
                                 <div class="ribbon-background"></div>
                             </div>
@@ -587,7 +718,7 @@ _________________________________________________________ -->
                         <!-- /.product -->
                     </div>
 
-                    <div class="item">
+                    <!--<div class="item">
                         <div class="product">
                             <div class="flip-container">
                                 <div class="flipper">
@@ -615,7 +746,7 @@ _________________________________________________________ -->
                         <!-- /.product -->
                     </div>
 
-                    <div class="item">
+                    <!--<div class="item">
                         <div class="product">
                             <div class="flip-container">
                                 <div class="flipper">
@@ -643,7 +774,7 @@ _________________________________________________________ -->
                         <!-- /.product -->
                     </div>
 
-                    <div class="item">
+                    <!--<div class="item">
                         <div class="product">
                             <div class="flip-container">
                                 <div class="flipper">
@@ -668,16 +799,16 @@ _________________________________________________________ -->
                             </div>
                             <!-- /.text -->
 
-                            <div class="ribbon new">
+                            <!--<div class="ribbon new">
                                 <div class="theribbon">NEW</div>
                                 <div class="ribbon-background"></div>
-                            </div>
+                            </div>-->
                             <!-- /.ribbon -->
                         </div>
                         <!-- /.product -->
                     </div>
 
-                    <div class="item">
+                    <!--<div class="item">
                         <div class="product">
                             <div class="flip-container">
                                 <div class="flipper">
@@ -702,10 +833,10 @@ _________________________________________________________ -->
                             </div>
                             <!-- /.text -->
 
-                            <div class="ribbon gift">
+                            <!--<div class="ribbon gift">
                                 <div class="theribbon">GIFT</div>
                                 <div class="ribbon-background"></div>
-                            </div>
+                            </div>-->
                             <!-- /.ribbon -->
 
                         </div>
@@ -713,7 +844,7 @@ _________________________________________________________ -->
                     </div>
                     <!-- /.col-md-4 -->
 
-                    <div class="item">
+                    <!--<div class="item">
                         <div class="product">
                             <div class="flip-container">
                                 <div class="flipper">
@@ -738,28 +869,28 @@ _________________________________________________________ -->
                             </div>
                             <!-- /.text -->
 
-                            <div class="ribbon sale">
+                            <!--<div class="ribbon sale">
                                 <div class="theribbon">SALE</div>
                                 <div class="ribbon-background"></div>
-                            </div>
+                            </div>-->
                             <!-- /.ribbon -->
 
-                            <div class="ribbon new">
+                            <!--<div class="ribbon new">
                                 <div class="theribbon">NEW</div>
                                 <div class="ribbon-background"></div>
-                            </div>
+                            </div>-->
                             <!-- /.ribbon -->
 
-                            <div class="ribbon gift">
+                            <!--<div class="ribbon gift">
                                 <div class="theribbon">GIFT</div>
                                 <div class="ribbon-background"></div>
-                            </div>
+                            </div>-->
                             <!-- /.ribbon -->
                         </div>
                         <!-- /.product -->
                     </div>
 
-                    <div class="item">
+                    <!--<div class="item">
                         <div class="product">
                             <div class="flip-container">
                                 <div class="flipper">

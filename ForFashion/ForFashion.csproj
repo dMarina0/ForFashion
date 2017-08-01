@@ -351,6 +351,7 @@
     <Content Include="Content\Theme\img\detailsquare.jpg" />
     <Content Include="Content\Theme\img\detailsquare2.jpg" />
     <Content Include="Content\Theme\img\detailsquare3.jpg" />
+    <Content Include="Content\Theme\img\ForFashionLogo.png" />
     <Content Include="Content\Theme\img\getinspired1.jpg" />
     <Content Include="Content\Theme\img\getinspired2.jpg" />
     <Content Include="Content\Theme\img\getinspired3.jpg" />
@@ -367,6 +368,11 @@
     <Content Include="Content\Theme\img\product2_2.jpg" />
     <Content Include="Content\Theme\img\product3.jpg" />
     <Content Include="Content\Theme\img\product3_2.jpg" />
+    <Content Include="Content\Theme\img\prood1.jpg" />
+    <Content Include="Content\Theme\img\prood2.jpg" />
+    <Content Include="Content\Theme\img\prood3.jpg" />
+    <Content Include="Content\Theme\img\prood4.jpg" />
+    <Content Include="Content\Theme\img\prood5.jpg" />
     <Content Include="Content\Theme\img\slider1.jpg" />
     <Content Include="Content\Theme\img\slider2.jpg" />
     <Content Include="Content\Theme\img\slider3.jpg" />
