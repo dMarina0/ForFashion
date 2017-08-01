@@ -278,6 +278,7 @@
     <Compile Include="Controllers\DressController.cs" />
     <Compile Include="Controllers\FashionHouseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LiveStreamController.cs" />
     <Compile Include="Controllers\ShirtController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DIContainer.cs" />
