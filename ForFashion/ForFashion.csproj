@@ -423,6 +423,13 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\app\app.config.js" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\app.modules.js" />
+    <Content Include="Scripts\app\core\base.controller.js" />
+    <Content Include="Scripts\app\home\home.controller.js" />
+    <Content Include="Scripts\app\home\home.coponent.js" />
+    <Content Include="Scripts\app\home\home.module.js" />
     <Content Include="Scripts\app\home\home.template.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -470,6 +477,13 @@
     <Content Include="Content\Theme\css\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\Theme\css\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Theme\css\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\app\home\home.controller.js.map" />
+    <Content Include="Scripts\app\home\home.coponent.js.map" />
+    <Content Include="Scripts\app\home\home.module.js.map" />
+    <Content Include="Scripts\app\app.config.js.map" />
+    <Content Include="Scripts\app\app.js.map" />
+    <Content Include="Scripts\app\app.modules.js.map" />
+    <Content Include="Scripts\app\core\base.controller.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -1240,6 +1254,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\app\core\dtos\" />
     <Folder Include="Scripts\register\" />
   </ItemGroup>
   <ItemGroup>
