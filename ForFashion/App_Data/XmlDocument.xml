@@ -493,6 +493,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:ForFashion.Controllers.LiveStreamController.Get">
+            <summary>
+            Returns the list of videos
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:ForFashion.Controllers.ShirtController.Get">
             <summary>
             Returns the list of shirts

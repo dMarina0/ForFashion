@@ -30,6 +30,7 @@ namespace DataLayer
             modelBuilder.Entity <Shirt> ().Property(s=> s.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<Dress>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<Collection>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            modelBuilder.Entity<LiveStream>().Property(l => l.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             base.OnModelCreating(modelBuilder);
         }
 
@@ -38,6 +39,7 @@ namespace DataLayer
         public DbSet<UserDetails> UserDetails { get; set; }
 
         public DbSet<Dress> Dresses { get; set; }
+        public DbSet<LiveStream> LiveStreams { get; set; }
         public DbSet<Collection> Collection { get; set; }
 
         //public DbSet<User> Users { get; set; }

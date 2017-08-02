@@ -278,6 +278,7 @@
     <Compile Include="Controllers\DressController.cs" />
     <Compile Include="Controllers\FashionHouseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LiveStreamController.cs" />
     <Compile Include="Controllers\ShirtController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DIContainer.cs" />
@@ -362,6 +363,10 @@
     <Content Include="Content\Theme\img\main-slider2.jpg" />
     <Content Include="Content\Theme\img\main-slider3.jpg" />
     <Content Include="Content\Theme\img\main-slider4.jpg" />
+    <Content Include="Content\Theme\img\main1.jpg" />
+    <Content Include="Content\Theme\img\main2.jpg" />
+    <Content Include="Content\Theme\img\main3.jpg" />
+    <Content Include="Content\Theme\img\main4.jpg" />
     <Content Include="Content\Theme\img\product1.jpg" />
     <Content Include="Content\Theme\img\product1_2.jpg" />
     <Content Include="Content\Theme\img\product2.jpg" />
@@ -429,6 +434,13 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\app\app.config.js" />
+    <Content Include="Scripts\app\app.js" />
+    <Content Include="Scripts\app\app.modules.js" />
+    <Content Include="Scripts\app\core\base.controller.js" />
+    <Content Include="Scripts\app\home\home.controller.js" />
+    <Content Include="Scripts\app\home\home.coponent.js" />
+    <Content Include="Scripts\app\home\home.module.js" />
     <Content Include="Scripts\app\home\home.template.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -476,7 +488,15 @@
     <Content Include="Content\Theme\css\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\Theme\css\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Theme\css\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\app\home\home.controller.js.map" />
+    <Content Include="Scripts\app\home\home.coponent.js.map" />
+    <Content Include="Scripts\app\home\home.module.js.map" />
+    <Content Include="Scripts\app\app.config.js.map" />
+    <Content Include="Scripts\app\app.js.map" />
+    <Content Include="Scripts\app\app.modules.js.map" />
+    <Content Include="Scripts\app\core\base.controller.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\app\FashionHouse\fashionhouse.template.html" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
     <Content Include="Scripts\i18n\angular-locale_af.js" />
@@ -1246,6 +1266,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\app\core\dtos\" />
     <Folder Include="Scripts\register\" />
   </ItemGroup>
   <ItemGroup>
@@ -1283,6 +1304,9 @@
     <TypeScriptCompile Include="Scripts\app\home\home.coponent.ts" />
     <TypeScriptCompile Include="Scripts\app\home\home.module.ts" />
     <TypeScriptCompile Include="Scripts\app\register\register.controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.module.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />

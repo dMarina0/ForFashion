@@ -8,6 +8,9 @@ angular.
             when('/home', {
             template: '<home></home>'
         }).
+            when('/fashionhouse', {
+            template: '<fashionhouse></fashionhouse>'
+        }).
             otherwise('/home');
     }
 ]);
