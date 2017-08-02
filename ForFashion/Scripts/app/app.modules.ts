@@ -3,5 +3,6 @@
 angular.module('ForFashionApp', [
     'ngRoute',
     'home',
-    'fashionhouse'
+    'fashionhouse',
+    'live'
 ]);

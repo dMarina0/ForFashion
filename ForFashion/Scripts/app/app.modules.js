@@ -2,6 +2,7 @@
 angular.module('ForFashionApp', [
     'ngRoute',
     'home',
-    'fashionhouse'
+    'fashionhouse',
+    'live'
 ]);
 //# sourceMappingURL=app.modules.js.map

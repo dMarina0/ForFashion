@@ -14,6 +14,9 @@ angular.
                 when('/fashionhouse', {
                     template: '<fashionhouse></fashionhouse>'
                 }).
+                when('/live', {
+                    template: '<live></live>'
+                }).
                 otherwise('/home');
         }
     ]);

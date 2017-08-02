@@ -442,6 +442,7 @@
     <Content Include="Scripts\app\home\home.coponent.js" />
     <Content Include="Scripts\app\home\home.module.js" />
     <Content Include="Scripts\app\home\home.template.html" />
+    <Content Include="Scripts\app\Live\live.template.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -1303,6 +1304,9 @@
     <TypeScriptCompile Include="Scripts\app\home\home.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\home\home.coponent.ts" />
     <TypeScriptCompile Include="Scripts\app\home\home.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\Live\live.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\Live\live.controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\Live\live.module.ts" />
     <TypeScriptCompile Include="Scripts\app\register\register.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.component.ts" />
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.controller.ts" />
