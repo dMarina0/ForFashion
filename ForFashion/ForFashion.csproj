@@ -443,6 +443,8 @@
     <Content Include="Scripts\app\home\home.module.js" />
     <Content Include="Scripts\app\home\home.template.html" />
     <Content Include="Scripts\app\Live\live.template.html" />
+    <Content Include="Scripts\app\News\news.template.html" />
+    <Content Include="Scripts\app\Vlog\vlog.template.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -1307,10 +1309,16 @@
     <TypeScriptCompile Include="Scripts\app\Live\live.component.ts" />
     <TypeScriptCompile Include="Scripts\app\Live\live.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\Live\live.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\News\news.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\News\news.controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\News\news.module.ts" />
     <TypeScriptCompile Include="Scripts\app\register\register.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.component.ts" />
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\Vlog\vlog.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\Vlog\vlog.controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\Vlog\vlog.module.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
