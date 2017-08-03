@@ -2,5 +2,7 @@
 
 angular.module('ForFashionApp', [
     'ngRoute',
-    'home'
+    'home',
+    'register',
+    'login'
 ]);

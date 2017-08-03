@@ -1,6 +1,8 @@
 'use strict';
 angular.module('ForFashionApp', [
     'ngRoute',
-    'home'
+    'home',
+    'register',
+    'login'
 ]);
 //# sourceMappingURL=app.modules.js.map

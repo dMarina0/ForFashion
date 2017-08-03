@@ -90,6 +90,7 @@ namespace DataLayer
                 c => c.Id,
                 new Collection() { Id = 1, Name = "Spring-Summmer",year = 2016, FashionHouse = fh1 },
                 new Collection() { Id = 2, Name = "Autumn-Winter",year = 2017, FashionHouse = fh2 },
+                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
                 new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 });
            
             context.SaveChanges(); 
