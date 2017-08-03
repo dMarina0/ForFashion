@@ -8,9 +8,15 @@ var FashionHouseDto = (function () {
     }
     return FashionHouseDto;
 }());
+var CollectionDto = (function () {
+    function CollectionDto() {
+    }
+    return CollectionDto;
+}());
 var HomeModel = (function () {
     function HomeModel() {
         this.FashionHouseDtos = new Array();
+        this.CollectionDtos = new Array();
     }
     return HomeModel;
 }());
@@ -22,18 +28,29 @@ var HomeController = (function (_super) {
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        this.get();
+        this.getFashionHouse();
+        this.getCollection();
     }
     HomeController.prototype.onLoad = function () {
         this.loadScript("Content/Theme/js/front.js");
     };
-    HomeController.prototype.get = function () {
+    HomeController.prototype.getFashionHouse = function () {
         var _this = this;
         this.httpService({
             method: 'GET',
             url: 'api/FashionHouse'
         }).then(function (response) {
             _this.Model.FashionHouseDtos = response.data;
+        }, function (response) {
+        });
+    };
+    HomeController.prototype.getCollection = function () {
+        var _this = this;
+        this.httpService({
+            method: 'GET',
+            url: 'api/Collection'
+        }).then(function (response) {
+            _this.Model.CollectionDtos = response.data;
         }, function (response) {
         });
     };

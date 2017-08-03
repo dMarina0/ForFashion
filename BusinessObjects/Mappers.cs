@@ -61,7 +61,7 @@ namespace BusinessObjects
                 PhoneNumber = it.PhoneNumber
 
             });
-            FashionHouse.Take(3);
+            
             return result;
         }
         public static IEnumerable<CollectionDto> ToCollectionDtos(this IEnumerable<Collection> collection)
@@ -74,6 +74,17 @@ namespace BusinessObjects
                //FashionHouse = it.FashionHouse
             });
             //collection.Take(3);
+            return result;
+        }
+        public static IEnumerable<LiveStreamDto> ToLiveStreamDtos(this IEnumerable<LiveStream> LiveStream)
+        {
+            var result = LiveStream.Select(it => new LiveStreamDto()
+            {
+                Id = it.Id,
+                Image = it.Image,
+                VideoUrl = it.VideoUrl,
+                Description = it.Description,
+            });
             return result;
         }
     }

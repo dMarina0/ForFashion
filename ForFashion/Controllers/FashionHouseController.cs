@@ -25,7 +25,7 @@ namespace ForFashion.Controllers
         /// <returns></returns>
         public IEnumerable<FashionHouseDto> Get()
         {
-            var result = _fashionhouseManager.GetAll();
+            var result = _fashionhouseManager.GetAll().Take(3);
             return result;
         }
     }

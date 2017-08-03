@@ -15,5 +15,6 @@ namespace BusinessObjects.Dtos
         public int year { get; set; }
         [Required]
         public virtual FashionHouse FashionHouse { get; set; }
+        public virtual IEnumerable<LiveStream> LiveStreams { get; set; }
     }
 }

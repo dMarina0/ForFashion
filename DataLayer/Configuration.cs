@@ -81,18 +81,28 @@ namespace DataLayer
             var fh1 = new FashionHouse() { Id = 1, Name = "Versace", PhoneNumber = "+40(0)31 6300031"};
             var fh2 = new FashionHouse() { Id = 2, Name = "Chanel", PhoneNumber = "+40(0)31 6355531" };
             var fh3 = new FashionHouse() { Id = 3, Name = "Gucci", PhoneNumber = "+40(0)31 8975531" };
+            var fh4 = new FashionHouse() { Id = 4, Name = "Calvin Klein", PhoneNumber = "+40(0)31 35232531" };
+            var fh5 = new FashionHouse() { Id = 5, Name = "QASIMI", PhoneNumber = "+40(0)31 35212331" };
             context.FashionHouse.AddOrUpdate(
                 f => f.Id,
                 fh1,
                 fh2,
-                fh3);
+                fh3,
+                fh4,
+                fh5);
             context.Collection.AddOrUpdate(
                 c => c.Id,
                 new Collection() { Id = 1, Name = "Spring-Summmer",year = 2016, FashionHouse = fh1 },
                 new Collection() { Id = 2, Name = "Autumn-Winter",year = 2017, FashionHouse = fh2 },
                 new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
+<<<<<<< HEAD
                 new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 });
            
+=======
+                new Collection() { Id = 4, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 },
+                new Collection() { Id = 5, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 });
+
+>>>>>>> b512831f7b60db4c20df4e7845322f1b1187c457
             context.SaveChanges(); 
             base.Seed(context);
 
