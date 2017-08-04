@@ -4,6 +4,8 @@ angular.module('ForFashionApp', [
     'home',
     'fashionhouse',
     'live',
-    'news'
+    'news',
+    'register',
+    'login'
 ]);
 //# sourceMappingURL=app.modules.js.map

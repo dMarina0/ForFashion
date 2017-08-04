@@ -20,6 +20,9 @@ angular.
                 when('/news', {
                     template: '<news></news>'
                 }).
+                when('/register', {
+                    template: '<register></register>'
+                }).
                 otherwise('/home');
         }
     ]);
