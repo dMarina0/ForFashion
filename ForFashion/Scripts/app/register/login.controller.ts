@@ -19,7 +19,7 @@ class LoginController extends BaseController {
     }
 
     public LoginClick() {
-        debugger
+       
         var req = {
             method: 'POST',
             url: '/token',

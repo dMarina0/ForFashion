@@ -11,6 +11,9 @@ angular.
                 when('/home', {
                     template: '<home></home>'
                 }).
+                when('/register', {
+                    template: '<register></register>'
+                }).
                 when('/fashionhouse', {
                     template: '<fashionhouse></fashionhouse>'
                 }).

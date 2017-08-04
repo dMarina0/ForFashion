@@ -4,5 +4,7 @@ angular.module('ForFashionApp', [
     'ngRoute',
     'home',
     'fashionhouse',
-    'live'
+    'live',
+    'regi
+    ster'
 ]);
