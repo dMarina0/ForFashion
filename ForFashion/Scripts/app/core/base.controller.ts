@@ -1,27 +1,20 @@
 ﻿
 abstract class BaseController  {
-   
+    public user: UserModel;
+    public newUser: UserModel = null;
+
+
     constructor() {
+        this.user = new UserModel();
+        this.newUser = new UserModel();
+        this.GetLoginData();
+       
     } 
+
 
     protected loadScript(url: string, callback: Function = null): void {
 
-        //let script: any = (<HTMLScriptElement[]><any>document.createElement("script"));
-        //script.type = "text/javascript";
-
-        //if (script.ReadyState) {  //IE
-        //    script.onreadystatechange = function () {
-        //        if (script.readyState == "loaded" ||
-        //            script.readyState == "complete") {
-        //            script.onreadystatechange = null;
-        //            callback();
-        //        }
-        //    };
-        //} else {  //Others
-        //    script.onload = function () {
-        //        callback();
-        //    };
-        //}
+    
 
         var script = document.createElement('script');
         script.src = url;
@@ -34,4 +27,16 @@ abstract class BaseController  {
 
         document.body.appendChild(script);
     }
+    protected GetLoginData(): any {
+        this.user = JSON.parse(localStorage.getItem('loginData'));
+     
+      
+      
+    }
+
+    protected LogOut(): void  {
+        localStorage.removeItem('loginData');
+        debugger
+    }
+
 }
