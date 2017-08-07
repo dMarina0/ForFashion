@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"file":"fashionhouse.component.js","sourceRoot":"","sources":["fashionhouse.component.ts"],"names":[],"mappings":"AAAC,YAAY,CAAA;AAGb,OAAO,CAAC,MAAM,CAAC,cAAc,CAAC;KACrB,SAAS,CAAC,cAAc,EAAE;IAC3B,WAAW,EAAE,sDAAsD;IACnE,UAAU,EAAE,CAAC,sBAAsB,CAAC;CACvC,CAAC,CAAC"}
+=======
+{"version":3,"file":"fashionhouse.component.js","sourceRoot":"","sources":["fashionhouse.component.ts"],"names":[],"mappings":"AAAA,YAAY,CAAA;AAGZ,OAAO,CAAC,MAAM,CAAC,cAAc,CAAC;KACrB,SAAS,CAAC,cAAc,EAAE;IAC3B,WAAW,EAAE,sDAAsD;IACnE,UAAU,EAAE,CAAC,OAAO,EAAE,sBAAsB,CAAC;CAChD,CAAC,CAAC"}
+>>>>>>> 80e0890a3f02dedb5b37d73078bd61542f3e0c24

@@ -1,17 +1,32 @@
-﻿class FashionHouseModel {
+﻿
+class CollectionFashionHouseDto {
+    public Name: string;
+}
+class FashionHouseModel {
+    public CollectionFashionHouseDtos: Array<CollectionFashionHouseDto>;
+    constructor() {
+        this.CollectionFashionHouseDtos = new Array<CollectionFashionHouseDto>();
+    }
+
 }
 class FashionHouseController extends BaseController {
     public Model: FashionHouseModel;
-    constructor() {
+    public httpService: ng.IHttpService;
+    constructor($http: ng.IHttpService) {
         super();
+        this.httpService = $http;
         this.Model = new FashionHouseModel();
-        this.onLoad();
+        this.getCollection();
         
     };
-    protected onLoad(): void {
-        this.loadScript("Content/Theme/js/front.js");
-    
+    public getCollection() {
+        this.httpService({
+            method: 'GET',
+            url: 'api/Collection'
+        }).then((response) => {
+            this.Model.CollectionFashionHouseDtos = <Array<CollectionDto>>response.data;
+        }, (response) => {
+        });
     }
-    
     
 }

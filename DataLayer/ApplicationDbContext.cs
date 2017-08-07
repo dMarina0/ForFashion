@@ -31,6 +31,7 @@ namespace DataLayer
             modelBuilder.Entity<Dress>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<Collection>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<LiveStream>().Property(l => l.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            modelBuilder.Entity<Chat>().Property(c => c.UserId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             base.OnModelCreating(modelBuilder);
         }
 
@@ -45,5 +46,6 @@ namespace DataLayer
         //public DbSet<User> Users { get; set; }
         //public DbSet<UserDetails> UserDetails { get; set; }        
         public DbSet<FashionHouse> FashionHouse { get; set; }
+        public DbSet<Chat> Chat { get; set; }
     }
 }

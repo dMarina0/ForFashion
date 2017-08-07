@@ -87,5 +87,14 @@ namespace BusinessObjects
             });
             return result;
         }
+        public static IEnumerable<ChatDto> ToChatDtos(this IEnumerable<Chat> Chat)
+        {
+            var result = Chat.Select(it => new ChatDto()
+            {
+                UserId=it.UserId,
+                Messagge=it.Messagge,
+            });
+            return result;
+        }
     }
 }

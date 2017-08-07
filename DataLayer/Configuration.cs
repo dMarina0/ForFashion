@@ -92,17 +92,18 @@ namespace DataLayer
                 fh5);
             context.Collection.AddOrUpdate(
                 c => c.Id,
-                new Collection() { Id = 1, Name = "Spring-Summmer",year = 2016, FashionHouse = fh1 },
-                new Collection() { Id = 2, Name = "Autumn-Winter",year = 2017, FashionHouse = fh2 },
-                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
-<<<<<<< HEAD
-                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 });
-           
-=======
-                new Collection() { Id = 4, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 },
-                new Collection() { Id = 5, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 });
+                new Collection() { Id = 1, Name = "Spring-Summmer",year = 2012, FashionHouse = fh1 },
+                new Collection() { Id = 2, Name = "Spring-Summer", year = 2012, FashionHouse = fh2 },
+                new Collection() { Id = 3, Name = "Spring-Summer", year = 2012, FashionHouse = fh3 },
+                new Collection() { Id = 4, Name = "Autumn-Winter", year = 2012, FashionHouse = fh3 },
+                new Collection() { Id = 5, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
+                new Collection() { Id = 6, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 },
+                new Collection() { Id = 7, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 },
+                new Collection() { Id = 8, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 },
+                new Collection() { Id = 9, Name = "Autumn-Winter", year = 2017, FashionHouse = fh1 },
+                new Collection() { Id = 10, Name = "Autumn-Winter", year = 2017, FashionHouse = fh1 });
 
->>>>>>> b512831f7b60db4c20df4e7845322f1b1187c457
+
             context.SaveChanges(); 
             base.Seed(context);
 
