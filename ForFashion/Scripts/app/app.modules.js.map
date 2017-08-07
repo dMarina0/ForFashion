@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"file":"app.modules.js","sourceRoot":"","sources":["app.modules.ts"],"names":[],"mappings":"AAAA,YAAY,CAAA;AAEZ,OAAO,CAAC,MAAM,CAAC,eAAe,EAAE;IAC5B,SAAS;IACT,MAAM;IACN,cAAc;IACd,MAAM;IACN,MAAM;IACN,UAAU;CACb,CAAC,CAAC"}
+=======
+{"version":3,"file":"app.modules.js","sourceRoot":"","sources":["app.modules.ts"],"names":[],"mappings":"AAAA,YAAY,CAAA;AAEZ,OAAO,CAAC,MAAM,CAAC,eAAe,EAAE;IAC5B,SAAS;IACT,MAAM;IACN,cAAc;IACd,MAAM;IACN,MAAM;IACN,UAAU;IACV,OAAO;CACV,CAAC,CAAC"}
+>>>>>>> dba452e31db5e2e76baef489db25d36995d8f059

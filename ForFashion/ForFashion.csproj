@@ -448,6 +448,13 @@
     <Content Include="Scripts\app\register\register.module.js" />
     <Content Include="Scripts\app\register\register.template.html" />
     <Content Include="Scripts\app\News\news.template.html" />
+    <Content Include="Scripts\app\register\login.components.js" />
+    <Content Include="Scripts\app\register\login.controller.js" />
+    <Content Include="Scripts\app\register\login.module.js" />
+    <Content Include="Scripts\app\register\register.component.js" />
+    <Content Include="Scripts\app\register\register.controller.js" />
+    <Content Include="Scripts\app\register\register.module.js" />
+    <Content Include="Scripts\app\register\register.template.html" />
     <Content Include="Scripts\app\Vlog\vlog.template.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -499,11 +506,19 @@
     <Content Include="Scripts\app\home\home.coponent.js.map" />
     <Content Include="Scripts\app\home\home.module.js.map" />
     <Content Include="Scripts\app\core\base.controller.js.map" />
+<<<<<<< HEAD
     <Content Include="Scripts\app\register\login.components.js.map" />
     <Content Include="Scripts\app\register\login.controller.js.map" />
     <Content Include="Scripts\app\register\login.module.js.map" />
     <Content Include="Scripts\app\register\register.component.js.map" />
     <Content Include="Scripts\app\register\register.controller.js.map" />
+=======
+    <Content Include="Scripts\app\register\register.component.js.map" />
+    <Content Include="Scripts\app\register\register.controller.js.map" />
+    <Content Include="Scripts\app\register\login.components.js.map" />
+    <Content Include="Scripts\app\register\login.controller.js.map" />
+    <Content Include="Scripts\app\register\login.module.js.map" />
+>>>>>>> dba452e31db5e2e76baef489db25d36995d8f059
     <Content Include="Scripts\app\register\register.module.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\app\FashionHouse\fashionhouse.template.html" />
@@ -1323,6 +1338,10 @@
     <TypeScriptCompile Include="Scripts\app\News\news.component.ts" />
     <TypeScriptCompile Include="Scripts\app\News\news.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\News\news.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\register\login.components.ts" />
+    <TypeScriptCompile Include="Scripts\app\register\login.controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\register\login.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\register\register.component.ts" />
     <TypeScriptCompile Include="Scripts\app\register\register.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.component.ts" />
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.controller.ts" />
