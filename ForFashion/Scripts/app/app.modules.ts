@@ -5,6 +5,6 @@ angular.module('ForFashionApp', [
     'home',
     'fashionhouse',
     'live',
-    'regi
-    ster'
+    'news',
+    'register'
 ]);

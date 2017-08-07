@@ -20,6 +20,9 @@ angular.
                 when('/live', {
                     template: '<live></live>'
                 }).
+                when('/news', {
+                    template: '<news></news>'
+                }).
                 otherwise('/home');
         }
     ]);
