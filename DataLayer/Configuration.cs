@@ -97,7 +97,8 @@ namespace DataLayer
                 new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
 
                 new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
-           
+
+                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
 
                 new Collection() { Id = 4, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 },
                 new Collection() { Id = 5, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 });

@@ -23,7 +23,6 @@ var LoginController = (function (_super) {
     }
     LoginController.prototype.LoginClick = function () {
         var _this = this;
-        debugger;
         var req = {
             method: 'POST',
             url: '/token',
