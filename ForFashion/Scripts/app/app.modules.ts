@@ -7,5 +7,6 @@ angular.module('ForFashionApp', [
     'live',
     'news',
     'register',
-    'login'
+    'login',
+    'videos'
 ]);

@@ -455,6 +455,7 @@
     <Content Include="Scripts\app\register\register.controller.js" />
     <Content Include="Scripts\app\register\register.module.js" />
     <Content Include="Scripts\app\register\register.template.html" />
+    <Content Include="Scripts\app\videos\videos.template.html" />
     <Content Include="Scripts\app\Vlog\vlog.template.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -506,19 +507,16 @@
     <Content Include="Scripts\app\home\home.coponent.js.map" />
     <Content Include="Scripts\app\home\home.module.js.map" />
     <Content Include="Scripts\app\core\base.controller.js.map" />
-
     <Content Include="Scripts\app\register\login.components.js.map" />
     <Content Include="Scripts\app\register\login.controller.js.map" />
     <Content Include="Scripts\app\register\login.module.js.map" />
     <Content Include="Scripts\app\register\register.component.js.map" />
     <Content Include="Scripts\app\register\register.controller.js.map" />
-
     <Content Include="Scripts\app\register\register.component.js.map" />
     <Content Include="Scripts\app\register\register.controller.js.map" />
     <Content Include="Scripts\app\register\login.components.js.map" />
     <Content Include="Scripts\app\register\login.controller.js.map" />
     <Content Include="Scripts\app\register\login.module.js.map" />
-
     <Content Include="Scripts\app\register\register.module.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\app\FashionHouse\fashionhouse.template.html" />
@@ -1347,6 +1345,9 @@
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.module.ts" />
     <TypeScriptCompile Include="Scripts\app\register\register.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\videos\videos.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\videos\videos.controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\videos\videos.module.ts" />
     <TypeScriptCompile Include="Scripts\app\Vlog\vlog.component.ts" />
     <TypeScriptCompile Include="Scripts\app\Vlog\vlog.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\Vlog\vlog.module.ts" />
