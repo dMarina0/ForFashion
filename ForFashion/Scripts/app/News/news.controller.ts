@@ -2,9 +2,10 @@
     constructor() { };
 }
 
-class NewsController {
+class NewsController extends BaseController {
     public Model: NewsModel;
     constructor() {
+        super();
         this.Model = new NewsModel();
     };
 }

@@ -8,5 +8,6 @@ angular.module('ForFashionApp', [
     'news',
     'register',
     'login',
-    'videos'
+    'videos',
+    'vlog',
 ]);

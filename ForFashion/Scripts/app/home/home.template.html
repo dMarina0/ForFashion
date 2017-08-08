@@ -3,7 +3,9 @@
 
 <!-- *** TOPBAR ***
 _________________________________________________________ -->
+
 <div id="top">
+    
     <div class="container">
         <div class="col-md-6 offer" data-animate="fadeInDown">
             <a href="#" class="btn btn-success btn-sm" data-animate-hover="shake">Offer of the day</a>  <a href="#">Get flat 35% off on orders over $50!</a>
@@ -11,10 +13,12 @@ _________________________________________________________ -->
         <div class="col-md-6" data-animate="fadeInDown">
             <ul class="menu">
                 <li>
-                    <a href="/index.html#!/register" data-toggle="modal" data-target="#login-modal">Login</a>
+                    <a ng-show="$ctrl.user">{{$ctrl.user.username}}</a>
+                    <a ng-hide="$ctrl.user" href="/index.html#!/register" data-toggle="modal" data-target="#login-modal">Login</a>
                 </li>
                 <li>
-                    <a href="/index.html#!/register">Register</a>
+                    <a ng-show="$ctrl.user" href="#", ng-click ="$ctrl.LogOut()" ,class="ng-hide">Log Out</a>
+                    <a ng-hide="$ctrl.user" href="/index.html#!/register", class="ng-hide">Register</a>
                 </li>
                 <li>
                     <a href="contact.html">Contact</a>
@@ -377,7 +381,7 @@ _________________________________________________________ -->
                 </li>
 
                 <li class="dropdown yamm-fw">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Vlog <b class="caret"></b></a>
+                    <a href="/index.html#!/vlog" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Vlog <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <div class="yamm-content">

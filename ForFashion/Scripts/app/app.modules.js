@@ -7,6 +7,7 @@ angular.module('ForFashionApp', [
     'news',
     'register',
     'login',
-    'videos'
+    'videos',
+    'vlog',
 ]);
 //# sourceMappingURL=app.modules.js.map

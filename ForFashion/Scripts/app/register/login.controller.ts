@@ -8,6 +8,15 @@
     }
 }
 
+class UserModel {
+    public username: string;
+    public password: string;
+    public token_type: string;
+    public token: string;
+    constructor() { }
+}
+
+
 class LoginController extends BaseController {
     public httpService: ng.IHttpService;
     public LoginModel: LoginModel;
@@ -30,12 +39,20 @@ class LoginController extends BaseController {
         }
 
         this.httpService(req).then(response => {
-            debugger
+            
             var myData: any = response.data;
+            var user: UserModel = new UserModel();
             if (typeof (Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
-               localStorage.setItem("token_type", myData.token_type);
-               localStorage.setItem("token", myData.access_token);
+                user.username = myData.userName;
+                user.password = myData.password;
+                user.token = myData.access_token;
+                user.token_type = myData.token_type;
+                var LoginData = JSON.stringify(user);
+                localStorage.setItem("loginData", LoginData);
+                window.location.href = "index.html#!/home";
+               //localStorage.setItem("token_type", myData.token_type);
+               //localStorage.setItem("token", myData.access_token);
                return response.statusText;
             } else {
                 console.log('error');

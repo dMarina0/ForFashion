@@ -10,10 +10,12 @@
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
                     <li>
-                        <a href="/index.html#!/register" data-toggle="modal" data-target="#login-modal">Login</a>
+                        <a ng-show="$ctrl.user">{{$ctrl.user.username}}</a>
+                        <a ng-hide="$ctrl.user" href="/index.html#!/register" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
                     <li>
-                        <a href="/index.html#!/register">Register</a>
+                        <a ng-show="$ctrl.user" href="#" , ng-click="$ctrl.LogOut()" ,class="ng-hide">Log Out</a>
+                        <a ng-hide="$ctrl.user" href="/index.html#!/register" , class="ng-hide">Register</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
@@ -540,7 +542,7 @@
                         <li>
                             <a href="#">Home</a>
                         </li>
-                        <li>News</li>
+                        <li href="/index.html#!/news">News</li>
                     </ul>
 
 
