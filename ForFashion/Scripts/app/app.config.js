@@ -23,6 +23,9 @@ angular.
             when('/register', {
             template: '<register></register>'
         }).
+            when('/vlog', {
+            template: '<vlog></vlog>'
+        }).
             otherwise('/home');
     }
 ]);

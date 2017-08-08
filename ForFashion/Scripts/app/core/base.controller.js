@@ -1,8 +1,6 @@
 var BaseController = (function () {
     function BaseController() {
-        this.newUser = null;
         this.user = new UserModel();
-        this.newUser = new UserModel();
         this.GetLoginData();
     }
     BaseController.prototype.loadScript = function (url, callback) {

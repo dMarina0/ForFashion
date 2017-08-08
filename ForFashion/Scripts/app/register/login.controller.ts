@@ -16,6 +16,7 @@ class UserModel {
     constructor() { }
 }
 
+
 class LoginController extends BaseController {
     public httpService: ng.IHttpService;
     public LoginModel: LoginModel;
@@ -48,7 +49,8 @@ class LoginController extends BaseController {
                 user.token = myData.access_token;
                 user.token_type = myData.token_type;
                 var LoginData = JSON.stringify(user);
-                localStorage.setItem("loginData", LoginData); 
+                localStorage.setItem("loginData", LoginData);
+               
                 window.location.href = "index.html#!/home";
                //localStorage.setItem("token_type", myData.token_type);
                //localStorage.setItem("token", myData.access_token);

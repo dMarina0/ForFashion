@@ -1,12 +1,11 @@
 ﻿
 abstract class BaseController  {
     public user: UserModel;
-    public newUser: UserModel = null;
+   
 
 
     constructor() {
         this.user = new UserModel();
-        this.newUser = new UserModel();
         this.GetLoginData();
        
     } 
@@ -28,9 +27,8 @@ abstract class BaseController  {
         document.body.appendChild(script);
     }
     protected GetLoginData(): any {
-        this.user = JSON.parse(localStorage.getItem('loginData'));
-     
-      
+        this.user = JSON.parse(localStorage.getItem('loginData'));  
+        
       
     }
 
