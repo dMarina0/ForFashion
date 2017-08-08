@@ -2,9 +2,10 @@
     constructor() { };
 }
 
-class VlogController {
+class VlogController extends BaseController{
     public VlogModel: VlogModel;
     constructor() {
+        super();
         this.VlogModel = new VlogModel();
     }
 }

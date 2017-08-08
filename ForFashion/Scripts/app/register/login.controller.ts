@@ -44,13 +44,12 @@ class LoginController extends BaseController {
             var user: UserModel = new UserModel();
             if (typeof (Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
-                user.username = myData.username;
+                user.username = myData.userName;
                 user.password = myData.password;
                 user.token = myData.access_token;
                 user.token_type = myData.token_type;
                 var LoginData = JSON.stringify(user);
                 localStorage.setItem("loginData", LoginData);
-               
                 window.location.href = "index.html#!/home";
                //localStorage.setItem("token_type", myData.token_type);
                //localStorage.setItem("token", myData.access_token);

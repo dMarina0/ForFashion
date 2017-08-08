@@ -36,7 +36,7 @@ var LoginController = (function (_super) {
             var user = new UserModel();
             if (typeof (Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
-                user.username = myData.username;
+                user.username = myData.userName;
                 user.password = myData.password;
                 user.token = myData.access_token;
                 user.token_type = myData.token_type;

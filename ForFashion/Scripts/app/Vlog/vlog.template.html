@@ -10,10 +10,12 @@
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
                     <li>
-                        <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                        <a ng-show="$ctrl.user">{{$ctrl.user.username}}</a>
+                        <a ng-hide="$ctrl.user" href="/index.html#!/register" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
                     <li>
-                        <a href="register.html">Register</a>
+                        <a ng-show="$ctrl.user" href="#" , ng-click="$ctrl.LogOut()" ,class="ng-hide">Log Out</a>
+                        <a ng-hide="$ctrl.user" href="/index.html#!/register" , class="ng-hide">Register</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
@@ -66,8 +68,8 @@
             <div class="navbar-header">
 
                 <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                    <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
-                    <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+                    <img src="Content/Theme/img/ForFashionLogo.png" alt="Obaju logo" class="hidden-xs">
+                    <img src="Content/Theme/img/ForFashionLogo.png alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -376,9 +378,9 @@
 
                     <li class="dropdown yamm-fw">
                         <a href="/index.html#!/vlog" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Vlog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
+                        <!--<ul class="dropdown-menu">
                             <li>
-                                <div class="yamm-content">
+                                <!--<div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <h5>Shop</h5>
@@ -467,7 +469,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- /.yamm-content -->
                             </li>
                         </ul>
@@ -528,7 +530,7 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a href="blog.html">Vlog</a>
+                            <a href="/index.html#!/vlog">Vlog</a>
                         </li>
                         
                     </ul>
@@ -702,7 +704,7 @@
                         </div>-->
                         <!-- /#comment-form -->
 
-                    </div>-->
+                    </div>
                     <!-- /.box -->
                 </div>
                 <!-- /#blog-post -->
