@@ -9,6 +9,11 @@ var LoginModel = (function () {
     }
     return LoginModel;
 }());
+var UserModel = (function () {
+    function UserModel() {
+    }
+    return UserModel;
+}());
 var LoginController = (function (_super) {
     __extends(LoginController, _super);
     function LoginController($http) {
@@ -18,7 +23,6 @@ var LoginController = (function (_super) {
     }
     LoginController.prototype.LoginClick = function () {
         var _this = this;
-        debugger;
         var req = {
             method: 'POST',
             url: '/token',
@@ -28,12 +32,19 @@ var LoginController = (function (_super) {
             data: 'grant_type=password' + '&' + 'username=' + this.LoginModel.username + '&' + 'password=' + this.LoginModel.password
         };
         this.httpService(req).then(function (response) {
-            debugger;
             var myData = response.data;
+            var user = new UserModel();
             if (typeof (Storage) !== "undefined") {
                 // Code for localStorage/sessionStorage.
-                localStorage.setItem("token_type", myData.token_type);
-                localStorage.setItem("token", myData.access_token);
+                user.username = myData.userName;
+                user.password = myData.password;
+                user.token = myData.access_token;
+                user.token_type = myData.token_type;
+                var LoginData = JSON.stringify(user);
+                localStorage.setItem("loginData", LoginData);
+                window.location.href = "index.html#!/home";
+                //localStorage.setItem("token_type", myData.token_type);
+                //localStorage.setItem("token", myData.access_token);
                 return response.statusText;
             }
             else {

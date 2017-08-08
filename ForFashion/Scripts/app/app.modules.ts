@@ -5,5 +5,9 @@ angular.module('ForFashionApp', [
     'home',
     'fashionhouse',
     'live',
-    'news'
+    'news',
+    'register',
+    'login',
+    'videos',
+    'vlog',
 ]);

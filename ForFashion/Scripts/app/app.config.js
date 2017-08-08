@@ -8,6 +8,9 @@ angular.
             when('/home', {
             template: '<home></home>'
         }).
+            when('/register', {
+            template: '<register></register>'
+        }).
             when('/fashionhouse', {
             template: '<fashionhouse></fashionhouse>'
         }).
@@ -16,6 +19,15 @@ angular.
         }).
             when('/news', {
             template: '<news></news>'
+        }).
+            when('/register', {
+            template: '<register></register>'
+        }).
+            when('/videos', {
+            template: '<videos></videos>'
+        }).
+            when('/vlog', {
+            template: '<vlog></vlog>'
         }).
             otherwise('/home');
     }

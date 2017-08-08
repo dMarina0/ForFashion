@@ -16,6 +16,7 @@ class RegisterModel {
 
 class RegisterController extends LoginController {
     public RegisterModel: RegisterModel;
+
     
     constructor($http: ng.IHttpService) {
         super($http);
@@ -24,6 +25,7 @@ class RegisterController extends LoginController {
     }
 
     public RegisterClick() {
+       
         var self = this;
         console.log(this.RegisterModel.Email);
         console.log(this.RegisterModel.Password);
