@@ -101,8 +101,34 @@ namespace DataLayer
                 new Collection() { Id = 7, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 },
                 new Collection() { Id = 8, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 },
                 new Collection() { Id = 9, Name = "Autumn-Winter", year = 2017, FashionHouse = fh1 },
-                new Collection() { Id = 10, Name = "Autumn-Winter", year = 2017, FashionHouse = fh1 });
-
+                new Collection() { Id = 10, Name = "Autumn-Winter", year = 2013, FashionHouse = fh2 }),
+                new Collection() { Id = 11, Name = "Spring-Summmer", year = 2013, FashionHouse = fh1 },
+                new Collection() { Id = 12, Name = "Spring-Summer", year = 2013, FashionHouse = fh2 },
+                new Collection() { Id = 13, Name = "Spring-Summer", year = 2013, FashionHouse = fh3 },
+                new Collection() { Id = 14, Name = "Autumn-Winter", year = 2013, FashionHouse = fh3 },
+                new Collection() { Id = 15, Name = "Spring-Summer", year = 2014, FashionHouse = fh3 },
+                new Collection() { Id = 16, Name = "Paris Haute Couture Spring/Summer", year = 2013, FashionHouse = fh4 },
+                new Collection() { Id = 17, Name = "New York Fashion Week Fall/Winter", year = 2013, FashionHouse = fh5 },
+                new Collection() { Id = 18, Name = "New York Fashion Week Fall/Winter", year = 2013, FashionHouse = fh5 },
+                new Collection() { Id = 19, Name = "Autumn-Winter", year = 2014, FashionHouse = fh1 },
+                new Collection() { Id = 20, Name = "Autumn-Winter", year = 2014, FashionHouse = fh2 }),
+                new Collection() { Id = 21, Name = "Spring-Summmer", year = 2015, FashionHouse = fh1 },
+                new Collection() { Id = 22, Name = "Spring-Summer", year = 2015, FashionHouse = fh2 },
+                new Collection() { Id = 23, Name = "Spring-Summer", year = 2015, FashionHouse = fh3 },
+                new Collection() { Id = 24, Name = "Autumn-Winter", year = 2015, FashionHouse = fh3 },
+                new Collection() { Id = 25, Name = "Spring-Summer", year = 2015, FashionHouse = fh3 },
+                new Collection() { Id = 26, Name = "Paris Haute Couture Spring/Summer", year = 2018, FashionHouse = fh4 },
+                new Collection() { Id = 27, Name = "New York Fashion Week Fall/Winter", year = 2018, FashionHouse = fh5 },
+                new Collection() { Id = 28, Name = "New York Fashion Week Fall/Winter", year = 2018, FashionHouse = fh5 },
+                new Collection() { Id = 29, Name = "Autumn-Winter", year = 2015, FashionHouse = fh1 },
+                new Collection() { Id = 30, Name = "Autumn-Winter", year = 2015, FashionHouse = fh1 }),
+                new Collection() { Id = 31, Name = "Spring-Summmer", year = 2016, FashionHouse = fh1 },
+                new Collection() { Id = 32, Name = "Spring-Summer", year = 2016, FashionHouse = fh2 },
+                new Collection() { Id = 33, Name = "Spring-Summer", year = 2016, FashionHouse = fh3 },
+                new Collection() { Id = 34, Name = "Autumn-Winter", year = 2016, FashionHouse = fh3 },
+                new Collection() { Id = 35, Name = "Spring-Summer", year = 2016, FashionHouse = fh3 },
+                new Collection() { Id = 39, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 },
+                new Collection() { Id = 40, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 });
 
             context.SaveChanges(); 
             base.Seed(context);
