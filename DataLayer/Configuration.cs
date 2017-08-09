@@ -92,7 +92,7 @@ namespace DataLayer
                 fh5);
             context.Collection.AddOrUpdate(
                 c => c.Id,
-                new Collection() { Id = 1, Name = "Spring-Summmer",year = 2012, FashionHouse = fh1 },
+                new Collection() { Id = 1, Name = "Spring-Summmer", year = 2012, FashionHouse = fh1 },
                 new Collection() { Id = 2, Name = "Spring-Summer", year = 2012, FashionHouse = fh2 },
                 new Collection() { Id = 3, Name = "Spring-Summer", year = 2012, FashionHouse = fh3 },
                 new Collection() { Id = 4, Name = "Autumn-Winter", year = 2012, FashionHouse = fh3 },
@@ -128,18 +128,7 @@ namespace DataLayer
                 new Collection() { Id = 34, Name = "Autumn-Winter", year = 2016, FashionHouse = fh3 },
                 new Collection() { Id = 35, Name = "Spring-Summer", year = 2016, FashionHouse = fh3 },
                 new Collection() { Id = 39, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 },
-                new Collection() { Id = 40, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 },
-                new Collection() { Id = 1, Name = "Spring-Summmer",year = 2016, FashionHouse = fh1 },
-                new Collection() { Id = 2, Name = "Autumn-Winter",year = 2017, FashionHouse = fh2 },
-                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
-
-                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
-
-                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
-
-                new Collection() { Id = 4, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 },
-                new Collection() { Id = 5, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 });
-
+                new Collection() { Id = 40, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 });
 
             context.SaveChanges(); 
             base.Seed(context);
