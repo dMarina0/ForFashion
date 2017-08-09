@@ -1,5 +1,4 @@
 ﻿
-
     <!-- *** TOPBAR ***
     _________________________________________________________ -->
     <div id="top">
@@ -10,17 +9,17 @@
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
                     <li>
-                        <a ng-show="$ctrl.user">{{$ctrl.user.username}}</a>
-                        <a ng-hide="$ctrl.user" href="/index.html#!/register" data-toggle="modal" data-target="#login-modal">Login</a>
+                        <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
                     <li>
-                        <a ng-show="$ctrl.user" href="#" , ng-click="$ctrl.LogOut()" ,class="ng-hide">Log Out</a>
-                        <a ng-hide="$ctrl.user" href="/index.html#!/register" , class="ng-hide">Register</a>
+                        <a href="register.html">Register</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
                     </li>
-                    
+                    <li>
+                        <a href="#">Recently viewed</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -66,8 +65,8 @@
             <div class="navbar-header">
 
                 <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                    <img src="Content/Theme/img/ForFashionLogo.png" alt="Obaju logo" class="hidden-xs">
-                    <img src="Content/Theme/img/ForFashionLogo.png alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+                    <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
+                    <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -92,7 +91,7 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li class="dropdown yamm-fw">
-                        <a href="/index.html#!/fashionhouse" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Fashion House <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
@@ -188,100 +187,7 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="/index.html#!/live" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Live <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="yamm-content">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h5>Clothing</h5>
-                                            <ul>
-                                                <li>
-                                                    <a href="category.html">T-shirts</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Shirts</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Pants</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Accessories</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Shoes</h5>
-                                            <ul>
-                                                <li>
-                                                    <a href="category.html">Trainers</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <h5>Accessories</h5>
-                                            <ul>
-                                                <li>
-                                                    <a href="category.html">Trainers</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Casual</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Hiking shoes</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Casual</a>
-                                                </li>
-                                            </ul>
-                                            <h5>Looks and trends</h5>
-                                            <ul>
-                                                <li>
-                                                    <a href="category.html">Trainers</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Sandals</a>
-                                                </li>
-                                                <li>
-                                                    <a href="category.html">Hiking shoes</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="banner">
-                                                <a href="#">
-                                                    <img src="img/banner.jpg" class="img img-responsive" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="banner">
-                                                <a href="#">
-                                                    <img src="img/banner2.jpg" class="img img-responsive" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.yamm-content -->
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown yamm-fw">
-                        <a href="/index.html#!/news" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">News <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Ladies <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
@@ -375,10 +281,10 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="/index.html#!/vlog" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Vlog <b class="caret"></b></a>
-                        <!--<ul class="dropdown-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
                             <li>
-                                <!--<div class="yamm-content">
+                                <div class="yamm-content">
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <h5>Shop</h5>
@@ -467,7 +373,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>-->
+                                </div>
                                 <!-- /.yamm-content -->
                             </li>
                         </ul>
@@ -520,231 +426,169 @@
         <div id="content">
             <div class="container">
 
-                <div class="col-sm-12">
+                <div class="col-md-12">
 
                     <ul class="breadcrumb">
-
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="#">Home</a>
                         </li>
-                        <li>
-                            <a href="/index.html#!/vlog">Vlog</a>
-                        </li>
-                        
+                        <li>My account</li>
                     </ul>
+
                 </div>
-
-                <div class="col-sm-9" id="blog-post">
-
-                    <div class="box">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8uZ98Pa3bPE" frameborder="0" allowfullscreen></iframe>
-                        </div>
-
-                    <!--<div class="box">
-
-                        <h1>Fashion now</h1>
-                        <p class="author-date">By <a href="#">John Slim</a> | June 20, 2013</p>
-                        <p class="lead">This is the lead paragraph of the article. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
-
-                        <div id="post-content">
-                            <p>
-                                <strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                                semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
-                                fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.
-                            </p>
-
-                            <p>
-                                <img src="img/blog2.jpg" class="img-responsive" alt="Example blog post alt">
-                            </p>
-
-                            <h2>Header Level 2</h2>
-
-                            <ol>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ol>
-
-                            <blockquote>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada
-                                    tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-                                </p>
-                            </blockquote>
-
-                            <h3>Header Level 3</h3>
-
-                            <p>
-                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
-                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
-                            </p>
-
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ul>
-
-                            <p>
-                                <img src="img/blog.jpg" class="img-responsive" alt="Example blog post alt">
-                            </p>
-
-                            <p>
-                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
-                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
-                            </p>
-
-                        </div>
-                        <!-- /#post-content -->
-
-                        <!--<div id="comments" data-animate="fadeInUp">
-                            <h4>2 comments</h4>
-
-
-                            <div class="row comment">
-                                <div class="col-sm-3 col-md-2 text-center-xs">
-                                    <p>
-                                        <img src="img/blog-avatar2.jpg" class="img-responsive img-circle" alt="">
-                                    </p>
-                                </div>
-                                <div class="col-sm-9 col-md-10">
-                                    <h5>Julie Alma</h5>
-                                    <p class="posted"><i class="fa fa-clock-o"></i> September 23, 2011 at 12:00 am</p>
-                                    <p>
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-                                        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-                                    </p>
-                                    <p class="reply">
-                                        <a href="#"><i class="fa fa-reply"></i> Reply</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.comment -->
-
-
-                            <!--<div class="row comment last">
-
-                                <div class="col-sm-3 col-md-2 text-center-xs">
-                                    <p>
-                                        <img src="img/blog-avatar.jpg" class="img-responsive img-circle" alt="">
-                                    </p>
-                                </div>
-
-                                <div class="col-sm-9 col-md-10">
-                                    <h5>Louise Armero</h5>
-                                    <p class="posted"><i class="fa fa-clock-o"></i> September 23, 2012 at 12:00 am</p>
-                                    <p>
-                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-                                        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-                                    </p>
-                                    <p class="reply">
-                                        <a href="#"><i class="fa fa-reply"></i> Reply</a>
-                                    </p>
-                                </div>
-
-                            </div>-->
-                            <!-- /.comment -->
-
-                        </div>
-                        <!-- /#comments -->
-
-                        <!--<div id="comment-form" data-animate="fadeInUp">
-
-                            <h4>Leave comment</h4>
-
-                            <form>
-                                <div class="row">
-
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="name">
-                                                Name <span class="required">*</span>
-                                            </label>
-                                            <input type="text" class="form-control" id="name">
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="email">
-                                                Email <span class="required">*</span>
-                                            </label>
-                                            <input type="text" class="form-control" id="email">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <label for="comment">
-                                                Comment <span class="required">*</span>
-                                            </label>
-                                            <textarea class="form-control" id="comment" rows="4"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-12 text-right">
-                                        <button class="btn btn-primary"><i class="fa fa-comment-o"></i> Post comment</button>
-                                    </div>
-                                </div>
-
-
-                            </form>
-
-                        </div>-->
-                        <!-- /#comment-form -->
-
-                    </div>
-                    <!-- /.box -->
-                </div>
-                <!-- /#blog-post -->
 
                 <div class="col-md-3">
-                    <!-- *** BLOG MENU ***
+                    <!-- *** CUSTOMER MENU ***
                     _________________________________________________________ -->
                     <div class="panel panel-default sidebar-menu">
 
                         <div class="panel-heading">
-                            <h3 class="panel-title">Blog</h3>
+                            <h3 class="panel-title">Customer section</h3>
                         </div>
 
                         <div class="panel-body">
 
                             <ul class="nav nav-pills nav-stacked">
-                                <li>
-                                    <a href="blog.html">About us</a>
-                                </li>
                                 <li class="active">
-                                    <a href="blog.html">Fashion</a>
+                                    <a href="customer-orders.html"><i class="fa fa-list"></i> My orders</a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">News and gossip</a>
+                                    <a href="customer-wishlist.html"><i class="fa fa-heart"></i> My wishlist</a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">Design</a>
+                                    <a href="customer-account.html"><i class="fa fa-user"></i> My account</a>
+                                </li>
+                                <li>
+                                    <a href="index.html"><i class="fa fa-sign-out"></i> Logout</a>
                                 </li>
                             </ul>
                         </div>
 
                     </div>
                     <!-- /.col-md-3 -->
-                    <!-- *** BLOG MENU END *** -->
-
-                    <div class="banner">
-                        <a href="#">
-                            <img src="img/banner.jpg" alt="sales 2014" class="img-responsive">
-                        </a>
-                    </div>
+                    <!-- *** CUSTOMER MENU END *** -->
                 </div>
 
+                <div class="col-md-9">
+                    <div class="box">
+                        <h1>My account</h1>
+                        <p class="lead">Change your personal details or your password here.</p>
+                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                        <h3>Change password</h3>
+
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password_old">Old password</label>
+                                        <input type="password" class="form-control" id="password_old">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password_1">New password</label>
+                                        <input type="password" class="form-control" id="password_1">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="password_2">Retype new password</label>
+                                        <input type="password" class="form-control" id="password_2">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save new password</button>
+                            </div>
+                        </form>
+
+                        <hr>
+
+                        <h3>Personal details</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="firstname">Firstname</label>
+                                        <input type="text" class="form-control" id="firstname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="lastname">Lastname</label>
+                                        <input type="text" class="form-control" id="lastname">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="company">Company</label>
+                                        <input type="text" class="form-control" id="company">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="street">Street</label>
+                                        <input type="text" class="form-control" id="street">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="city">Company</label>
+                                        <input type="text" class="form-control" id="city">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="zip">ZIP</label>
+                                        <input type="text" class="form-control" id="zip">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <select class="form-control" id="state"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="country">Country</label>
+                                        <select class="form-control" id="country"></select>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="phone">Telephone</label>
+                                        <input type="text" class="form-control" id="phone">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="text" class="form-control" id="email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
             </div>
             <!-- /.container -->
@@ -922,4 +766,4 @@
     <!-- /#all -->
     <!-- *** SCRIPTS TO INCLUDE ***
     _________________________________________________________ -->
-    
+ 
