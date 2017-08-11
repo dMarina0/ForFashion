@@ -85,12 +85,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\ChatDto.cs" />
     <Compile Include="Dtos\CollectionDto.cs" />
     <Compile Include="Dtos\DressDto.cs" />
     <Compile Include="Dtos\FashionHouseDto.cs" />
     <Compile Include="Dtos\VideosDto.cs" />
     <Compile Include="Dtos\ShirtDto.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
+    <Compile Include="Entities\Chat.cs" />
     <Compile Include="Entities\Collection.cs" />
     <Compile Include="Entities\Dress.cs" />
     <Compile Include="Entities\FashionHouse.cs" />

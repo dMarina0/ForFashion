@@ -274,6 +274,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\CollectionController.cs" />
     <Compile Include="Controllers\DressController.cs" />
     <Compile Include="Controllers\FashionHouseController.cs" />
@@ -440,6 +441,7 @@
     <Content Include="Scripts\app\home\home.module.js" />
     <Content Include="Scripts\app\home\home.template.html" />
     <Content Include="Scripts\app\Live\live.template.html" />
+    <Content Include="Scripts\app\register\register.template.html" />
     <Content Include="Scripts\app\register\login.components.js" />
     <Content Include="Scripts\app\register\login.controller.js" />
     <Content Include="Scripts\app\register\login.module.js" />
@@ -1349,6 +1351,7 @@
     <TypeScriptCompile Include="Scripts\app\videos\videos.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\videos\videos.filter.ts" />
     <TypeScriptCompile Include="Scripts\app\videos\videos.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\register\register.module.ts" />
     <TypeScriptCompile Include="Scripts\app\Vlog\vlog.component.ts" />
     <TypeScriptCompile Include="Scripts\app\Vlog\vlog.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\Vlog\vlog.module.ts" />
