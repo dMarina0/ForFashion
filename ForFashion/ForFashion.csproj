@@ -281,6 +281,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LiveStreamController.cs" />
     <Compile Include="Controllers\ShirtController.cs" />
+    <Compile Include="Controllers\UserDetailsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DIContainer.cs" />
     <Compile Include="Global.asax.cs">
@@ -457,6 +458,7 @@
     <Content Include="Scripts\app\register\register.controller.js" />
     <Content Include="Scripts\app\register\register.module.js" />
     <Content Include="Scripts\app\register\register.template.html" />
+    <Content Include="Scripts\app\UserProfile\userprofile.template.html" />
     <Content Include="Scripts\app\videos\videos.template.html" />
     <Content Include="Scripts\app\Vlog\vlog.template.html" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1347,6 +1349,9 @@
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\FashionHouse\fashionhouse.module.ts" />
     <TypeScriptCompile Include="Scripts\app\register\register.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\UserProfile\userprofile.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\UserProfile\userprofile.controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\UserProfile\userprofile.module.ts" />
     <TypeScriptCompile Include="Scripts\app\videos\videos.component.ts" />
     <TypeScriptCompile Include="Scripts\app\videos\videos.controller.ts" />
     <TypeScriptCompile Include="Scripts\app\videos\videos.module.ts" />

@@ -10,4 +10,5 @@ angular.module('ForFashionApp', [
     'login',
     'videos',
     'vlog',
+    'userprofile'
 ]);

@@ -9,11 +9,14 @@
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
                     <li>
-                        <a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                        <a ng-show="$ctrl.user">{{$ctrl.user.username}}</a>
+                        <a ng-hide="$ctrl.user" href="/index.html#!/register" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
                     <li>
-                        <a href="register.html">Register</a>
+                        <a ng-show="$ctrl.user" href="#" , ng-click="$ctrl.LogOut()" ,class="ng-hide">Log Out</a>
+                        <a ng-hide="$ctrl.user" href="/index.html#!/register" , class="ng-hide">Register</a>
                     </li>
+                   
                     <li>
                         <a href="contact.html">Contact</a>
                     </li>
@@ -47,7 +50,7 @@
                         </form>
 
                         <p class="text-center text-muted">Not registered yet?</p>
-                        <p class="text-center text-muted"><a href="register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
+                        <p class="text-center text-muted"><a href="/index.html#!/register"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
 
                     </div>
                 </div>
@@ -65,8 +68,8 @@
             <div class="navbar-header">
 
                 <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                    <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
-                    <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+                    <img src="Content/Theme/img/ForFashionLogo.png" alt="Obaju logo" class="hidden-xs">
+                    <img src="Content/Theme/img/ForFashionLogo.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -91,7 +94,7 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
+                        <a href="/index.html#!/fashionhouse" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Fashion House <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
@@ -187,7 +190,100 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Ladies <b class="caret"></b></a>
+                        <a href="/index.html#!/live" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Live <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h5>Clothing</h5>
+                                            <ul>
+                                                <li>
+                                                    <a href="category.html">T-shirts</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Shirts</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Pants</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Accessories</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>Shoes</h5>
+                                            <ul>
+                                                <li>
+                                                    <a href="category.html">Trainers</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Sandals</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Hiking shoes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Casual</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>Accessories</h5>
+                                            <ul>
+                                                <li>
+                                                    <a href="category.html">Trainers</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Sandals</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Hiking shoes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Casual</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Hiking shoes</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Casual</a>
+                                                </li>
+                                            </ul>
+                                            <h5>Looks and trends</h5>
+                                            <ul>
+                                                <li>
+                                                    <a href="category.html">Trainers</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Sandals</a>
+                                                </li>
+                                                <li>
+                                                    <a href="category.html">Hiking shoes</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="banner">
+                                                <a href="#">
+                                                    <img src="img/banner.jpg" class="img img-responsive" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="banner">
+                                                <a href="#">
+                                                    <img src="img/banner2.jpg" class="img img-responsive" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.yamm-content -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown yamm-fw">
+                        <a href="/index.html#!/news" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">News <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
@@ -281,7 +377,7 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>
+                        <a href="/index.html#!/vlog" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Vlog <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">
@@ -472,40 +568,10 @@
                 <div class="col-md-9">
                     <div class="box">
                         <h1>My account</h1>
-                        <p class="lead">Change your personal details or your password here.</p>
-                        <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p class="lead">Change your personal details </p>
+                       
 
-                        <h3>Change password</h3>
 
-                        <form>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="password_old">Old password</label>
-                                        <input type="password" class="form-control" id="password_old">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="password_1">New password</label>
-                                        <input type="password" class="form-control" id="password_1">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="password_2">Retype new password</label>
-                                        <input type="password" class="form-control" id="password_2">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.row -->
-
-                            <div class="col-sm-12 text-center">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save new password</button>
-                            </div>
-                        </form>
 
                         <hr>
 
@@ -515,13 +581,13 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="firstname">Firstname</label>
-                                        <input type="text" class="form-control" id="firstname">
+                                        <input type="text" class="form-control" id="firstname" ng-model="$ctrl.UserProfileModel.FirstName">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="lastname">Lastname</label>
-                                        <input type="text" class="form-control" id="lastname">
+                                        <input type="text" class="form-control" id="lastname" ng-model="$ctrl.UserProfileModel.LastName">
                                     </div>
                                 </div>
                             </div>
@@ -530,59 +596,54 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="company">Company</label>
-                                        <input type="text" class="form-control" id="company">
+                                        <label for="company">City</label>
+                                        <input type="text" class="form-control" id="company" ng-model="$ctrl.UserProfileModel.City">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="street">Street</label>
-                                        <input type="text" class="form-control" id="street">
+                                        <label for="street">Adress</label>
+                                        <input type="text" class="form-control" id="street" ng-model="$ctrl.UserProfileModel.Address">
                                     </div>
                                 </div>
                             </div>
                             <!-- /.row -->
 
                             <div class="row">
-                                <div class="col-sm-6 col-md-3">
+                                <!--<div class="col-sm-6 col-md-3">
                                     <div class="form-group">
                                         <label for="city">Company</label>
                                         <input type="text" class="form-control" id="city">
                                     </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3">
+                                </div>-->
+                                <!--<div class="col-sm-6 col-md-3">
                                     <div class="form-group">
                                         <label for="zip">ZIP</label>
                                         <input type="text" class="form-control" id="zip">
                                     </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3">
+                                </div>-->
+                                <!--<div class="col-sm-6 col-md-3">
                                     <div class="form-group">
                                         <label for="state">State</label>
                                         <select class="form-control" id="state"></select>
                                     </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3">
+                                </div>-->
+                                <!--<div class="col-sm-6 col-md-3">
                                     <div class="form-group">
                                         <label for="country">Country</label>
                                         <select class="form-control" id="country"></select>
                                     </div>
-                                </div>
+                                </div>-->
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="phone">Telephone</label>
-                                        <input type="text" class="form-control" id="phone">
+                                        <input type="text" class="form-control" id="phone" ng-model="$ctrl.UserProfileModel.PhoneNumber">
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email">
-                                    </div>
-                                </div>
+     
                                 <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
+                                    <button type="submit" class="btn btn-primary" ng-click="$ctrl.postData()"><i class="fa fa-save"></i> Save changes</button>
 
                                 </div>
                             </div>

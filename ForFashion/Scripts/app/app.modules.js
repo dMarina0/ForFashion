@@ -9,5 +9,6 @@ angular.module('ForFashionApp', [
     'login',
     'videos',
     'vlog',
+    'userprofile'
 ]);
 //# sourceMappingURL=app.modules.js.map

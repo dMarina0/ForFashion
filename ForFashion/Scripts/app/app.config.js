@@ -29,6 +29,9 @@ angular.
             when('/vlog', {
             template: '<vlog></vlog>'
         }).
+            when('/userprofile', {
+            template: '<userprofile></userprofile>'
+        }).
             otherwise('/home');
     }
 ]);

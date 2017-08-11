@@ -1,5 +1,6 @@
 ﻿
 
+using BusinessObjects.Entities;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
@@ -35,33 +36,24 @@ namespace BusinessObjects
     }
 
 
-    public class UserDetails
-    {
-        [Key]
-        public int Id { get; set; }
-        public string Address { get; set; }
-        public string PhoneNumber { get; set; }
-        //[ForeignKey("ApplicationUser")]
-        //public string IdUser { get; set; }
-        [Required]
-        public virtual ApplicationUser ApplicationUser { get; set; }
-
-    }
-
-    //    public string userName { get; set; }
-       
-    //    public virtual UserDetails Details { get; set; }
-    //}
     //public class UserDetails
     //{
-    //    //[Key,ForeignKey("User")]
+    //    [Key]
+    //    public int Id { get; set; }
+    //    public string FirstName { get; set; }
 
-    //    public string UserID{ get; set; }
+    //    public string LastName { get; set; }
+    //    public string City { get; set; }
     //    public string Address { get; set; }
-    //    public double PhoneNumber { get; set; }
+    //    public string PhoneNumber { get; set; }
+    //    //[ForeignKey("ApplicationUser")]
+    //    //public string IdUser { get; set; }
+    //    [Required]
     //    public virtual ApplicationUser ApplicationUser { get; set; }
 
     //}
+
+ 
    
 
 

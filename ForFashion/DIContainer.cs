@@ -2,6 +2,7 @@
 using Abstracts.IManagers;
 using BusinessLayer;
 using BusinessObjects;
+using BusinessObjects.Entities;
 using DataLayer;
 using Microsoft.Practices.Unity;
 using System;

@@ -511,5 +511,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:ForFashion.Controllers.UserDetailsController.GetbyUser(System.String)">
+            <summary>
+            Returns the list of shirts
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

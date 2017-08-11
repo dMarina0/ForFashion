@@ -35,6 +35,18 @@ namespace BusinessObjects
             result.Name = dress.Name;
             return result;
         }
+        public static UserDetailsDto ToUserDetailDto(UserDetails userDetails)
+        {
+            var result = new UserDetailsDto();
+            result.Id = userDetails.Id;
+            result.FirstName = userDetails.FirstName;
+            result.LastName = userDetails.LastName;
+            result.City = userDetails.City;
+            result.Address = userDetails.Address;
+            result.PhoneNumber = userDetails.PhoneNumber;
+            return result;
+
+        }
         public static Dress ToDressEntity(DressDto dressDto)
         {
             var result = new Dress();
@@ -84,6 +96,19 @@ namespace BusinessObjects
                 Image = it.Image,
                 VideoUrl = it.VideoUrl,
                 Description = it.Description,
+            });
+            return result;
+        }
+        public static IEnumerable<UserDetailsDto> ToUserDetailsDtos(this IEnumerable<UserDetails> UserDetail)
+        {
+            var result = UserDetail.Select(it => new UserDetailsDto()
+            {
+                Id = it.Id,
+                FirstName = it.FirstName,
+                LastName = it.LastName,
+                City = it.City,
+                Address= it.Address,
+                PhoneNumber=it.PhoneNumber
             });
             return result;
         }
