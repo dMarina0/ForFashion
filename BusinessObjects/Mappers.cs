@@ -64,6 +64,19 @@ namespace BusinessObjects
             
             return result;
         }
+
+        public static FashionHouseDto ToFashionHouseDto(this FashionHouse fashionHouse)
+        {
+            var result = new FashionHouseDto()
+            {
+                Id = fashionHouse.Id,
+                Name = fashionHouse.Name,
+                PhoneNumber = fashionHouse.PhoneNumber
+            };
+
+            return result;
+        }
+
         public static IEnumerable<CollectionDto> ToCollectionDtos(this IEnumerable<Collection> collection)
         {
             var result = collection.Select(it => new CollectionDto()
@@ -76,14 +89,25 @@ namespace BusinessObjects
             //collection.Take(3);
             return result;
         }
-        public static IEnumerable<LiveStreamDto> ToLiveStreamDtos(this IEnumerable<LiveStream> LiveStream)
+        public static CollectionDto ToCollectionDto(this Collection collection)
         {
-            var result = LiveStream.Select(it => new LiveStreamDto()
+            var result = new CollectionDto()
+            {
+                Id = collection.Id,
+                Name = collection.Name,
+                year = collection.year,
+                //FashionHouse = it.FashionHouse
+            };
+            //collection.Take(3);
+            return result;
+        }
+
+        public static IEnumerable<VideosDto> ToVideosDtos(this IEnumerable<Videos> Videos)
+        {
+            var result = Videos.Select(it => new VideosDto()
             {
                 Id = it.Id,
-                Image = it.Image,
                 VideoUrl = it.VideoUrl,
-                Description = it.Description,
             });
             return result;
         }

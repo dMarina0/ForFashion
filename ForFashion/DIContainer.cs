@@ -31,6 +31,7 @@ namespace ForFashion
             _container.RegisterType<IRepository<UserDetails>, Repository<UserDetails>>(new ContainerControlledLifetimeManager());
             _container.RegisterType<IRepository<DressManager>, Repository<DressManager>>(new ContainerControlledLifetimeManager());
             _container.RegisterType<ICollectionManager, CollectionManager>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<IVideosManager, VideosManager>(new ContainerControlledLifetimeManager());
         }
 
         //Singleton

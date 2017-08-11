@@ -16,11 +16,15 @@ var FashionHouseModel = (function () {
 }());
 var FashionHouseController = (function (_super) {
     __extends(FashionHouseController, _super);
-    function FashionHouseController($http) {
+    //  public x: any;
+    function FashionHouseController($http, $routeParams) {
         _super.call(this);
+        var id = $routeParams.id;
         this.httpService = $http;
         this.Model = new FashionHouseModel();
         this.getCollection();
+        this.getFashionHouse(id);
+        //   this.x = $location.search;
     }
     ;
     FashionHouseController.prototype.getCollection = function () {
@@ -30,6 +34,16 @@ var FashionHouseController = (function (_super) {
             url: 'api/Collection'
         }).then(function (response) {
             _this.Model.CollectionFashionHouseDtos = response.data;
+        }, function (response) {
+        });
+    };
+    FashionHouseController.prototype.getFashionHouse = function (id) {
+        var _this = this;
+        this.httpService({
+            method: 'GET',
+            url: 'api/FashionHouse/' + id
+        }).then(function (response) {
+            _this.Model.FashionHouseDto = response.data;
         }, function (response) {
         });
     };

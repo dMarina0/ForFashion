@@ -1,9 +1,11 @@
 ﻿class FashionHouseDto {
     public Name: string;
+    public Id: string;
 }
 class CollectionDto {
     public Name: string;
-}
+    public Id: number;
+} 
 
 class HomeModel {
     public FashionHouseDtos: Array<FashionHouseDto>
@@ -24,7 +26,7 @@ class HomeController extends BaseController {
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        this.getFashionHouse();
+        this.getFashionHouses();
         this.getCollection();
     }
 
@@ -32,11 +34,12 @@ class HomeController extends BaseController {
         this.loadScript("Content/Theme/js/front.js");
     }
 
-    public getFashionHouse() {
+    public getFashionHouses() {
         this.httpService({
             method: 'GET',
             url: 'api/FashionHouse'
         }).then((response) => {
+            debugger
             this.Model.FashionHouseDtos = <Array<FashionHouseDto>>response.data;
         }, (response) => {
         });
@@ -50,4 +53,5 @@ class HomeController extends BaseController {
         }, (response) => {
         });
     }
+
 }

@@ -16,8 +16,8 @@ namespace BusinessObjects.Entities
         public string Name { get; set; }
         public int year { get; set; }
         [Required]
-        public virtual FashionHouse FashionHouse { get; set; }
-        public virtual IEnumerable<LiveStream> LiveStreams { get; set; }
+        public FashionHouse FashionHouse { get; set; }
+        public ICollection<Videos> Video { get; set; }
         
     }
 }

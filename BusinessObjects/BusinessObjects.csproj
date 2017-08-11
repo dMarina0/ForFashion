@@ -88,13 +88,13 @@
     <Compile Include="Dtos\CollectionDto.cs" />
     <Compile Include="Dtos\DressDto.cs" />
     <Compile Include="Dtos\FashionHouseDto.cs" />
-    <Compile Include="Dtos\LiveStreamDto.cs" />
+    <Compile Include="Dtos\VideosDto.cs" />
     <Compile Include="Dtos\ShirtDto.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Entities\Collection.cs" />
     <Compile Include="Entities\Dress.cs" />
     <Compile Include="Entities\FashionHouse.cs" />
-    <Compile Include="Entities\LiveStream.cs" />
+    <Compile Include="Entities\Videos.cs" />
     <Compile Include="Entities\Shirt.cs" />
     <Compile Include="Mappers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

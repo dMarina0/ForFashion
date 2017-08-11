@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Abstracts.IManagers
 {
-   public interface ILiveStreamManager
+   public interface IVideosManager
     {
-        IEnumerable<LiveStreamDto> GetAll();
+        IEnumerable<VideosDto> GetAll();
+        IEnumerable<VideosDto> GetById(int id);
     }
+    
 }

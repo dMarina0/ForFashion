@@ -27,5 +27,10 @@ namespace BusinessLayer
             return result;
         }
 
+        public FashionHouseDto GetById(int id)
+        {
+            var result = _repository.GetById(id).ToFashionHouseDto();
+            return result;
+        }
     }
 }

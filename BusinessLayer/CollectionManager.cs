@@ -31,5 +31,11 @@ namespace BusinessLayer
             var result = _repository.GetAll().ToCollectionDtos();
             return result;
         }
+
+        public CollectionDto GetById(int id)
+        {
+            var result = _repository.GetById(id).ToCollectionDto();
+            return result;
+        }
     }
 }

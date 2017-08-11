@@ -90,19 +90,23 @@ namespace DataLayer
                 fh3,
                 fh4,
                 fh5);
+            var c1 = new Collection() { Id = 1, Name = "Spring-Summmer", year = 2016, FashionHouse = fh1 };
+            var c2 = new Collection() { Id = 2, Name = "Autumn-Winter", year = 2017, FashionHouse = fh2 };
+            var c3 = new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 };
+            var c4 = new Collection() { Id = 4, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 };
+            var c5 = new Collection() { Id = 5, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 };
             context.Collection.AddOrUpdate(
                 c => c.Id,
-                new Collection() { Id = 1, Name = "Spring-Summmer",year = 2016, FashionHouse = fh1 },
-                new Collection() { Id = 2, Name = "Autumn-Winter",year = 2017, FashionHouse = fh2 },
-                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
+                c1,
+                c2,
+                c3,
+                c4,
+                c5);
 
-                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
-
-                new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
-
-                new Collection() { Id = 4, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 },
-                new Collection() { Id = 5, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 });
-
+            context.Videos.AddOrUpdate(
+                new Videos() { Id = 1, VideoUrl = "https://www.youtube.com/embed/t15ftuJ7Vl4", Collection_Id = c1.Id },
+                new Videos() { Id = 2, VideoUrl = "https://www.youtube.com/embed/qHzam_SGlJo", Collection_Id = c2.Id },
+                new Videos() { Id = 3, VideoUrl = "https://www.youtube.com/embed/emkZ5rVIv7Q", Collection_Id = c1.Id });
 
             context.SaveChanges(); 
             base.Seed(context);

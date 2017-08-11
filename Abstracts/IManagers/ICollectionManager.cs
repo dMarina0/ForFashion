@@ -12,7 +12,7 @@ namespace Abstracts.IManagers
     {
 
         IEnumerable<CollectionDto> GetAll();
-       // void AddCollection(int id);
-       
+        // void AddCollection(int id);
+        CollectionDto GetById(int id);
     }
 }

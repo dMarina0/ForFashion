@@ -28,18 +28,19 @@ var HomeController = (function (_super) {
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        this.getFashionHouse();
+        this.getFashionHouses();
         this.getCollection();
     }
     HomeController.prototype.onLoad = function () {
         this.loadScript("Content/Theme/js/front.js");
     };
-    HomeController.prototype.getFashionHouse = function () {
+    HomeController.prototype.getFashionHouses = function () {
         var _this = this;
         this.httpService({
             method: 'GET',
             url: 'api/FashionHouse'
         }).then(function (response) {
+            debugger;
             _this.Model.FashionHouseDtos = response.data;
         }, function (response) {
         });

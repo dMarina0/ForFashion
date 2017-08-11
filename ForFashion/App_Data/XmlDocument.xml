@@ -487,15 +487,35 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:ForFashion.Controllers.CollectionController.GetById(System.Int32)">
+            <summary>
+            Returns a collection with the given id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:ForFashion.Controllers.FashionHouseController.Get">
             <summary>
             Returns the list of fashion houses
             </summary>
             <returns></returns>
         </member>
-        <member name="M:ForFashion.Controllers.LiveStreamController.Get">
+        <member name="M:ForFashion.Controllers.FashionHouseController.GetById(System.Int32)">
+            <summary>
+            Returns a fashion house by a given id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ForFashion.Controllers.VideosController.Get">
             <summary>
             Returns the list of videos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ForFashion.Controllers.VideosController.GetById(System.Int32)">
+            <summary>
+            Returns the list of videos for a specific collection
             </summary>
             <returns></returns>
         </member>
