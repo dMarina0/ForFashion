@@ -538,10 +538,9 @@ _________________________________________________________ -->
             </div>-->
 
             <div class="row products">
-
-                <div class="col-md-4 col-sm-4">
+                <div  ng-repeat="videos in $ctrl.Model.VideosDtos" class="col-md-4 col-sm-4">
                     <div class="product">
-                        <div class="flip-container">
+                        <!--<div class="flip-container">
                             <div class="flipper">
                                 <div class="front">
 
@@ -552,15 +551,19 @@ _________________________________________________________ -->
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 4:3 aspect ratio -->
+                        </div>-->
                         <div class="embed-responsive embed-responsive-4by3">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/t15ftuJ7Vl4"></iframe>
+                            <iframe class="embed-responsive-item" ng-src="{{videos.VideoUrl | trustedResource}}"></iframe>
+                            <iframe ng-src="{{videos.VideoUrl | trustedResource}}" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"> </iframe>
+                            <!--<video controls="controls" ng-if="videos.VideoUrl != null">
+                                <source ng-src="{{videos.VideoUrl | trustedResource}}" type="" />
+                            </video>-->
                         </div>
 
-                        <a href="detail.html" class="invisible">
+
+                        <!--<a href="detail.html" class="invisible">
                             <img src="img/product1.jpg" alt="" class="img-responsive">
-                        </a>
+                        </a>-->
                         <!--<div class="text">
                             <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
                             <p class="price">$143.00</p>
@@ -588,10 +591,12 @@ _________________________________________________________ -->
                                 </div>
                             </div>
                         </div>
+                      
                         <!-- 4:3 aspect ratio -->
-                        <div class="embed-responsive embed-responsive-4by3">
+                        <!--<div class="embed-responsive embed-responsive-4by3">
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qHzam_SGlJo"></iframe>
-                        </div>
+                            <iframe src="https://www.youtube.com/embed/qHzam_SGlJo" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"> </iframe>
+                        </div>-->
 
                         <a href="detail.html" class="invisible">
                             <img src="img/product1.jpg" alt="" class="img-responsive">
@@ -629,9 +634,10 @@ _________________________________________________________ -->
                             <img src="img/product2.jpg" alt="" class="img-responsive">
                         </a>
                         <!-- 4:3 aspect ratio -->
-                        <div class="embed-responsive embed-responsive-4by3">
+                        <!--<div class="embed-responsive embed-responsive-4by3">
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/emkZ5rVIv7Q"></iframe>
-                        </div>
+                            <iframe src="https://www.youtube.com/embed/emkZ5rVIv7Q" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"> </iframe> 
+                        </div>-->
 
                         <!--<div class="text">
                             <h3><a href="detail.html">White Blouse Armani</a></h3>
@@ -676,9 +682,10 @@ _________________________________________________________ -->
                                 </div>
                             </div>
                         </div>-->
-                        <div class="embed-responsive embed-responsive-4by3">
+                        <!--<div class="embed-responsive embed-responsive-4by3">
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YLDUXZ4X5b8"></iframe>
-                        </div>
+                            <iframe src="https://www.youtube.com/embed/YLDUXZ4X5b8" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"> </iframe> 
+                        </div>-->
                         <a href="detail.html" class="invisible">
                             <img src="img/product3.jpg" alt="" class="img-responsive">
                         </a>
@@ -745,7 +752,10 @@ _________________________________________________________ -->
                                 </div>
                             </div>
                         </div>
-
+                        <!--<div class="embed-responsive embed-responsive-4by3">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/--vB3yMS-jw" ></iframe>
+                            <iframe src="https://www.youtube.com/embed/--vB3yMS-jw"  allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"> </iframe>
+                        </div>-->
                         <a href="detail.html" class="invisible">
                             <img src="img/product2.jpg" alt="" class="img-responsive">
                         </a>
@@ -810,7 +820,7 @@ _________________________________________________________ -->
 
                 <div class="col-md-4 col-sm-4">
                     <div class="product">
-                        <div class="flip-container">
+                        <!--<div class="flip-container">
                             <div class="flipper">
                                 <div class="front">
                                     <a href="detail.html">
@@ -823,7 +833,8 @@ _________________________________________________________ -->
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
+
                         <a href="detail.html" class="invisible">
                             <img src="img/product2.jpg" alt="" class="img-responsive">
                         </a>

@@ -1,5 +1,6 @@
 ﻿using Abstracts.IManagers;
 using BusinessObjects.Dtos;
+using BusinessObjects.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,17 @@ namespace ForFashion.Controllers
         public IEnumerable<FashionHouseDto> Get()
         {
             var result = _fashionhouseManager.GetAll().Take(3);
+            return result;
+        }
+
+        /// <summary>
+        /// Returns a fashion house by a given id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public FashionHouseDto GetById(int id)
+        {
+            var result = _fashionhouseManager.GetById(id);
             return result;
         }
     }

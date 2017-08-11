@@ -279,7 +279,7 @@
     <Compile Include="Controllers\DressController.cs" />
     <Compile Include="Controllers\FashionHouseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LiveStreamController.cs" />
+    <Compile Include="Controllers\VideosController.cs" />
     <Compile Include="Controllers\ShirtController.cs" />
     <Compile Include="Controllers\UserDetailsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -1354,6 +1354,7 @@
     <TypeScriptCompile Include="Scripts\app\UserProfile\userprofile.module.ts" />
     <TypeScriptCompile Include="Scripts\app\videos\videos.component.ts" />
     <TypeScriptCompile Include="Scripts\app\videos\videos.controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\videos\videos.filter.ts" />
     <TypeScriptCompile Include="Scripts\app\videos\videos.module.ts" />
     <TypeScriptCompile Include="Scripts\app\register\register.module.ts" />
     <TypeScriptCompile Include="Scripts\app\Vlog\vlog.component.ts" />

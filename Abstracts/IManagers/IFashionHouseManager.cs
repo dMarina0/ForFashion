@@ -11,5 +11,6 @@ namespace Abstracts.IManagers
     public interface IFashionHouseManager
     {
         IEnumerable<FashionHouseDto> GetAll();
+        FashionHouseDto GetById(int id);
     }
 }

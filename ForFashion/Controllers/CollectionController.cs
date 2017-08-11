@@ -27,5 +27,16 @@ namespace ForFashion.Controllers
             var result = _collectionManager.GetAll();
             return result;
         }
+
+        /// <summary>
+        /// Returns a collection with the given id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public CollectionDto GetById(int id)
+        {
+            var result = _collectionManager.GetById(id);
+            return result;
+        }
     }
 }

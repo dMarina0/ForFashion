@@ -90,45 +90,100 @@ namespace DataLayer
                 fh3,
                 fh4,
                 fh5);
+            var c1 = new Collection() { Id = 1, Name = "Spring-Summmer", year = 2016, FashionHouse = fh1 };
+            var c2 = new Collection() { Id = 2, Name = "Autumn-Winter", year = 2017, FashionHouse = fh2 };
+            var c3 = new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 };
+            var c4 = new Collection() { Id = 4, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 };
+            var c5 = new Collection() { Id = 5, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 };
+            var c6 = new Collection() { Id = 1, Name = "Spring-Summmer", year = 2012, FashionHouse = fh1 };
+            var c7 = new Collection() { Id = 2, Name = "Spring-Summer", year = 2012, FashionHouse = fh2 };
+            var c8 = new Collection() { Id = 3, Name = "Spring-Summer", year = 2012, FashionHouse = fh3 };
+            var c9 = new Collection() { Id = 4, Name = "Autumn-Winter", year = 2012, FashionHouse = fh3 };
+            var c10 = new Collection() { Id = 5, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 };
+            var c11 = new Collection() { Id = 6, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 };
+            var c12 = new Collection() { Id = 7, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 };
+            var c13 = new Collection() { Id = 8, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 };
+            var c14 = new Collection() { Id = 9, Name = "Autumn-Winter", year = 2017, FashionHouse = fh1 };
+            var c15 = new Collection() { Id = 10, Name = "Autumn-Winter", year = 2013, FashionHouse = fh2 };
+            var c16 = new Collection() { Id = 11, Name = "Spring-Summmer", year = 2013, FashionHouse = fh1 };
+            var c17 = new Collection() { Id = 12, Name = "Spring-Summer", year = 2013, FashionHouse = fh2 };
+            var c18 = new Collection() { Id = 13, Name = "Spring-Summer", year = 2013, FashionHouse = fh3 };
+            var c19 = new Collection() { Id = 14, Name = "Autumn-Winter", year = 2013, FashionHouse = fh3 };
+            var c20 = new Collection() { Id = 15, Name = "Spring-Summer", year = 2014, FashionHouse = fh3 };
+            var c21 = new Collection() { Id = 16, Name = "Paris Haute Couture Spring/Summer", year = 2013, FashionHouse = fh4 };
+            var c22 = new Collection() { Id = 17, Name = "New York Fashion Week Fall/Winter", year = 2013, FashionHouse = fh5 };
+            var c23 = new Collection() { Id = 18, Name = "New York Fashion Week Fall/Winter", year = 2013, FashionHouse = fh5 };
+            var c24 = new Collection() { Id = 19, Name = "Autumn-Winter", year = 2014, FashionHouse = fh1 };
+            var c25 = new Collection() { Id = 20, Name = "Autumn-Winter", year = 2014, FashionHouse = fh2 };
+            var c26 = new Collection() { Id = 21, Name = "Spring-Summmer", year = 2015, FashionHouse = fh1 };
+            var c27 = new Collection() { Id = 22, Name = "Spring-Summer", year = 2015, FashionHouse = fh2 };
+            var c28 = new Collection() { Id = 23, Name = "Spring-Summer", year = 2015, FashionHouse = fh3 };
+            var c29 = new Collection() { Id = 24, Name = "Autumn-Winter", year = 2015, FashionHouse = fh3 };
+            var c30 = new Collection() { Id = 25, Name = "Spring-Summer", year = 2015, FashionHouse = fh3 };
+            var c31 = new Collection() { Id = 26, Name = "Paris Haute Couture Spring/Summer", year = 2018, FashionHouse = fh4 };
+            var c32 = new Collection() { Id = 27, Name = "New York Fashion Week Fall/Winter", year = 2018, FashionHouse = fh5 };
+            var c33 = new Collection() { Id = 28, Name = "New York Fashion Week Fall/Winter", year = 2018, FashionHouse = fh5 };
+            var c34 = new Collection() { Id = 29, Name = "Autumn-Winter", year = 2015, FashionHouse = fh1 };
+            var c35 = new Collection() { Id = 30, Name = "Autumn-Winter", year = 2015, FashionHouse = fh1 };
+            var c36 = new Collection() { Id = 31, Name = "Spring-Summmer", year = 2016, FashionHouse = fh1 };
+            var c37 = new Collection() { Id = 32, Name = "Spring-Summer", year = 2016, FashionHouse = fh2 };
+            var c38 = new Collection() { Id = 33, Name = "Spring-Summer", year = 2016, FashionHouse = fh3 };
+            var c39 = new Collection() { Id = 34, Name = "Autumn-Winter", year = 2016, FashionHouse = fh3 };
+            var c40 = new Collection() { Id = 35, Name = "Spring-Summer", year = 2016, FashionHouse = fh3 };
+            var c41 = new Collection() { Id = 39, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 };
+            var c42 = new Collection() { Id = 40, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 };
+
             context.Collection.AddOrUpdate(
                 c => c.Id,
-                new Collection() { Id = 1, Name = "Spring-Summmer", year = 2012, FashionHouse = fh1 },
-                new Collection() { Id = 2, Name = "Spring-Summer", year = 2012, FashionHouse = fh2 },
-                new Collection() { Id = 3, Name = "Spring-Summer", year = 2012, FashionHouse = fh3 },
-                new Collection() { Id = 4, Name = "Autumn-Winter", year = 2012, FashionHouse = fh3 },
-                new Collection() { Id = 5, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 },
-                new Collection() { Id = 6, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 },
-                new Collection() { Id = 7, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 },
-                new Collection() { Id = 8, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 },
-                new Collection() { Id = 9, Name = "Autumn-Winter", year = 2017, FashionHouse = fh1 },
-                new Collection() { Id = 10, Name = "Autumn-Winter", year = 2013, FashionHouse = fh2 },
-                new Collection() { Id = 11, Name = "Spring-Summmer", year = 2013, FashionHouse = fh1 },
-                new Collection() { Id = 12, Name = "Spring-Summer", year = 2013, FashionHouse = fh2 },
-                new Collection() { Id = 13, Name = "Spring-Summer", year = 2013, FashionHouse = fh3 },
-                new Collection() { Id = 14, Name = "Autumn-Winter", year = 2013, FashionHouse = fh3 },
-                new Collection() { Id = 15, Name = "Spring-Summer", year = 2014, FashionHouse = fh3 },
-                new Collection() { Id = 16, Name = "Paris Haute Couture Spring/Summer", year = 2013, FashionHouse = fh4 },
-                new Collection() { Id = 17, Name = "New York Fashion Week Fall/Winter", year = 2013, FashionHouse = fh5 },
-                new Collection() { Id = 18, Name = "New York Fashion Week Fall/Winter", year = 2013, FashionHouse = fh5 },
-                new Collection() { Id = 19, Name = "Autumn-Winter", year = 2014, FashionHouse = fh1 },
-                new Collection() { Id = 20, Name = "Autumn-Winter", year = 2014, FashionHouse = fh2 },
-                new Collection() { Id = 21, Name = "Spring-Summmer", year = 2015, FashionHouse = fh1 },
-                new Collection() { Id = 22, Name = "Spring-Summer", year = 2015, FashionHouse = fh2 },
-                new Collection() { Id = 23, Name = "Spring-Summer", year = 2015, FashionHouse = fh3 },
-                new Collection() { Id = 24, Name = "Autumn-Winter", year = 2015, FashionHouse = fh3 },
-                new Collection() { Id = 25, Name = "Spring-Summer", year = 2015, FashionHouse = fh3 },
-                new Collection() { Id = 26, Name = "Paris Haute Couture Spring/Summer", year = 2018, FashionHouse = fh4 },
-                new Collection() { Id = 27, Name = "New York Fashion Week Fall/Winter", year = 2018, FashionHouse = fh5 },
-                new Collection() { Id = 28, Name = "New York Fashion Week Fall/Winter", year = 2018, FashionHouse = fh5 },
-                new Collection() { Id = 29, Name = "Autumn-Winter", year = 2015, FashionHouse = fh1 },
-                new Collection() { Id = 30, Name = "Autumn-Winter", year = 2015, FashionHouse = fh1 },
-                new Collection() { Id = 31, Name = "Spring-Summmer", year = 2016, FashionHouse = fh1 },
-                new Collection() { Id = 32, Name = "Spring-Summer", year = 2016, FashionHouse = fh2 },
-                new Collection() { Id = 33, Name = "Spring-Summer", year = 2016, FashionHouse = fh3 },
-                new Collection() { Id = 34, Name = "Autumn-Winter", year = 2016, FashionHouse = fh3 },
-                new Collection() { Id = 35, Name = "Spring-Summer", year = 2016, FashionHouse = fh3 },
-                new Collection() { Id = 39, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 },
-                new Collection() { Id = 40, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 });
+                c1,
+                c2,
+                c3,
+                c4,
+                c5,
+                c6,
+                c7,
+                c8,
+                c9,
+                c10,
+                c11,
+                 c12,
+                c13,
+                c14,
+                c15,
+                c16,
+                c17,
+                c18,
+                c19,
+                c20,
+                c21,
+                c22, 
+                c23,
+                c24,
+                c25,
+                c26,
+                c27,
+                c28,
+                c29,
+                c30,
+                c31,
+                c32,
+                c33,
+                 c34,
+                c35,
+                c36,
+                c37,
+                c38,
+                c39,
+                c40,
+                c41,
+                c42);
+
+                
+
+            context.Videos.AddOrUpdate(
+                new Videos() { Id = 1, VideoUrl = "https://www.youtube.com/embed/t15ftuJ7Vl4", Collection_Id = c1.Id },
+                new Videos() { Id = 2, VideoUrl = "https://www.youtube.com/embed/qHzam_SGlJo", Collection_Id = c2.Id },
+                new Videos() { Id = 3, VideoUrl = "https://www.youtube.com/embed/emkZ5rVIv7Q", Collection_Id = c1.Id });
 
             context.SaveChanges(); 
             base.Seed(context);
