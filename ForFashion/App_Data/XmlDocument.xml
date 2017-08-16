@@ -533,8 +533,9 @@
         </member>
         <member name="M:ForFashion.Controllers.UserDetailsController.GetbyUser(System.String)">
             <summary>
-            Returns the list of shirts
+            Returns user by id
             </summary>
+             /// <param name="id"></param>
             <returns></returns>
         </member>
     </members>

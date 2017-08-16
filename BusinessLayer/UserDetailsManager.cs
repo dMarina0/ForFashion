@@ -52,11 +52,16 @@ namespace BusinessLayer
 
         public UserDetailsDto GetByUser(string userId)
         {
-            var applicationUser = _repository.GetById(userId);
-            var rezult = applicationUser.UserDetails;
-            var result = Mappers.ToUserDetailDto(rezult);
-
+         
+             var applicationUser = _repository.GetById(userId);
+             applicationUser.UserDetails = new UserDetails(); ;
+             var result = Mappers.ToUserDetailDto(applicationUser.UserDetails);
+             return result;
+            
+            /*var rezultat = _UserDetailsRepository.GetById(userId);
+            var result = Mappers.ToUserDetailDto(rezultat);
             return result;
+            */
         }
     }
 }

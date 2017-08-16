@@ -38,7 +38,7 @@ namespace BusinessObjects
         public static UserDetailsDto ToUserDetailDto(UserDetails userDetails)
         {
             var result = new UserDetailsDto();
-            result.Id = userDetails.Id;
+           // result.Id = userDetails.Id;
             result.FirstName = userDetails.FirstName;
             result.LastName = userDetails.LastName;
             result.City = userDetails.City;

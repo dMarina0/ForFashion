@@ -58,7 +58,6 @@ class UserProfileController extends BaseController {
 
             },
             data: {
-
                 "FirstName":this.UserProfileModel.FirstName,
                 "LastName": this.UserProfileModel.LastName,
                 "City": this.UserProfileModel.City,

@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace ForFashion.Controllers
 {
-    [Authorize]
+  //  [Authorize]
     public class UserDetailsController : ApiController
     {
         private IUserDetailsManager _iuserDetailsManager;
@@ -25,10 +25,12 @@ namespace ForFashion.Controllers
             string id = RequestContext.Principal.Identity.GetUserId();
             _iuserDetailsManager.UpdateUserDetails(id, dto);
         }
-        // GET api/UserDetails/{id}
+
+        // GET api/UserDetails
         /// <summary>
-        /// Returns the list of shirts
+        /// Returns user by id
         /// </summary>
+        ///  /// <param name="id"></param>
         /// <returns></returns>
         public UserDetailsDto GetbyUser(string id)
         {
