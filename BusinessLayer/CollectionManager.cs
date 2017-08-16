@@ -1,4 +1,4 @@
-﻿using Abstracts.IManagers;
+﻿ using Abstracts.IManagers;
 using System;
 using System.Collections.Generic;
 using System.Linq;

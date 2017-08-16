@@ -32,9 +32,9 @@ namespace ForFashion.Controllers
         /// </summary>
         ///  /// <param name="id"></param>
         /// <returns></returns>
-        public UserDetailsDto GetbyUser(string id)
+        public UserDetailsDto GetbyUser()
         {
-            id = RequestContext.Principal.Identity.GetUserId();
+            var id = RequestContext.Principal.Identity.GetUserId();
             var result = _iuserDetailsManager.GetByUser(id);
             return result;
         }

@@ -13,8 +13,8 @@ var UserProfileController = (function (_super) {
     __extends(UserProfileController, _super);
     function UserProfileController($http) {
         _super.call(this);
-        this.UserProfileModel = new UserProfileModel();
         this.httpService = $http;
+        this.UserProfileModel = new UserProfileModel();
         this.getData();
     }
     UserProfileController.prototype.getData = function () {

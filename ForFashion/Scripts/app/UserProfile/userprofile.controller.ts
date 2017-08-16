@@ -20,8 +20,8 @@ class UserProfileController extends BaseController {
 
     constructor($http: ng.IHttpService) {
         super();
-        this.UserProfileModel = new UserProfileModel();
         this.httpService = $http;
+        this.UserProfileModel = new UserProfileModel();
         this.getData();
     }
 

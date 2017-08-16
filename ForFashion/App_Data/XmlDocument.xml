@@ -531,7 +531,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:ForFashion.Controllers.UserDetailsController.GetbyUser(System.String)">
+        <member name="M:ForFashion.Controllers.UserDetailsController.GetbyUser">
             <summary>
             Returns user by id
             </summary>

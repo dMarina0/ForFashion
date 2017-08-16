@@ -54,7 +54,6 @@ namespace BusinessLayer
         {
          
              var applicationUser = _repository.GetById(userId);
-             applicationUser.UserDetails = new UserDetails(); ;
              var result = Mappers.ToUserDetailDto(applicationUser.UserDetails);
              return result;
             
