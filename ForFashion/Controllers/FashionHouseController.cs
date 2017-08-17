@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace ForFashion.Controllers
 {
@@ -19,6 +20,7 @@ namespace ForFashion.Controllers
             _fashionhouseManager = DIContainer.Instance.Resolve<IFashionHouseManager>();
 
         }
+        
         // GET api/FashionHouse
         /// <summary>
         /// Returns the list of fashion houses

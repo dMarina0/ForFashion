@@ -6,7 +6,7 @@
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
                     <li>
-                        <a ng-show="$ctrl.user">{{$ctrl.user.username}}</a>
+                        <a ng-show="$ctrl.user" href="/index.html#!/userprofile">{{$ctrl.user.username}}</a>
                         <a ng-hide="$ctrl.user" href="/index.html#!/register" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
                     <li>
