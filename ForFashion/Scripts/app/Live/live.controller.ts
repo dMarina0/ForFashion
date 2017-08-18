@@ -1,4 +1,6 @@
 ﻿class LiveModel {
+    UserName: string;
+    Message: string;
     constructor() { };
 }
 
@@ -8,7 +10,8 @@
 class LiveController extends BaseController {
     private connection: SignalR;
     private proxy: SignalR.Hub.Proxy;
-
+    public messages: Array<string>;
+    public message: string;;
 
     public Model: LiveModel;
     constructor() {
@@ -23,30 +26,26 @@ class LiveController extends BaseController {
         this.connection = $.connection;
         this.proxy = $.connection.hub.createHubProxy('chatHub');
         this.proxy.on('broadcastMessage', (name, message) => this.broadcastMessage(name, message));
-        this.connection.hub.start().done(() => this.executeHubInitActions());
-
-            //// Declare a proxy to reference the hub.
-
-            //var connection:any = $.connection;
-            //var chat = connection.chatHub;
-            //// Create a function that the hub can call to broadcast messages.
-            //chat.client.broadcastMessage = function (name, message) {
-            //    console.log(name + " " + message);
-            //};
-
-            //// Start the connection.
-            //$.connection.hub.start().done(function () {
-            //    chat.server.send("me", "you");
-
-
-            //});
+        this.proxy.on('userConnected', (number) => this.userConnected(number));
+        this.proxy.on('onConnected', (id, userName, connectedUsersJson) => this.onConnected(id, userName, connectedUsersJson));
+        this.connection.hub.start().done(() => this.newMessage())
     }
 
-    protected executeHubInitActions() {
-        this.proxy.invoke("send", "me", "you");
+    protected newMessage() {
+        this.proxy.invoke("onConnected", this.user.username);
     }
+ 
+
 
     protected broadcastMessage(name, message) {
         console.log(name + " " + message);
+    }
+    protected userConnected(number) {
+        debugger
+        console.log(number);
+    }
+    protected onConnected(id, userName, connectedUsersJson) {
+        debugger
+        var connecvtedUsers = JSON.parse(connectedUsersJson);
     }
 }

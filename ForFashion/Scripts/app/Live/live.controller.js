@@ -17,30 +17,30 @@ var LiveController = (function (_super) {
         this.conection();
     }
     ;
+    ;
     LiveController.prototype.conection = function () {
         var _this = this;
         //initialize connection
         this.connection = $.connection;
         this.proxy = $.connection.hub.createHubProxy('chatHub');
         this.proxy.on('broadcastMessage', function (name, message) { return _this.broadcastMessage(name, message); });
-        this.connection.hub.start().done(function () { return _this.executeHubInitActions(); });
-        //// Declare a proxy to reference the hub.
-        //var connection:any = $.connection;
-        //var chat = connection.chatHub;
-        //// Create a function that the hub can call to broadcast messages.
-        //chat.client.broadcastMessage = function (name, message) {
-        //    console.log(name + " " + message);
-        //};
-        //// Start the connection.
-        //$.connection.hub.start().done(function () {
-        //    chat.server.send("me", "you");
-        //});
+        this.proxy.on('userConnected', function (number) { return _this.userConnected(number); });
+        this.proxy.on('onConnected', function (id, userName, connectedUsersJson) { return _this.onConnected(id, userName, connectedUsersJson); });
+        this.connection.hub.start().done(function () { return _this.newMessage(); });
     };
-    LiveController.prototype.executeHubInitActions = function () {
-        this.proxy.invoke("send", "me", "you");
+    LiveController.prototype.newMessage = function () {
+        this.proxy.invoke("onConnected", this.user.username);
     };
     LiveController.prototype.broadcastMessage = function (name, message) {
         console.log(name + " " + message);
+    };
+    LiveController.prototype.userConnected = function (number) {
+        debugger;
+        console.log(number);
+    };
+    LiveController.prototype.onConnected = function (id, userName, connectedUsersJson) {
+        debugger;
+        var connecvtedUsers = JSON.parse(connectedUsersJson);
     };
     return LiveController;
 }(BaseController));

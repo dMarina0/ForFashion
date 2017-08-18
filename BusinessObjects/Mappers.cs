@@ -140,9 +140,10 @@ namespace BusinessObjects
         {
             var result = Chat.Select(it => new ChatDto()
             {
-                UserId=it.UserId,
-                Messagge=it.Messagge,
-            });
+                ConnectionId = it.ConnectionId,
+                UserName = it.UserName,
+               
+    });
             return result;
         }
     }
