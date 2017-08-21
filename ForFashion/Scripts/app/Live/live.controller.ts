@@ -1,22 +1,28 @@
-﻿class LiveModel {
-    UserName: string;
-    Message: string;
-    constructor() { };
+﻿class Message {
+    UserMessage: string;
+    constructor() {
+    };
 }
-
-
+class LiveModel {
+    UserName: string;
+    mesaj: string;
+    Messages: Array<Message>;
+    constructor() {
+       this.Messages = new Array<Message>();
+    };
+}
 
 
 class LiveController extends BaseController {
     private connection: SignalR;
     private proxy: SignalR.Hub.Proxy;
-    public messages: Array<string>;
-    public message: string;;
+    public LiveModel: LiveModel;
+    protected RootScope: ng.IRootScopeService;
 
-    public Model: LiveModel;
-    constructor() {
+    constructor($rootScope: ng.IRootScopeService) {
         super();
-        this.Model = new LiveModel();
+        this.RootScope = $rootScope;
+        this.LiveModel = new LiveModel();
         this.conection();
     };
 
@@ -34,18 +40,24 @@ class LiveController extends BaseController {
     protected newMessage() {
         this.proxy.invoke("onConnected", this.user.username);
     }
- 
-
 
     protected broadcastMessage(name, message) {
-        console.log(name + " " + message);
+        name = this.user.username;
+        this.LiveModel.UserName = name;
+        this.LiveModel.mesaj = message;
+        var a = new Message();
+        a.UserMessage = message;
+        this.LiveModel.Messages.push(a);
+        this.RootScope.$apply();
     }
+    protected SendMessage() {
+        this.proxy.invoke("send", this.LiveModel.UserName, this.LiveModel.mesaj);
+    }
+
     protected userConnected(number) {
-        debugger
         console.log(number);
     }
     protected onConnected(id, userName, connectedUsersJson) {
-        debugger
         var connecvtedUsers = JSON.parse(connectedUsersJson);
     }
 }

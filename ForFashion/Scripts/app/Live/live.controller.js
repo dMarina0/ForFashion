@@ -3,20 +3,27 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+var Message = (function () {
+    function Message() {
+    }
+    ;
+    return Message;
+}());
 var LiveModel = (function () {
     function LiveModel() {
+        this.Messages = new Array();
     }
     ;
     return LiveModel;
 }());
 var LiveController = (function (_super) {
     __extends(LiveController, _super);
-    function LiveController() {
+    function LiveController($rootScope) {
         _super.call(this);
-        this.Model = new LiveModel();
+        this.RootScope = $rootScope;
+        this.LiveModel = new LiveModel();
         this.conection();
     }
-    ;
     ;
     LiveController.prototype.conection = function () {
         var _this = this;
@@ -32,14 +39,21 @@ var LiveController = (function (_super) {
         this.proxy.invoke("onConnected", this.user.username);
     };
     LiveController.prototype.broadcastMessage = function (name, message) {
-        console.log(name + " " + message);
+        name = this.user.username;
+        this.LiveModel.UserName = name;
+        this.LiveModel.mesaj = message;
+        var a = new Message();
+        a.UserMessage = message;
+        this.LiveModel.Messages.push(a);
+        this.RootScope.$apply();
+    };
+    LiveController.prototype.SendMessage = function () {
+        this.proxy.invoke("send", this.LiveModel.UserName, this.LiveModel.mesaj);
     };
     LiveController.prototype.userConnected = function (number) {
-        debugger;
         console.log(number);
     };
     LiveController.prototype.onConnected = function (id, userName, connectedUsersJson) {
-        debugger;
         var connecvtedUsers = JSON.parse(connectedUsersJson);
     };
     return LiveController;
