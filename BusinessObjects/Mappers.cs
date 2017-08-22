@@ -54,6 +54,15 @@ namespace BusinessObjects
             result.Name = dressDto.Name;
             return result;
         }
+        public static Chat ToChatEntity(ChatDto chatDto)
+        {
+            var result = new Chat();
+            result.ConnectionId = chatDto.ConnectionId;
+            result.UserName = chatDto.UserName;
+            result.Messages = chatDto.Messages;
+            return result;
+         }
+
         public static IEnumerable<DressDto> ToDressDtos(this IEnumerable<Dress> dress)
         {
             var result = dress.Select(it => new DressDto()
@@ -142,6 +151,7 @@ namespace BusinessObjects
             {
                 ConnectionId = it.ConnectionId,
                 UserName = it.UserName,
+                Messages=it.Messages,
                
     });
             return result;

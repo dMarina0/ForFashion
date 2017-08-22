@@ -26,5 +26,13 @@ namespace ForFashion.Controllers
             var result = _chatManager.GetAll();
             return result;
         }
+        //[HttpPost]
+        //[Route("api/Chat/post")]
+        [System.Web.Http.HttpPost]
+        public IHttpActionResult AddObj(ChatDto dtoChat)
+        {
+            _chatManager.Insert(dtoChat);
+            return Ok();
+        }
     }
 }

@@ -1,15 +1,18 @@
 ﻿class Message {
+    UserName: string;
     UserMessage: string;
     constructor() {
     };
 }
 class LiveModel {
-    UserName: string;
+    ConnectedUsers: Array<string>;
+    Name: string;
     mesaj: string;
     Messages: Array<Message>;
     constructor() {
        this.Messages = new Array<Message>();
     };
+
 }
 
 
@@ -38,26 +41,31 @@ class LiveController extends BaseController {
     }
 
     protected newMessage() {
-        this.proxy.invoke("onConnected", this.user.username);
+        this.proxy.invoke("Connected", this.LiveModel.Name);
+
     }
 
     protected broadcastMessage(name, message) {
         name = this.user.username;
-        this.LiveModel.UserName = name;
+        this.LiveModel.Name = name;
         this.LiveModel.mesaj = message;
         var a = new Message();
         a.UserMessage = message;
+        a.UserName = name;
         this.LiveModel.Messages.push(a);
         this.RootScope.$apply();
     }
     protected SendMessage() {
-        this.proxy.invoke("send", this.LiveModel.UserName, this.LiveModel.mesaj);
+        this.proxy.invoke("send", this.LiveModel.Name, this.LiveModel.mesaj);
     }
 
     protected userConnected(number) {
         console.log(number);
     }
     protected onConnected(id, userName, connectedUsersJson) {
-        var connecvtedUsers = JSON.parse(connectedUsersJson);
+       
+        var connectedUsers = JSON.parse(connectedUsersJson);
+        
+       
     }
 }

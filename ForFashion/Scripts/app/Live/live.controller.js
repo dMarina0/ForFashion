@@ -36,25 +36,26 @@ var LiveController = (function (_super) {
         this.connection.hub.start().done(function () { return _this.newMessage(); });
     };
     LiveController.prototype.newMessage = function () {
-        this.proxy.invoke("onConnected", this.user.username);
+        this.proxy.invoke("Connected", this.LiveModel.Name);
     };
     LiveController.prototype.broadcastMessage = function (name, message) {
         name = this.user.username;
-        this.LiveModel.UserName = name;
+        this.LiveModel.Name = name;
         this.LiveModel.mesaj = message;
         var a = new Message();
         a.UserMessage = message;
+        a.UserName = name;
         this.LiveModel.Messages.push(a);
         this.RootScope.$apply();
     };
     LiveController.prototype.SendMessage = function () {
-        this.proxy.invoke("send", this.LiveModel.UserName, this.LiveModel.mesaj);
+        this.proxy.invoke("send", this.LiveModel.Name, this.LiveModel.mesaj);
     };
     LiveController.prototype.userConnected = function (number) {
         console.log(number);
     };
     LiveController.prototype.onConnected = function (id, userName, connectedUsersJson) {
-        var connecvtedUsers = JSON.parse(connectedUsersJson);
+        var connectedUsers = JSON.parse(connectedUsersJson);
     };
     return LiveController;
 }(BaseController));

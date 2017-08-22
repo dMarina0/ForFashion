@@ -24,5 +24,11 @@ namespace BusinessLayer
             var result = _repository.GetAll().ToChatDtos();
             return result;
         }
+        public void Insert(ChatDto chatDto)
+        {
+            var chatEntity = Mappers.ToChatEntity(chatDto);
+            _repository.Insert(chatEntity);
+            _repository.Save();
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace Abstracts.IManagers
     public interface IChatManager
     {
         IEnumerable<ChatDto> GetAll();
+        void Insert(ChatDto obj);
     }
 }

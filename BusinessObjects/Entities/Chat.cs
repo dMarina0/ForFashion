@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessObjects.Entities
 {
+   
    public class Chat
     {
         [Key]
@@ -15,6 +17,7 @@ namespace BusinessObjects.Entities
         
         public string ConnectionId { get; set; }
         public string UserName { get; set; }
+        public string Messages{ get; set; }
         
     }
 }
