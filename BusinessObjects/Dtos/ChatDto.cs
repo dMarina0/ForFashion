@@ -8,8 +8,9 @@ namespace BusinessObjects.Dtos
 {
     public class ChatDto
     {
-        public int UserId { get; set; }
-        public string Messagge { get; set; }
+        public string ConnectionId { get; set; }
+        public string UserName { get; set; }
+      
 
     }
 }

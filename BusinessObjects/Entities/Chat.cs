@@ -12,7 +12,9 @@ namespace BusinessObjects.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int UserId { get; set; }
-        public string Messagge { get; set; }
+        
+        public string ConnectionId { get; set; }
+        public string UserName { get; set; }
+        
     }
 }

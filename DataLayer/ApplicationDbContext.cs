@@ -31,7 +31,7 @@ namespace DataLayer
             modelBuilder.Entity<Dress>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<Collection>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<Videos>().Property(l => l.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            modelBuilder.Entity<Chat>().Property(c => c.UserId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            modelBuilder.Entity<Chat>().Property(c => c.ConnectionId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             base.OnModelCreating(modelBuilder);
         }
 
