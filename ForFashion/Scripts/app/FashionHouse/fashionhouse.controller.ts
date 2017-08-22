@@ -1,6 +1,8 @@
 ﻿
 class CollectionFashionHouseDto {
     public Name: string;
+    public Year: number;
+ 
 }
 class FashionHouseModel {
     public CollectionFashionHouseDtos: Array<CollectionFashionHouseDto>;
