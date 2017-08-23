@@ -95,11 +95,7 @@ namespace DataLayer
             var c3 = new Collection() { Id = 3, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 };
             var c4 = new Collection() { Id = 4, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 };
             var c5 = new Collection() { Id = 5, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 };
-            var c6 = new Collection() { Id = 1, Name = "Spring-Summmer", year = 2012, FashionHouse = fh1 };
-            var c7 = new Collection() { Id = 2, Name = "Spring-Summer", year = 2012, FashionHouse = fh2 };
-            var c8 = new Collection() { Id = 3, Name = "Spring-Summer", year = 2012, FashionHouse = fh3 };
-            var c9 = new Collection() { Id = 4, Name = "Autumn-Winter", year = 2012, FashionHouse = fh3 };
-            var c10 = new Collection() { Id = 5, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 };
+           
             var c11 = new Collection() { Id = 6, Name = "Paris Haute Couture Spring/Summer", year = 2016, FashionHouse = fh4 };
             var c12 = new Collection() { Id = 7, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 };
             var c13 = new Collection() { Id = 8, Name = "New York Fashion Week Fall/Winter", year = 2017, FashionHouse = fh5 };
@@ -132,6 +128,12 @@ namespace DataLayer
             var c40 = new Collection() { Id = 35, Name = "Spring-Summer", year = 2016, FashionHouse = fh3 };
             var c41 = new Collection() { Id = 39, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 };
             var c42 = new Collection() { Id = 40, Name = "Autumn-Winter", year = 2016, FashionHouse = fh1 };
+
+            var c6 = new Collection() { Id = 41, Name = "Spring-Summmer", year = 2012, FashionHouse = fh1 };
+            var c7 = new Collection() { Id = 42, Name = "Spring-Summer", year = 2012, FashionHouse = fh2 };
+            var c8 = new Collection() { Id = 43, Name = "Spring-Summer", year = 2012, FashionHouse = fh3 };
+            var c9 = new Collection() { Id = 44, Name = "Autumn-Winter", year = 2012, FashionHouse = fh3 };
+            var c10 = new Collection() { Id = 45, Name = "Spring-Summer", year = 2017, FashionHouse = fh3 };
 
             context.Collection.AddOrUpdate(
                 c => c.Id,

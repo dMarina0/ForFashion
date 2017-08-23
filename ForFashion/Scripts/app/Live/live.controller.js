@@ -23,24 +23,22 @@ var LiveController = (function (_super) {
         this.RootScope = $rootScope;
         this.LiveModel = new LiveModel();
         this.conection();
+        this.LiveModel.Name = this.user.username;
     }
     ;
     LiveController.prototype.conection = function () {
         var _this = this;
-        //initialize connection
         this.connection = $.connection;
         this.proxy = $.connection.hub.createHubProxy('chatHub');
         this.proxy.on('broadcastMessage', function (name, message) { return _this.broadcastMessage(name, message); });
         this.proxy.on('userConnected', function (number) { return _this.userConnected(number); });
-        this.proxy.on('onConnected', function (id, userName, connectedUsersJson) { return _this.onConnected(id, userName, connectedUsersJson); });
-        this.connection.hub.start().done(function () { return _this.newMessage(); });
+        this.proxy.on('onConnected', function (connectedUsersJson) { return _this.onConnected(connectedUsersJson); });
+        this.connection.hub.start().done(function () { return _this.NewMessage(); });
     };
-    LiveController.prototype.newMessage = function () {
-        this.proxy.invoke("Connected", this.LiveModel.Name);
+    LiveController.prototype.NewMessage = function () {
+        this.proxy.invoke("Connected");
     };
     LiveController.prototype.broadcastMessage = function (name, message) {
-        name = this.user.username;
-        this.LiveModel.Name = name;
         this.LiveModel.mesaj = message;
         var a = new Message();
         a.UserMessage = message;
@@ -54,7 +52,7 @@ var LiveController = (function (_super) {
     LiveController.prototype.userConnected = function (number) {
         console.log(number);
     };
-    LiveController.prototype.onConnected = function (id, userName, connectedUsersJson) {
+    LiveController.prototype.onConnected = function (connectedUsersJson) {
         var connectedUsers = JSON.parse(connectedUsersJson);
     };
     return LiveController;

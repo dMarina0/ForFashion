@@ -15,7 +15,6 @@ class LiveModel {
 
 }
 
-
 class LiveController extends BaseController {
     private connection: SignalR;
     private proxy: SignalR.Hub.Proxy;
@@ -27,27 +26,25 @@ class LiveController extends BaseController {
         this.RootScope = $rootScope;
         this.LiveModel = new LiveModel();
         this.conection();
+        this.LiveModel.Name = this.user.username;
     };
 
 
     public conection(): void {
-        //initialize connection
         this.connection = $.connection;
         this.proxy = $.connection.hub.createHubProxy('chatHub');
         this.proxy.on('broadcastMessage', (name, message) => this.broadcastMessage(name, message));
         this.proxy.on('userConnected', (number) => this.userConnected(number));
-        this.proxy.on('onConnected', (id, userName, connectedUsersJson) => this.onConnected(id, userName, connectedUsersJson));
-        this.connection.hub.start().done(() => this.newMessage())
+        this.proxy.on('onConnected', (connectedUsersJson) => this.onConnected(connectedUsersJson));
+        this.connection.hub.start().done(() => this.NewMessage())
     }
 
-    protected newMessage() {
-        this.proxy.invoke("Connected", this.LiveModel.Name);
-
+    protected NewMessage() {
+        this.proxy.invoke("Connected");
+       
     }
 
     protected broadcastMessage(name, message) {
-        name = this.user.username;
-        this.LiveModel.Name = name;
         this.LiveModel.mesaj = message;
         var a = new Message();
         a.UserMessage = message;
@@ -62,10 +59,7 @@ class LiveController extends BaseController {
     protected userConnected(number) {
         console.log(number);
     }
-    protected onConnected(id, userName, connectedUsersJson) {
-       
+    protected onConnected(connectedUsersJson) {
         var connectedUsers = JSON.parse(connectedUsersJson);
-        
-       
     }
 }

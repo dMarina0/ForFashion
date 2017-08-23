@@ -8,45 +8,53 @@ using Microsoft.AspNet.SignalR.Hubs;
 using BusinessObjects.Entities;
 using Newtonsoft.Json;
 using DataLayer;
+using Abstracts.IManagers;
+using BusinessObjects.Dtos;
 
 namespace ForFashion.Hubs
 {
     [HubName("chatHub")]
     public class ChatHub : Hub
-    {
-
-        public static List<Chat> ConnectedUsers = new List<Chat>();
-        public static List<Messages> CurrentMessage = new List<Messages>();
-        
-        
-        public void Send(string name, string message)
-        {   
-            Clients.All.broadcastMessage(name, message);
-            
-        }
-        public  Task OnConnected()
+    { 
+        public ChatHub()
         {
-            var name = Context.User.Identity.Name;
-            var id = Context.ConnectionId;
-            using (var db = new ApplicationDbContext())
-            {
-                var user = db.Chats
-                    .SingleOrDefault(u => u.UserName == name);
-
-                if (user == null)
-                {
-                    user = new Chat
-                    {
-                        UserName = name,
-                        ConnectionId = id
-                    };
-                    db.Chats.Add(user);
-                }
-            }
-            return base.OnConnected();
+            _chatManager = DIContainer.Instance.Resolve<IChatManager>();
         }
-            
+        public  List<ChatDto> ConnectedUsers = new List<ChatDto>();
         
+        
+
+        private IChatManager _chatManager;
+        public void Send(string name, string message)
+        {
+            var id = Context.ConnectionId;
+            _chatManager.Insert(new ChatDto
+            {
+                UserName = name,
+                ConnectionId = id,
+                Messages = message,
+                
+            });
+            
+            
+
+            Clients.All.broadcastMessage(name, message);
+
+        }
+        public void Connected()
+        {
+
+            IEnumerable<ChatDto> m = _chatManager.GetAll();
+
+              var p = m.Select(c => new Chat { UserName = c.UserName, ConnectionId=c.ConnectionId , Id=c.Id ,Messages=c.Messages});
+
+              
+            Clients.Caller.onConnected(JsonConvert.SerializeObject(_chatManager.GetAll()));
+            
+            
+        }
+
+
         /* var id = Context.ConnectionId;
          nameUser = Context.User.Identity.Name;
 
@@ -68,5 +76,5 @@ namespace ForFashion.Hubs
 
 
     }
-   
+
 }

@@ -13,11 +13,11 @@ namespace BusinessObjects.Entities
    public class Chat
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        
+        public int Id { get; set; }
         public string ConnectionId { get; set; }
         public string UserName { get; set; }
         public string Messages{ get; set; }
-        
+       
+
     }
 }

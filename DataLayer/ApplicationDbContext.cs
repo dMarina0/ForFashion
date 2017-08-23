@@ -32,7 +32,8 @@ namespace DataLayer
             modelBuilder.Entity<Collection>().Property(d => d.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<Videos>().Property(l => l.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<Chat>().Property(c => c.ConnectionId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-           
+            
+
             base.OnModelCreating(modelBuilder);
         }
 
@@ -47,5 +48,6 @@ namespace DataLayer
         public DbSet<FashionHouse> FashionHouse { get; set; }
         
         public DbSet<Chat> Chats { get; set; }
+        
     }
 }

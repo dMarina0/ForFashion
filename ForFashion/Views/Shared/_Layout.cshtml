@@ -39,22 +39,6 @@
     <script src="~/Scripts/jquery.signalR-2.2.2.js"></script>
     <script src="signalr/hubs"></script>
     @RenderSection("scripts", required: false)
-    <script type="text/javascript">
-        $(function () {
-            // Declare a proxy to reference the hub.
-            var chat = $.connection.chatHub;
-            // Create a function that the hub can call to broadcast messages.
-            chat.client.broadcastMessage = function (name, message) {
-                console.log(name + " " + message);
-            };
-
-            // Start the connection.
-            $.connection.hub.start().done(function () {
-                chat.server.send("me", "you");
-
-
-            });
-        });
-    </script>
+  
 </body>
 </html>
