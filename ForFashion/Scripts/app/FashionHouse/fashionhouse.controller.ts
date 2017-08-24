@@ -38,7 +38,7 @@ class FashionHouseController extends BaseController {
             method: 'GET',
             url: 'api/Collection'
         }).then((response) => {
-            this.Model.CollectionFashionHouseDtos = <Array<CollectionDto>>response.data;
+            this.Model.CollectionFashionHouseDtos = <Array<CollectionFashionHouseDto>>response.data;
         }, (response) => {
         });
     }
@@ -59,7 +59,7 @@ class FashionHouseController extends BaseController {
             method: 'GET',
             url: 'api/Collection?fashionId1=' + fashionId
         }).then((response) => {
-            this.Model.CollectionFashionHouseDtos = <Array<CollectionDto>>response.data;
+            this.Model.CollectionFashionHouseDtos = <Array<CollectionFashionHouseDto>>response.data;
             debugger
         }, (response) => {
         });
