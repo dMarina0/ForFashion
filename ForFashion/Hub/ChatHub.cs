@@ -44,9 +44,9 @@ namespace ForFashion.Hubs
         public void Connected()
         {
 
-            IEnumerable<ChatDto> m = _chatManager.GetAll();
+            //IEnumerable<ChatDto> m = _chatManager.GetAll();
 
-              var p = m.Select(c => new Chat { UserName = c.UserName, ConnectionId=c.ConnectionId , Id=c.Id ,Messages=c.Messages});
+             // var p = m.Select(c => new Chat { UserName = c.UserName, ConnectionId=c.ConnectionId , Id=c.Id ,Messages=c.Messages});
 
               
             Clients.Caller.onConnected(JsonConvert.SerializeObject(_chatManager.GetAll()));

@@ -24,14 +24,14 @@ class HomeController extends BaseController {
     public Model: HomeModel;
     public httpService: ng.IHttpService;
     public _array: Array<any>;
-    constructor($http: ng.IHttpService, $routeParams:any) {
+    constructor($http: ng.IHttpService) {
         super();
         var self = this;
-        var id: number = $routeParams.id;
+       
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        this.getFashionHouse(id);
+       // this.getFashionHouse(id);
         this.getCollection();
     }
 
@@ -39,11 +39,11 @@ class HomeController extends BaseController {
         this.loadScript("Content/Theme/js/front.js");
     }
 
-    public getFashionHouse(id: number) {
+    public getFashionHouse() {
 
         this.httpService({
             method: 'GET',
-            url: 'api/FashionHouse/' + id
+            url: 'api/FashionHouse' 
         }).then((response) => {
             this.Model.FashionHouseDto = <FashionHouseDto>response.data;
         }, (response) => {

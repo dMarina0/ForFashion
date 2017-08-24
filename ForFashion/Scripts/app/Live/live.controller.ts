@@ -1,16 +1,25 @@
-﻿class Message {
+﻿class Conversation {
+    UserName: string;
+    Messages: string;
+    constructor() {
+    };
+}
+
+
+class Message {
     UserName: string;
     UserMessage: string;
     constructor() {
     };
 }
 class LiveModel {
-    ConnectedUsers: Array<string>;
+    Conversations: Array<Conversation>;
     Name: string;
     mesaj: string;
     Messages: Array<Message>;
     constructor() {
-       this.Messages = new Array<Message>();
+        this.Messages = new Array<Message>();
+        this.Conversations = new Array<Conversation>();
     };
 
 }
@@ -19,6 +28,7 @@ class LiveController extends BaseController {
     private connection: SignalR;
     private proxy: SignalR.Hub.Proxy;
     public LiveModel: LiveModel;
+    //public ConversationModel: Conversation;
     protected RootScope: ng.IRootScopeService;
 
     constructor($rootScope: ng.IRootScopeService) {
@@ -46,10 +56,12 @@ class LiveController extends BaseController {
 
     protected broadcastMessage(name, message) {
         this.LiveModel.mesaj = message;
-        var a = new Message();
-        a.UserMessage = message;
+        var a = new Conversation();
+        a.Messages = message;
         a.UserName = name;
-        this.LiveModel.Messages.push(a);
+        this.LiveModel.Conversations.unshift(a);
+        debugger
+        this.LiveModel.mesaj = '';
         this.RootScope.$apply();
     }
     protected SendMessage() {
@@ -60,6 +72,10 @@ class LiveController extends BaseController {
         console.log(number);
     }
     protected onConnected(connectedUsersJson) {
-        var connectedUsers = JSON.parse(connectedUsersJson);
+        this.LiveModel.Conversations = <Array<Conversation>>JSON.parse(connectedUsersJson);
+
+        this.RootScope.$apply();
+        //this.LiveModel.Conversations.push(deserialize);
+       
     }
 }
