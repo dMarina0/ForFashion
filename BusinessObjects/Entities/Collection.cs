@@ -15,12 +15,9 @@ namespace BusinessObjects.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public int year { get; set; }
-        public int FashionHouse_Id { get; set; }
         [Required]
-        [ForeignKey("FashionHouse_Id")]
         public FashionHouse FashionHouse { get; set; }
         public ICollection<Videos> Video { get; set; }
-
-
+        
     }
 }

@@ -500,13 +500,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:ForFashion.Controllers.CollectionController.GetByFashionHouseId(System.Int32)">
-            <summary>
-            Returns collections for a specific fashion house
-            </summary>
-            <param name="fashionId"></param>
-            <returns></returns>
-        </member>
         <member name="M:ForFashion.Controllers.FashionHouseController.Get">
             <summary>
             Returns the list of fashion houses

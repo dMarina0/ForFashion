@@ -57,6 +57,7 @@ var LiveController = (function (_super) {
     };
     LiveController.prototype.SendMessage = function () {
         this.proxy.invoke("send", this.LiveModel.Name, this.LiveModel.mesaj);
+        $("#message-text").focus();
     };
     LiveController.prototype.userConnected = function (number) {
         console.log(number);

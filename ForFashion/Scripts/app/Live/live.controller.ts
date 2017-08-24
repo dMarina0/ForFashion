@@ -66,6 +66,7 @@ class LiveController extends BaseController {
     }
     protected SendMessage() {
         this.proxy.invoke("send", this.LiveModel.Name, this.LiveModel.mesaj);
+        $("#message-text").focus();
     }
 
     protected userConnected(number) {
