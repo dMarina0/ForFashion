@@ -2,6 +2,7 @@
 class CollectionFashionHouseDto {
     public Name: string;
     public Year: number;
+    public FashionHouse_Id: number;
  
 }
 class FashionHouseModel {
@@ -14,6 +15,8 @@ class FashionHouseModel {
 }
 
 
+
+
 class FashionHouseController extends BaseController {
     public Model: FashionHouseModel;
     public httpService: ng.IHttpService;
@@ -22,10 +25,12 @@ class FashionHouseController extends BaseController {
     constructor($http: ng.IHttpService, $routeParams: any) {
         super();
         var id: number = $routeParams.id;
+        var fashionId: number = $routeParams.fashionId;
         this.httpService = $http;
         this.Model = new FashionHouseModel();
         this.getCollection();
         this.getFashionHouse(id);
+        this.getCollectionByFashionHouse(fashionId)
      //   this.x = $location.search;
     };
     public getCollection() {
@@ -45,6 +50,17 @@ class FashionHouseController extends BaseController {
             url: 'api/FashionHouse/' + id
         }).then((response) => {            
             this.Model.FashionHouseDto = <FashionHouseDto>response.data;
+        }, (response) => {
+        });
+    }
+
+    public getCollectionByFashionHouse(fashionId: number) {
+        this.httpService({
+            method: 'GET',
+            url: 'api/Collection?fashionId1=' + fashionId
+        }).then((response) => {
+            this.Model.CollectionFashionHouseDtos = <Array<CollectionDto>>response.data;
+            debugger
         }, (response) => {
         });
     }

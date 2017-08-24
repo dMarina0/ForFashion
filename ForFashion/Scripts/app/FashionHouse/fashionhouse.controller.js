@@ -20,10 +20,12 @@ var FashionHouseController = (function (_super) {
     function FashionHouseController($http, $routeParams) {
         _super.call(this);
         var id = $routeParams.id;
+        var fashionId = $routeParams.fashionId;
         this.httpService = $http;
         this.Model = new FashionHouseModel();
         this.getCollection();
         this.getFashionHouse(id);
+        this.getCollectionByFashionHouse(fashionId);
         //   this.x = $location.search;
     }
     ;
@@ -44,6 +46,17 @@ var FashionHouseController = (function (_super) {
             url: 'api/FashionHouse/' + id
         }).then(function (response) {
             _this.Model.FashionHouseDto = response.data;
+        }, function (response) {
+        });
+    };
+    FashionHouseController.prototype.getCollectionByFashionHouse = function (fashionId) {
+        var _this = this;
+        this.httpService({
+            method: 'GET',
+            url: 'api/Collection?fashionId1=' + fashionId
+        }).then(function (response) {
+            _this.Model.CollectionFashionHouseDtos = response.data;
+            debugger;
         }, function (response) {
         });
     };

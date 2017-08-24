@@ -22,14 +22,14 @@ var HomeModel = (function () {
 }());
 var HomeController = (function (_super) {
     __extends(HomeController, _super);
-    function HomeController($http, $routeParams) {
+    function HomeController($http) {
         _super.call(this);
         var self = this;
-        var id = $routeParams.id;
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        this.getFashionHouse(id);
+        this.getFashionHouses();
+        //this.getFashionHouse(id);
         this.getCollection();
     }
     HomeController.prototype.onLoad = function () {
@@ -42,6 +42,16 @@ var HomeController = (function (_super) {
             url: 'api/FashionHouse/' + id
         }).then(function (response) {
             _this.Model.FashionHouseDto = response.data;
+        }, function (response) {
+        });
+    };
+    HomeController.prototype.getFashionHouses = function () {
+        var _this = this;
+        this.httpService({
+            method: 'GET',
+            url: 'api/FashionHouse'
+        }).then(function (response) {
+            _this.Model.FashionHouseDtos = response.data;
         }, function (response) {
         });
     };
