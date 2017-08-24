@@ -3,6 +3,12 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+var Conversation = (function () {
+    function Conversation() {
+    }
+    ;
+    return Conversation;
+}());
 var Message = (function () {
     function Message() {
     }
@@ -12,6 +18,7 @@ var Message = (function () {
 var LiveModel = (function () {
     function LiveModel() {
         this.Messages = new Array();
+        this.Conversations = new Array();
     }
     ;
     return LiveModel;
@@ -40,10 +47,12 @@ var LiveController = (function (_super) {
     };
     LiveController.prototype.broadcastMessage = function (name, message) {
         this.LiveModel.mesaj = message;
-        var a = new Message();
-        a.UserMessage = message;
+        var a = new Conversation();
+        a.Messages = message;
         a.UserName = name;
-        this.LiveModel.Messages.push(a);
+        this.LiveModel.Conversations.unshift(a);
+        debugger;
+        this.LiveModel.mesaj = '';
         this.RootScope.$apply();
     };
     LiveController.prototype.SendMessage = function () {
@@ -53,7 +62,9 @@ var LiveController = (function (_super) {
         console.log(number);
     };
     LiveController.prototype.onConnected = function (connectedUsersJson) {
-        var connectedUsers = JSON.parse(connectedUsersJson);
+        this.LiveModel.Conversations = JSON.parse(connectedUsersJson);
+        this.RootScope.$apply();
+        //this.LiveModel.Conversations.push(deserialize);
     };
     return LiveController;
 }(BaseController));

@@ -478,20 +478,26 @@
                             <li>Message</li>
                         </ul>
                     </div>-->
-                    <div class="container">
+                    <div style="width:350px; height:150px; position:absolute; left:50px ; margin-left:800px; top:70px;" class="container">
                         <div class="row">
                             <div class="panel panel-default">
                                 <div class="panel-heading">Hello,{{$ctrl.user.username}}</div>
-                                <div class="panel-body">
-                                    <div class="container2">
-                                        <div ng-repeat="message in $ctrl.LiveModel.Messages">
+                                <div  class="panel-body">
+                                    <div style="height:300px; overflow:scroll;" class="container2">
+                                        <div ng-repeat="conversations in $ctrl.LiveModel.Conversations">
+                                            <div>
+                                                <b>{{conversations.UserName}}</b>
+                                                : {{conversations.Messages}}
+                                            </div>
+                                        </div>
+                                        <!--<div  ng-repeat="message in $ctrl.LiveModel.Messages">
                                             <div><b>{{message.UserName}}</b>
                                              : {{message.UserMessage}}</div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <div class="panel-footer">
                                         <div class="input-group">
-                                            <input  type="text" class="form-control" ng-model="$ctrl.LiveModel.mesaj">
+                                            <input  type="text" class="form-control" ng-model="$ctrl.LiveModel.mesaj" autofocus>
                                             <span class="input-group-btn">
                                                 <button class="btn btn-default" type="button" ng-click="$ctrl.SendMessage()">Send</button>
                                             </span>

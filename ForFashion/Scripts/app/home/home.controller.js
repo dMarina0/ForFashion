@@ -28,30 +28,19 @@ var HomeController = (function (_super) {
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        this.getFashionHouses();
-        //this.getFashionHouse(id);
+        // this.getFashionHouse(id);
         this.getCollection();
     }
     HomeController.prototype.onLoad = function () {
         this.loadScript("Content/Theme/js/front.js");
     };
-    HomeController.prototype.getFashionHouse = function (id) {
-        var _this = this;
-        this.httpService({
-            method: 'GET',
-            url: 'api/FashionHouse/' + id
-        }).then(function (response) {
-            _this.Model.FashionHouseDto = response.data;
-        }, function (response) {
-        });
-    };
-    HomeController.prototype.getFashionHouses = function () {
+    HomeController.prototype.getFashionHouse = function () {
         var _this = this;
         this.httpService({
             method: 'GET',
             url: 'api/FashionHouse'
         }).then(function (response) {
-            _this.Model.FashionHouseDtos = response.data;
+            _this.Model.FashionHouseDto = response.data;
         }, function (response) {
         });
     };
