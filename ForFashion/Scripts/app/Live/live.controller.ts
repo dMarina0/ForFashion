@@ -44,7 +44,6 @@ class LiveController extends BaseController {
         this.connection = $.connection;
         this.proxy = $.connection.hub.createHubProxy('chatHub');
         this.proxy.on('broadcastMessage', (name, message) => this.broadcastMessage(name, message));
-        this.proxy.on('userConnected', (number) => this.userConnected(number));
         this.proxy.on('onConnected', (connectedUsersJson) => this.onConnected(connectedUsersJson));
         this.connection.hub.start().done(() => this.NewMessage())
     }
@@ -65,17 +64,13 @@ class LiveController extends BaseController {
         this.RootScope.$apply();
     }
     protected SendMessage() {
+      
         this.proxy.invoke("send", this.LiveModel.Name, this.LiveModel.mesaj);
-    }
-
-    protected userConnected(number) {
-        console.log(number);
+        $("#message-text").focus();
     }
     protected onConnected(connectedUsersJson) {
         this.LiveModel.Conversations = <Array<Conversation>>JSON.parse(connectedUsersJson);
-
         this.RootScope.$apply();
-        //this.LiveModel.Conversations.push(deserialize);
-       
+  
     }
 }

@@ -188,7 +188,8 @@
                     </li>
 
                     <li class="dropdown yamm-fw">
-                        <a href="/index.html#!/live" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Live <b class="caret"></b></a>
+                        <a ng-show="$ctrl.user" href="/index.html#!/live" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Live /Register<b class="caret"></b></a>
+                        <a ng-hide="$ctrl.user" href="/index.html#!/register" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Register/Live <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="yamm-content">

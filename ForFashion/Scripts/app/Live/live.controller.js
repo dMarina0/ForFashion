@@ -38,7 +38,6 @@ var LiveController = (function (_super) {
         this.connection = $.connection;
         this.proxy = $.connection.hub.createHubProxy('chatHub');
         this.proxy.on('broadcastMessage', function (name, message) { return _this.broadcastMessage(name, message); });
-        this.proxy.on('userConnected', function (number) { return _this.userConnected(number); });
         this.proxy.on('onConnected', function (connectedUsersJson) { return _this.onConnected(connectedUsersJson); });
         this.connection.hub.start().done(function () { return _this.NewMessage(); });
     };
@@ -57,14 +56,11 @@ var LiveController = (function (_super) {
     };
     LiveController.prototype.SendMessage = function () {
         this.proxy.invoke("send", this.LiveModel.Name, this.LiveModel.mesaj);
-    };
-    LiveController.prototype.userConnected = function (number) {
-        console.log(number);
+        $("#message-text").focus();
     };
     LiveController.prototype.onConnected = function (connectedUsersJson) {
         this.LiveModel.Conversations = JSON.parse(connectedUsersJson);
         this.RootScope.$apply();
-        //this.LiveModel.Conversations.push(deserialize);
     };
     return LiveController;
 }(BaseController));

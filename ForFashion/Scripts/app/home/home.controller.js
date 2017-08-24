@@ -28,8 +28,8 @@ var HomeController = (function (_super) {
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        // this.getFashionHouse(id);
         this.getCollection();
+        this.getFashionHouse();
     }
     HomeController.prototype.onLoad = function () {
         this.loadScript("Content/Theme/js/front.js");
@@ -40,7 +40,7 @@ var HomeController = (function (_super) {
             method: 'GET',
             url: 'api/FashionHouse'
         }).then(function (response) {
-            _this.Model.FashionHouseDto = response.data;
+            _this.Model.FashionHouseDtos = response.data;
         }, function (response) {
         });
     };

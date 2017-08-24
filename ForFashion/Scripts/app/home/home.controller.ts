@@ -27,12 +27,11 @@ class HomeController extends BaseController {
     constructor($http: ng.IHttpService) {
         super();
         var self = this;
-       
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-       // this.getFashionHouse(id);
         this.getCollection();
+        this.getFashionHouse();
     }
 
     protected onLoad(): void {
@@ -45,7 +44,7 @@ class HomeController extends BaseController {
             method: 'GET',
             url: 'api/FashionHouse' 
         }).then((response) => {
-            this.Model.FashionHouseDto = <FashionHouseDto>response.data;
+            this.Model.FashionHouseDtos = <Array<FashionHouseDto>>response.data;
         }, (response) => {
         });
     }
