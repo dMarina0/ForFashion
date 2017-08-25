@@ -1,13 +1,14 @@
 ﻿class FashionHouseDto {
     public Name: string;
     public Id: string;
-  
+     
 }
 class CollectionDto {
     public Name: string;
     public Id: number;
     public FashionHouse: string;
     public Year: number;
+    public fashionId: number; 
 } 
 
 class HomeModel {
@@ -27,11 +28,13 @@ class HomeController extends BaseController {
     constructor($http: ng.IHttpService) {
         super();
         var self = this;
+       
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
         this.getFashionHouse();
         this.getCollection();
+        
     }
 
     protected onLoad(): void {

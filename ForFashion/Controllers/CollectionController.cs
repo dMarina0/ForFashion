@@ -27,6 +27,12 @@ namespace ForFashion.Controllers
             var result = _collectionManager.GetAll();
             return result;
         }
+        
+        public IEnumerable<CollectionDto> GetSomeElements()
+        {
+            var result = _collectionManager.GetAll().Take(6);
+            return result;
+        }
 
         /// <summary>
         /// Returns a collection with the given id
@@ -36,6 +42,17 @@ namespace ForFashion.Controllers
         public CollectionDto GetById(int id)
         {
             var result = _collectionManager.GetById(id);
+            return result;
+        }
+
+        /// <summary>
+        /// Returns collections for a specific fashion house
+        /// </summary>
+        /// <param name="fashionId"></param>
+        /// <returns></returns>
+        public IEnumerable<CollectionDto> GetByFashionHouseId(int fashionId)
+        {
+            var result = _collectionManager.GetByFashionHouseId(fashionId);
             return result;
         }
     }
