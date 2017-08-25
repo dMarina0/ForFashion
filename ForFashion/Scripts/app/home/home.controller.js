@@ -28,8 +28,8 @@ var HomeController = (function (_super) {
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        this.getCollection();
         this.getFashionHouse();
+        this.getCollection();
     }
     HomeController.prototype.onLoad = function () {
         this.loadScript("Content/Theme/js/front.js");

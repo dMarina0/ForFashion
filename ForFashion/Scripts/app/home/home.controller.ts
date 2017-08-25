@@ -30,8 +30,8 @@ class HomeController extends BaseController {
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        this.getCollection();
         this.getFashionHouse();
+        this.getCollection();
     }
 
     protected onLoad(): void {
@@ -39,14 +39,16 @@ class HomeController extends BaseController {
     }
 
     public getFashionHouse() {
-
+        
         this.httpService({
             method: 'GET',
             url: 'api/FashionHouse' 
         }).then((response) => {
             this.Model.FashionHouseDtos = <Array<FashionHouseDto>>response.data;
+            
         }, (response) => {
         });
+       
     }
     public getCollection() {
         this.httpService({
@@ -56,6 +58,7 @@ class HomeController extends BaseController {
             this.Model.CollectionDtos = <Array<CollectionDto>>response.data;
         }, (response) => {
         });
+        
     }
 
 }

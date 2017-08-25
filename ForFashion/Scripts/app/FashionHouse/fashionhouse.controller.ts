@@ -26,7 +26,7 @@ class FashionHouseController extends BaseController {
         this.Model = new FashionHouseModel();
         this.getCollection();
         this.getFashionHouse(id);
-     //   this.x = $location.search;
+     // this.x = $location.search;
     };
     public getCollection() {
         this.httpService({

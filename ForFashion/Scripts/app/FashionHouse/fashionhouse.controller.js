@@ -24,7 +24,7 @@ var FashionHouseController = (function (_super) {
         this.Model = new FashionHouseModel();
         this.getCollection();
         this.getFashionHouse(id);
-        //   this.x = $location.search;
+        // this.x = $location.search;
     }
     ;
     FashionHouseController.prototype.getCollection = function () {
