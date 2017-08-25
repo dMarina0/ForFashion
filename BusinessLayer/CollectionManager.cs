@@ -32,6 +32,12 @@ namespace BusinessLayer
             return result;
         }
 
+        public IEnumerable<CollectionDto> GetByFashionHouseId(int fashionId)
+        {
+            var result = _repository.GetAll().Where(it => it.FashionHouse_Id == fashionId).ToCollectionDtos();
+            return result;
+        }
+
         public CollectionDto GetById(int id)
         {
             var result = _repository.GetById(id).ToCollectionDto();

@@ -1,13 +1,14 @@
 ﻿class FashionHouseDto {
     public Name: string;
     public Id: string;
-  
+     
 }
 class CollectionDto {
     public Name: string;
     public Id: number;
     public FashionHouse: string;
     public Year: number;
+    public fashionId: number; 
 } 
 
 class HomeModel {
@@ -24,28 +25,29 @@ class HomeController extends BaseController {
     public Model: HomeModel;
     public httpService: ng.IHttpService;
     public _array: Array<any>;
-    constructor($http: ng.IHttpService, $routeParams:any) {
+    constructor($http: ng.IHttpService) {
         super();
         var self = this;
-        var id: number = $routeParams.id;
+       
         this.httpService = $http;
         this.Model = new HomeModel();
         this.onLoad();
-        this.getFashionHouse(id);
         this.getCollection();
+        this.getFashionHouse();
+        
     }
 
     protected onLoad(): void {
         this.loadScript("Content/Theme/js/front.js");
     }
 
-    public getFashionHouse(id: number) {
+    public getFashionHouse() {
 
         this.httpService({
             method: 'GET',
-            url: 'api/FashionHouse/' + id
+            url: 'api/FashionHouse' 
         }).then((response) => {
-            this.Model.FashionHouseDto = <FashionHouseDto>response.data;
+            this.Model.FashionHouseDtos = <Array<FashionHouseDto>>response.data;
         }, (response) => {
         });
     }

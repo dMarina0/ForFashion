@@ -14,5 +14,6 @@ namespace Abstracts.IManagers
         IEnumerable<CollectionDto> GetAll();
         // void AddCollection(int id);
         CollectionDto GetById(int id);
+        IEnumerable<CollectionDto> GetByFashionHouseId(int fashionId);
     }
 }
