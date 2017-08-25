@@ -35,7 +35,6 @@ var LoginController = (function (_super) {
             var myData = response.data;
             var user = new UserModel();
             if (typeof (Storage) !== "undefined") {
-                // Code for localStorage/sessionStorage.
                 user.username = myData.userName;
                 user.password = myData.password;
                 user.token = myData.access_token;
@@ -43,8 +42,6 @@ var LoginController = (function (_super) {
                 var LoginData = JSON.stringify(user);
                 localStorage.setItem("loginData", LoginData);
                 window.location.href = "index.html#!/home";
-                //localStorage.setItem("token_type", myData.token_type);
-                //localStorage.setItem("token", myData.access_token);
                 return response.statusText;
             }
             else {
@@ -54,7 +51,6 @@ var LoginController = (function (_super) {
         }, function (error) {
             debugger;
             _this.LoginModel.ErrorMessage = error.data.Message;
-            //console.log(error.data.Message);
         });
     };
     return LoginController;

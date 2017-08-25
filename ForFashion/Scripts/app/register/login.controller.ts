@@ -43,7 +43,7 @@ class LoginController extends BaseController {
             var myData: any = response.data;
             var user: UserModel = new UserModel();
             if (typeof (Storage) !== "undefined") {
-                // Code for localStorage/sessionStorage.
+                
                 user.username = myData.userName;
                 user.password = myData.password;
                 user.token = myData.access_token;
@@ -51,8 +51,7 @@ class LoginController extends BaseController {
                 var LoginData = JSON.stringify(user);
                 localStorage.setItem("loginData", LoginData);
                 window.location.href = "index.html#!/home";
-               //localStorage.setItem("token_type", myData.token_type);
-               //localStorage.setItem("token", myData.access_token);
+               
                return response.statusText;
             } else {
                 console.log('error');
@@ -63,8 +62,9 @@ class LoginController extends BaseController {
         }, error => {
             debugger
             this.LoginModel.ErrorMessage = error.data.Message;
-           
-            //console.log(error.data.Message);
-        });
+            });
     }
+    
+
+
 }

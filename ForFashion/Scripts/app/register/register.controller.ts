@@ -16,21 +16,20 @@ class RegisterModel {
 
 class RegisterController extends LoginController {
     public RegisterModel: RegisterModel;
+    
 
     
     constructor($http: ng.IHttpService) {
         super($http);
         this.httpService = $http;
         this.RegisterModel = new RegisterModel();
+        
     }
 
     public RegisterClick() {
-       
+        this.LoginClick();
+        window.location.href = "/index.html#!/userprofile";
         var self = this;
-        console.log(this.RegisterModel.Email);
-        console.log(this.RegisterModel.Password);
-        console.log(this.RegisterModel.ConfirmPassword);
-        
         var req = {
             method: 'POST',
             url: 'api/Account/Register',
@@ -44,7 +43,9 @@ class RegisterController extends LoginController {
             return response.statusText;
         }, (error) => {
             self.RegisterModel.ErrorMessage = error.data.Message;
-            //console.log(error.data.Message);
-        });
+          
+            });
+       
     }
+
 }
