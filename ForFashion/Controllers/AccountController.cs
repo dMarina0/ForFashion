@@ -344,6 +344,8 @@ namespace ForFashion.Controllers
             _iuserDetailsManager.AddUserDetails(user.Id);
 
             return Ok();
+            
+           
         }
 
         // POST api/Account/RegisterExternal

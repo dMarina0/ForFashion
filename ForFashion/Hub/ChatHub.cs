@@ -44,9 +44,7 @@ namespace ForFashion.Hubs
         public void Connected()
         {
 
-            //IEnumerable<ChatDto> m = _chatManager.GetAll();
-
-             // var p = m.Select(c => new Chat { UserName = c.UserName, ConnectionId=c.ConnectionId , Id=c.Id ,Messages=c.Messages});
+            
 
               
             Clients.Caller.onConnected(JsonConvert.SerializeObject(_chatManager.GetAll()));
@@ -55,24 +53,7 @@ namespace ForFashion.Hubs
         }
 
 
-        /* var id = Context.ConnectionId;
-         nameUser = Context.User.Identity.Name;
-
-         if (!ConnectedUsers.Any(x => x.UserName == nameUser))
-         {
-             ConnectedUsers.Add(new Chat { ConnectionId = id, UserName = nameUser });
-
-             Chat CurrentUser = ConnectedUsers.Where(u => u.ConnectionId == id).FirstOrDefault();
-
-             Clients.Caller.onConnected(id, CurrentUser.UserName, JsonConvert.SerializeObject(ConnectedUsers));
-
-             Clients.AllExcept(id).onNewUserConnected(nameUser);
-
-         }
-
-         return base.OnConnected();
-      }*/
-
+       
 
 
     }

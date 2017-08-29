@@ -27,7 +27,7 @@ class RegisterController extends LoginController {
     }
 
     public RegisterClick() {
-        this.LoginClick();
+       
         window.location.href = "/index.html#!/userprofile";
         var self = this;
         var req = {
@@ -40,7 +40,9 @@ class RegisterController extends LoginController {
         }
 
         this.httpService(req).then(response => {
+           
             return response.statusText;
+            
         }, (error) => {
             self.RegisterModel.ErrorMessage = error.data.Message;
           

@@ -20,7 +20,6 @@ var RegisterController = (function (_super) {
         this.RegisterModel = new RegisterModel();
     }
     RegisterController.prototype.RegisterClick = function () {
-        this.LoginClick();
         window.location.href = "/index.html#!/userprofile";
         var self = this;
         var req = {

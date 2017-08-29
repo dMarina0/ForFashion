@@ -542,18 +542,7 @@ _________________________________________________________ -->
             <div class="row products">
                 <div  ng-repeat="videos in $ctrl.Model.VideosDtos" class="col-md-4 col-sm-4">
                     <div class="product">
-                        <!--<div class="flip-container">
-                            <div class="flipper">
-                                <div class="front">
-
-                                </div>
-                                <div class="back">
-                                    <a href="detail.html">
-                                        <img src="img/product1_2.jpg" alt="" class="img-responsive">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>-->
+                        
                         <div class="embed-responsive embed-responsive-4by3">
                             <iframe class="embed-responsive-item" ng-src="{{videos.VideoUrl | trustedResource}}"></iframe>
                             <iframe ng-src="{{videos.VideoUrl | trustedResource}}" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"> </iframe>

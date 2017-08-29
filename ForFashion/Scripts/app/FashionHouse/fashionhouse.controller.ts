@@ -7,6 +7,7 @@ class CollectionFashionHouseDto {
 class FashionHouseModel {
     public CollectionFashionHouseDtos: Array<CollectionFashionHouseDto>;
     public FashionHouseDto: FashionHouseDto;
+    public Houses: Array<FashionHouseDto>;
     constructor() {
         this.CollectionFashionHouseDtos = new Array<CollectionFashionHouseDto>();
     }
@@ -64,4 +65,15 @@ class FashionHouseController extends BaseController {
         }, (response) => {
         });
     }
+    public getFashionHouses() {
+
+        this.httpService({
+            method: 'GET',
+            url: 'api/FashionHouse' 
+        }).then((response) => {
+            this.Model.Houses = <Array<FashionHouseDto>>response.data;
+        }, (response) => {
+        });
+    }
+
 }

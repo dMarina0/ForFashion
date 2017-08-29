@@ -287,6 +287,8 @@
     <Compile Include="Controllers\DressController.cs" />
     <Compile Include="Controllers\FashionHouseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StreamController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="Controllers\VideosController.cs" />
     <Compile Include="Controllers\ShirtController.cs" />
     <Compile Include="Controllers\UserDetailsController.cs" />

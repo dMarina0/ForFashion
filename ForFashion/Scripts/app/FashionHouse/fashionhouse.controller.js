@@ -14,17 +14,24 @@ var FashionHouseModel = (function () {
     }
     return FashionHouseModel;
 }());
+var Pagination = (function () {
+    function Pagination() {
+    }
+    return Pagination;
+}());
 var FashionHouseController = (function (_super) {
     __extends(FashionHouseController, _super);
     //  public x: any;
     function FashionHouseController($http, $routeParams) {
         _super.call(this);
         var id = $routeParams.id;
+        var fashionId = id;
         this.httpService = $http;
         this.Model = new FashionHouseModel();
         this.getCollection();
         this.getFashionHouse(id);
-        // this.x = $location.search;
+        this.getCollectionByFashionHouseId(fashionId);
+        //   this.x = $location.search;
     }
     ;
     FashionHouseController.prototype.getCollection = function () {
@@ -37,6 +44,16 @@ var FashionHouseController = (function (_super) {
         }, function (response) {
         });
     };
+    FashionHouseController.prototype.getCollectionByFashionHouseId = function (fashionId) {
+        var _this = this;
+        this.httpService({
+            method: 'GET',
+            url: 'api/Collection?fashionId=' + fashionId
+        }).then(function (response) {
+            _this.Model.CollectionFashionHouseDtos = response.data;
+        }, function (response) {
+        });
+    };
     FashionHouseController.prototype.getFashionHouse = function (id) {
         var _this = this;
         this.httpService({
@@ -44,6 +61,16 @@ var FashionHouseController = (function (_super) {
             url: 'api/FashionHouse/' + id
         }).then(function (response) {
             _this.Model.FashionHouseDto = response.data;
+        }, function (response) {
+        });
+    };
+    FashionHouseController.prototype.getFashionHouses = function () {
+        var _this = this;
+        this.httpService({
+            method: 'GET',
+            url: 'api/FashionHouse'
+        }).then(function (response) {
+            _this.Model.Houses = response.data;
         }, function (response) {
         });
     };
