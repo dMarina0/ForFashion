@@ -1,8 +1,13 @@
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var FashionHouseDto = (function () {
     function FashionHouseDto() {
     }
@@ -23,13 +28,14 @@ var HomeModel = (function () {
 var HomeController = (function (_super) {
     __extends(HomeController, _super);
     function HomeController($http) {
-        _super.call(this);
-        var self = this;
-        this.httpService = $http;
-        this.Model = new HomeModel();
-        this.onLoad();
-        this.getFashionHouse();
-        this.getCollection();
+        var _this = _super.call(this) || this;
+        var self = _this;
+        _this.httpService = $http;
+        _this.Model = new HomeModel();
+        _this.onLoad();
+        _this.getFashionHouse();
+        _this.getCollection();
+        return _this;
     }
     HomeController.prototype.onLoad = function () {
         this.loadScript("Content/Theme/js/front.js");

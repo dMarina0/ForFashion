@@ -1,8 +1,13 @@
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var Conversation = (function () {
     function Conversation() {
     }
@@ -26,11 +31,12 @@ var LiveModel = (function () {
 var LiveController = (function (_super) {
     __extends(LiveController, _super);
     function LiveController($rootScope) {
-        _super.call(this);
-        this.RootScope = $rootScope;
-        this.LiveModel = new LiveModel();
-        this.conection();
-        this.LiveModel.Name = this.user.username;
+        var _this = _super.call(this) || this;
+        _this.RootScope = $rootScope;
+        _this.LiveModel = new LiveModel();
+        _this.conection();
+        _this.LiveModel.Name = _this.user.username;
+        return _this;
     }
     ;
     LiveController.prototype.conection = function () {
